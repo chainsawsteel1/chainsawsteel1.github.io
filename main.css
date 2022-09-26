@@ -1,0 +1,53 @@
+h1 {
+background:gray;
+animation-name: fadeInAnime;
+animation-fill-mode:backwards;
+animation-duration:2s;
+animation-timing-function:ease;
+animation-delay: 0.5;
+animation-direction:normal;
+}
+
+
+article {
+animation-name: fadeInAnime;
+animation-fill-mode:backwards;
+animation-duration:2s;
+animation-timing-function:ease;
+animation-delay: 0.5;
+animation-direction:normal;
+}
+
+@keyframes fadeInAnime{
+0% {
+opacity: 0;
+visibility: hidden;
+color:black;
+}
+100% {
+opacity: 1;
+visibility: visible;
+color:white;
+}
+}
+
+html,body {
+color:white;
+height: 100%;
+background:black;
+animation: bg_slide 0.5s linear;
+}
+@keyframes bg_slide {
+0% {
+transform: translateX(-300px);
+visibility: hidden;
+opacity: 0;
+}
+100% {
+transform: translateX(0px);
+visibility: visible;
+opacity: 1;
+}
+}
+
+
