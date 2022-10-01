@@ -1,1 +1,4 @@
+---
+permalink: "link.html"
+---
 
