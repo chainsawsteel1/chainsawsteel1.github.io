@@ -61,3 +61,11 @@ opacity: 1;
 .side{
 background:gray;
 }
+
+
+
+.side {
+   float: left;
+   padding: 20px 30px;
+   text-align: center;
+}
