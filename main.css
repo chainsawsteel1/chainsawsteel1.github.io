@@ -50,3 +50,23 @@ opacity: 1;
 }
 }
 
+
+
+html,body {
+color:white;
+height: 100%;
+background:black;
+animation: bg_slide 0.5s linear;
+}
+@keyframes bg_slide {
+0% {
+transform: translateZ(-300px);
+visibility: hidden;
+opacity: 0;
+}
+100% {
+transform: translateZ(0px);
+visibility: visible;
+opacity: 1;
+}
+}
