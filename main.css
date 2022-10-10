@@ -44,7 +44,7 @@ visibility: hidden;
 opacity: 0;
 }
 50% {
-transform: rotateX(10px);
+transform: rotateZ(30deg);
 visibility: visible;
 opacity: 1;
 }
