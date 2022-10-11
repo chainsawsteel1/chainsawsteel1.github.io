@@ -60,10 +60,10 @@ opacity: 1;
 
 
 html{
-    width: 200px;
+    width: 500px;
     border: 1px solid #333;
     background: #d1ecfd;
-    padding: 10px;
+    padding: 100px;
     box-sizing: border-box;
 }
 
