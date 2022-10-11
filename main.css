@@ -58,8 +58,12 @@ opacity: 1;
 }
 
 
-.side{
-background:gray;
+html{
+    width: 200px;
+    border: 1px solid #333;
+    background: #d1ecfd;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 
