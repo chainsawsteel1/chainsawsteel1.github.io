@@ -57,10 +57,11 @@ opacity: 1;
 
 
 html{
-    width: 500px;
+    width: 800px;
+    height: 800px;
     border: 1px solid #333;
     background: #d1ecfd;
-    padding: 100px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
