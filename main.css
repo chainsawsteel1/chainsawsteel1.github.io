@@ -43,16 +43,13 @@ animation: bg_slide 0.5s linear;
 @keyframes bg_slide {
 0% {
 transform: translateY(-300px);
+transform: rotateZ(45deg);
 visibility: hidden;
 opacity: 0;
 }
-50% {
-transform: rotateZ(30deg);
-visibility: visible;
-opacity: 1;
-}
 100% {
 transform: translateY(0px);
+transform: rotateZ(0deg)
 visibility: visible;
 opacity: 1;
 }
