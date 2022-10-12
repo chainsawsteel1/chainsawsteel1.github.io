@@ -15,7 +15,7 @@ animation-name: fadeInAnime;
 animation-fill-mode:backwards;
 animation-duration:2s;
 animation-timing-function:ease;
-animation-delay: 0.5;
+animation-delay: 1;
 animation-direction:normal;
 }
 
@@ -35,11 +35,11 @@ color:white;
 html {
 color:white;
 height: 100%;
-animation: bg_slide 0.5s linear;
+animation: bg_slide 1s linear;
 }
 @keyframes bg_slide {
 0% {
-transform: translateY(-300px);
+transform: translateY(-600px);
 visibility: hidden;
 opacity: 0;
 }
