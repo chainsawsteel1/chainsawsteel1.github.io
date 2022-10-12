@@ -60,6 +60,14 @@ function draw(canvas, color) {
 	drawWave(canvas, color[2], 0.3, 1.6, 0);
 	drawWave(canvas, color[3], 0.2, 3, 100);
 	drawWave(canvas, color[4], 0.5, 1.6, 250);
+        drawWave(canvas, color[1], 0.5, 4, 0);
+	drawWave(canvas, color[2], 0.3, 1.6, 0);
+	drawWave(canvas, color[3], 0.2, 3, 100);
+	drawWave(canvas, color[4], 0.5, 1.6, 250);
+        drawWave(canvas, color[1], 0.5, 4, 0);
+	drawWave(canvas, color[2], 0.3, 1.6, 0);
+	drawWave(canvas, color[3], 0.2, 3, 100);
+	drawWave(canvas, color[4], 0.5, 1.6, 250);
 }
 
 /**
