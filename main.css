@@ -11,6 +11,7 @@ text-align: center;
 
 
 html {
+color:white;
 animation-name: fadeInAnime;
 animation-fill-mode:backwards;
 animation-duration:2s;
@@ -23,12 +24,10 @@ animation-direction:normal;
 0% {
 opacity: 0;
 visibility: hidden;
-color:white;
 }
 100% {
 opacity: 1;
 visibility: visible;
-color:white;
 }
 }
 
@@ -88,8 +87,6 @@ body {
   text-align:center;
   top:50%;
   transform:translate(-50%, -50%);
-  -ms-filter: blur(10px);
-  filter: blur(10px);
 }
 
 
