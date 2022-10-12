@@ -22,7 +22,7 @@ function init() {
 		for(var canvasIndex in canvasList) {
         var canvas = canvasList[canvasIndex];
         canvas.width = document.documentElement.clientWidth; //Canvasのwidthをウィンドウの幅に合わせる
-        canvas.height = 200;//波の高さ
+        canvas.height = 500;//波の高さ
         canvas.contextCache = canvas.getContext("2d");
     }
     // 共通の更新処理呼び出し
