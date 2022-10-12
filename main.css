@@ -32,24 +32,6 @@ color:white;
 }
 }
 
-html {
-color:white;
-height: 100%;
-animation: bg_slide 1s linear;
-}
-@keyframes bg_slide {
-0% {
-transform: translateY(-600px);
-visibility: hidden;
-opacity: 0;
-}
-100% {
-transform: translateY(0px);
-visibility: visible;
-opacity: 1;
-}
-
-}
 
 
 html{
