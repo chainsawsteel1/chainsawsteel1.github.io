@@ -1,4 +1,4 @@
-main("main", {
+main("particles-js", {
   particles: {
     number: {
       value: 1250, //この数値を変更すると紙吹雪の数が増減できる
