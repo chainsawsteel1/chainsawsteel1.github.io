@@ -10,7 +10,7 @@ text-align: center;
 }
 
 
-article {
+html {
 animation-name: fadeInAnime;
 animation-fill-mode:backwards;
 animation-duration:2s;
