@@ -23,7 +23,7 @@ animation-direction:normal;
 0% {
 opacity: 0;
 visibility: hidden;
-color:black;
+color:white;
 }
 100% {
 opacity: 1;
@@ -66,8 +66,6 @@ body {
   right:-50%;
   top:0;
   z-index:-1;
--ms-filter: blur(6px);
-  filter: blur(6px);
 }
 
 .bg2 {
@@ -90,6 +88,8 @@ body {
   text-align:center;
   top:50%;
   transform:translate(-50%, -50%);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
 }
 
 
