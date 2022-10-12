@@ -33,6 +33,7 @@ color:white;
 }
 
 html,body {
+background:black;
 color:white;
 height: 100%;
 animation: bg_slide 0.5s linear;
@@ -91,6 +92,7 @@ html{
 
 .wave{
 position:relative;
+width: 100%;
 height:100%;/*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 canvas{
