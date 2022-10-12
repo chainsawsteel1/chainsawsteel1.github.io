@@ -97,6 +97,7 @@ $particleSize: 20vmin;
 $animationDuration: 6s;
 $amount: 20;
 .background span {
+z-index:-1;
   width: $particleSize;
   height: $particleSize;
   border-radius: $particleSize;
