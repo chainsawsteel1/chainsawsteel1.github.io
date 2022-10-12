@@ -35,7 +35,6 @@ color:white;
 html,body {
 color:white;
 height: 100%;
-background:black;
 animation: bg_slide 0.5s linear;
 }
 @keyframes bg_slide {
