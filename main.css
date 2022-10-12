@@ -88,6 +88,7 @@ body {
 }
 
 .background {
+z-index:-1;
   width: 100vw;
   height: 100vh;
   background: #3E1E68;
@@ -97,7 +98,6 @@ $particleSize: 20vmin;
 $animationDuration: 6s;
 $amount: 20;
 .background span {
-z-index:-1;
   width: $particleSize;
   height: $particleSize;
   border-radius: $particleSize;
