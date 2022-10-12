@@ -80,7 +80,7 @@ html{
 }
 
 
-#main {
+#particles-js {
   position: fixed; /*描画固定*/
   z-index: -1; /*描画を一番下に*/
   width: 100%;
