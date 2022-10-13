@@ -163,7 +163,3 @@ h1 {
 	transition:all 0.3s;
 }
 
-/* 以下は検証用のレイアウトのための CSS*/
-section{
-  padding:300px 0;
-}
