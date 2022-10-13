@@ -34,14 +34,7 @@ body {
   animation-duration:5s;
 }
 
-.container {
-  background-color:rgba(0,0,0,.15);
-  border-radius:.25em;
-  box-shadow:0 0 .25em rgba(0,0,0,.25);
-  box-sizing:border-box;
-  text-align:center;
-  transform:translate(-50%, -50%);
-}
+
 
 h1 {
   font-family:monospace;
