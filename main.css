@@ -108,7 +108,9 @@ body.appear{
 
 /*画面遷移アニメーション*/
 .splashbg1,
-.splashbg2{
+.splashbg2,
+.splashbg3,
+.splashbg4{
     display: none;
 }
 
