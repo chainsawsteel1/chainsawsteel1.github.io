@@ -98,6 +98,6 @@ h1 {
 
 /* Loading アイコンの大きさ設定　*/
 #splash_logo img {
-  width:260px;
+  width:100%;
 }
 
