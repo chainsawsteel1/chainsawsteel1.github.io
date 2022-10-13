@@ -115,17 +115,17 @@ body.appear{
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .splashbg1,
-body.appear .splashbg2,
-body.appear .splashbg3,
-body.appear .splashbg4{
+body .splashbg1,
+body .splashbg2,
+body .splashbg3,
+body .splashbg4{
   display:block;
 }
 
 /*上に消えるエリア*/
 body.appear .splashbg1{
   animation-name:PageAnime;
-  animation-duration:1.4s;
+  animation-duration:1.0s;
   animation-timing-function:ease-in-out;
   animation-fill-mode:forwards;
     content: "";
@@ -154,7 +154,7 @@ body.appear .splashbg1{
 /*下に消えるエリア*/
 body.appear .splashbg2{
     animation-name:PageAnime2;
-  animation-duration:1.4s;
+  animation-duration:1.0s;
   animation-timing-function:ease-in-out;
   animation-fill-mode:forwards;
     content: "";
