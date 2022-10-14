@@ -274,3 +274,26 @@ opacity:0;
   opacity: 0;
 }
 }
+
+
+
+
+#footer{
+  background:#333;
+  color:#fff;
+  padding:40px;
+  text-align:center;
+}
+
+#footer a{
+  color: #fff;
+}
+
+@font-face {
+  font-family: 'vl_gothic';
+  src: url('/VL-Gothic-Regular.woff') format('woff');
+}
+
+body {
+  font-family: 'vl_gothic', sans-serif; 
+}
