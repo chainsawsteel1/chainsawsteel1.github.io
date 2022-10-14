@@ -243,3 +243,40 @@ h1 {
 	transition:all 0.3s;
 }
   	
+
+
+
+
+#header2{
+	position: relative;/*背景を設定するdivの基点とするためrelativeをかける*/
+  width: 100%;
+	height:100vh;
+ 	overflow: hidden;/*はみ出しているところを隠す*/
+}
+
+#header-img{
+  position: fixed;/*背景を固定するためfixedをかける*/
+	z-index: 1;/*#container,#footerよりも下に配置するために数値を小さくする*/
+  top: 0;/*topの位置がJSで変化*/
+	/*以下画面で背景画像を表示させるための指定*/
+  width: 100%;
+	height:100vh;
+	background: url("../pic/main.jpg") no-repeat top center;/*背景画像の設定※オリジナルの画像に設定してください*/
+	background-size:cover;
+	transform-origin:center;/*変化する基点を中心からに設定*/
+}
+
+#container,
+#footer{
+	position: relative;/*#header-imgよりも配置を上にするためにrelativeをつける*/
+	z-index: 2/*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
+}
+
+/*ロゴを中央に配置*/
+#header2 h1{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;/*#header-imgよりも手前に配置*/
+}
