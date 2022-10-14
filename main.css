@@ -268,6 +268,7 @@ h1 {
 
 #container,
 #footer{
+background:white;
 	position: relative;/*#header-imgよりも配置を上にするためにrelativeをつける*/
 	z-index: 2/*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
 }
