@@ -280,7 +280,13 @@ opacity:0;
 
 
 
-
+@media (prefers-color-scheme: dark) {
+  #container {
+    background-color: #000;
+    color: #fff;
+    transition: 1s;
+  }
+}
 
 
 #footer{
