@@ -88,9 +88,11 @@ p{
 
 #container,
 #footer{
+margin: 20px;
+padding: 20px;
 background:white;
-	position: relative;/*#header-imgよりも配置を上にするためにrelativeをつける*/
-	z-index: 2/*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
+position: relative;/*#header-imgよりも配置を上にするためにrelativeをつける*/
+z-index: 2/*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
 }
 
 /*ロゴを中央に配置*/
