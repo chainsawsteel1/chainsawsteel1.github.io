@@ -287,6 +287,10 @@ opacity:0;
     color: #fff;
     transition: 1s;
   }
+a {
+  color: skyblue;
+  text-decoration: none;
+}
 }
 
 
@@ -312,6 +316,6 @@ body {
 
 
 a {
-  color: skyblue;
+  color: deepskyblue;
   text-decoration: none;
 }
