@@ -309,3 +309,9 @@ opacity:0;
 body {
   font-family: 'vl_gothic', sans-serif; 
 }
+
+
+a {
+  color: skyblue;
+  text-decoration: none;
+}
