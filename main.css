@@ -88,7 +88,6 @@ p{
 
 #container,
 #footer{
-margin: 20px;
 padding: 20px;
 background:white;
 position: relative;/*#header-imgよりも配置を上にするためにrelativeをつける*/
