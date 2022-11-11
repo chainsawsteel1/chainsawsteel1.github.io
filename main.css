@@ -309,14 +309,6 @@ background:black;
   color: #fff;
 }
 
-@font-face {
-  font-family: 'vl_gothic';
-  src: url('/VL-Gothic-Regular.woff') format('woff');
-}
-
-body {
-  font-family: 'vl_gothic', sans-serif; 
-}
 
 
 a {
