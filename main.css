@@ -333,7 +333,11 @@ h1.glow span{ animation:glow_anime_on 1s ease-out forwards; }
 
 
 
-:root { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', sans-serif; }
+@font-face {
+  font-family: 'inter';
+  src: url('/Inter-Regular.ttf') format('ttf');
+}
+
+body {
+  font-family: 'inter', sans-serif; 
 }
