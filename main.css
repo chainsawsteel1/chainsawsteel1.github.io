@@ -338,3 +338,10 @@ h1.glow span{ animation:glow_anime_on 1s ease-out forwards; }
 	50% { opacity:1;text-shadow: 0 0 10px #fff,0 0 15px #fff; }
 	100% { opacity:1; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
 }
+
+
+
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
