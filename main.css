@@ -77,7 +77,7 @@ p{
 
 #header-img{
   position: fixed;/*背景を固定するためfixedをかける*/
-	z-index: 1;/*#container,#footerよりも下に配置するために数値を小さくする*/
+	z-index: -1;/*#container,#footerよりも下に配置するために数値を小さくする*/
   top: 0;/*topの位置がJSで変化*/
 	/*以下画面で背景画像を表示させるための指定*/
   width: 100%;
@@ -85,6 +85,7 @@ p{
 	background: url("../pic/main.jpg") no-repeat top center;/*背景画像の設定※オリジナルの画像に設定してください*/
 	background-size:cover;
 	transform-origin:center;/*変化する基点を中心からに設定*/
+
 }
 
 #container,
