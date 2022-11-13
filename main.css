@@ -328,6 +328,6 @@ h1.glow span{ animation:glow_anime_on 1s ease-out forwards; }
   overflow-wrap: normal;
 }
 
-#small {
+.small {
   color: gray;
 }
