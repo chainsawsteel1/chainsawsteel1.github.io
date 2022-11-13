@@ -323,11 +323,3 @@ h1.glow span{ animation:glow_anime_on 1s ease-out forwards; }
 
 
 
-
-#container{
-position: relative;
-  z-index:1;
-    /*以下はレイアウトのための記述*/
- 
-  padding:600px 0;
-}
