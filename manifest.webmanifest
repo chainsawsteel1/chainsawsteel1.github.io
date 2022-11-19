@@ -1,16 +1,14 @@
 {
-  "name": "chainsawsteel1ホーム",
-  "short_name": "ホーム",
-  "theme_color": "#707070",
-  "background_color": "#4e4e4e",
-  "display": "browser",
-  "scope": "/",
-  "start_url": "/"
-  "icons": [
-    {
-      "src": "/favicon.ico",
-      "sizes": "512x512",
-      "type": "image/ico"
-    }
-   ]
+"name": "chainsawsteel1ホーム",
+"short_name": "ホーム",
+"theme_color": "#707070",
+"background_color": "#4e4e4e",
+"display": "browser",
+"scope": "/",
+"start_url": "/"
+"icons": [{
+"src": "/icon.png",
+"sizes": "512x512",
+"type": "image/png"
+}]
 }
