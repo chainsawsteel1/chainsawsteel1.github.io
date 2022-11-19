@@ -1,5 +1,11 @@
 'use strict';
-
+const CACHE_NAME = 'cache1';
+const urlsToCache = [
+  "＜キャッシュするファイルパス1＞",
+  "＜キャッシュするファイルパス2＞",
+  //・・・
+  "＜キャッシュするファイルパスX＞"
+];
 //installイベントの場合
 //前述のファイルパスをすべてキャッシュに登録する
 self.addEventListener('install', function(event) {
