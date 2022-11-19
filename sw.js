@@ -1,56 +1,31 @@
-const NAME = 'cache';
-const VERSION = '001';
-const CACHE_NAME = NAME + VERSION;
-const urlsToCache = [
-  '/index.html',
-  '/main.js',
-  '/main.css',
-  '/particleText.js',
+// Files to cache
+const cacheName = 'chainsawsteel1home';
+const appShellFiles = [
+  '/',
+  '/pic',
+  '/documents',
 ];
 
-// Service Worker へファイルをインストール
-
-self.addEventListener('install', function (event) {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function (cache) {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
+// Installing Service Worker
+self.addEventListener('install', (e) => {
+  console.log('[Service Worker] Install');
+  e.waitUntil((async () => {
+    const cache = await caches.open(cacheName);
+    console.log('[Service Worker] Caching all: app shell and content');
+    await cache.addAll(contentToCache);
+  })());
 });
 
-// リクエストされたファイルが Service Worker にキャッシュされている場合
-// キャッシュからレスポンスを返す
-
-self.addEventListener('fetch', function (event) {
-  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin')
-    return;
-  event.respondWith(
-    caches.match(event.request)
-      .then(function (response) {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      })
-  );
-});
-
-// Cache Storage にキャッシュされているサービスワーカーのkeyに変更があった場合
-// 新バージョンをインストール後、旧バージョンのキャッシュを削除する
-// (このファイルでは CACHE_NAME をkeyの値とみなし、変更を検知している)
-
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys => Promise.all(
-      keys.map(key => {
-        if (!CACHE_NAME.includes(key)) {
-          return caches.delete(key);
-        }
-      })
-    )).then(() => {
-      console.log(CACHE_NAME + "activated");
-    })
-  );
+// Fetching content using Service Worker
+self.addEventListener('fetch', (e) => {
+  e.respondWith((async () => {
+    const r = await caches.match(e.request);
+    console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+    if (r) return r;
+    const response = await fetch(e.request);
+    const cache = await caches.open(cacheName);
+    console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+    cache.put(e.request, response.clone());
+    return response;
+  })());
 });
