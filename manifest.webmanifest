@@ -6,4 +6,11 @@
   "display": "browser",
   "scope": "/",
   "start_url": "/"
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "512x512",
+      "type": "image/ico"
+    }
+   ]
 }
