@@ -1,6 +1,8 @@
 {
-  "theme_color": "#727272",
-  "background_color": "#4f4f4f",
+  "name": "chainsawsteel1ホーム",
+  "short_name": "ホーム",
+  "theme_color": "#707070",
+  "background_color": "#4e4e4e",
   "display": "browser",
   "scope": "/",
   "start_url": "/"
