@@ -1,9 +1,9 @@
 // Files to cache
 const cacheName = 'chainsawsteel1home';
 const appShellFiles = [
-  '/',
-  '/pic',
-  '/documents',
+  '/*',
+  '/pic/*',
+  '/documents/*',
 ];
 
 // Installing Service Worker
