@@ -58,6 +58,8 @@
     <section id="area-2">
 <div class="container">
 <h2>丸罰ゲーム</h2>
+
+<body>
     <div id="app">
         <table id="table">
             <tr v-for="(row,rowsIndex) in states">
@@ -69,17 +71,16 @@
         </table>
         <br>
         <div style="text-align:center;">
-            <div style="color:#f00;" v-if="playerId==1">「○ プレイヤーさん、マスを選んでください」</div>
-            <div style="color:#00f;" v-if="playerId==2">「× プレイヤーさん、マスを選んでください」</div>
+            <div style="color:#f00;" v-if="playerId==1">「丸 プレイヤーさん、マスを選んでください」</div>
+            <div style="color:#00f;" v-if="playerId==2">「罰 プレイヤーさん、マスを選んでください」</div>
         </div>
         <br>
         <div v-if="winnerText" style="text-align:center;">
-            <h2 v-text="おめおめ"></h2>
-        
+            <h2 v-text="winnerText"></h2>
+            <img src="./images/congrats.png">
         </div>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
     <script>
 
         new Vue({
