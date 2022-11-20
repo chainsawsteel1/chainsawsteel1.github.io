@@ -65,49 +65,14 @@
     <div id="app">
 
         <table id="table">
-    <tr v-for="(row,rowsIndex) in states">
-        <td v-for="(state,colsIndex) in row">
-            <div style="color:#f00;" v-if="state==1">○</div>
-            <div style="color:#00f;" v-if="state==2">×</div>
-        </td>
-        <td v-for="(state,colsIndex) in row">
-            <div style="color:#f00;" v-if="state==1">○</div>
-            <div style="color:#00f;" v-if="state==2">×</div>
-        </td>
-        <td v-for="(state,colsIndex) in row">
-            <div style="color:#f00;" v-if="state==1">○</div>
-            <div style="color:#00f;" v-if="state==2">×</div>
-        </td>
-    </tr>
-    <tr v-for="(row,rowsIndex) in states">
-        <td v-for="(state,colsIndex) in row">
-            <div style="color:#f00;" v-if="state==1">○</div>
-            <div style="color:#00f;" v-if="state==2">×</div>
-        </td>
-        <td v-for="(state,colsIndex) in row">
-            <div style="color:#f00;" v-if="state==1">○</div>
-            <div style="color:#00f;" v-if="state==2">×</div>
-        </td>
-        <td v-for="(state,colsIndex) in row">
-            <div style="color:#f00;" v-if="state==1">○</div>
-            <div style="color:#00f;" v-if="state==2">×</div>
-        </td>
-    </tr>
-    <tr v-for="(row,rowsIndex) in states">
-        <td v-for="(state,colsIndex) in row">
-            <div style="color:#f00;" v-if="state==1">○</div>
-            <div style="color:#00f;" v-if="state==2">×</div>
-        </td>
-        <td v-for="(state,colsIndex) in row">
-            <div style="color:#f00;" v-if="state==1">○</div>
-            <div style="color:#00f;" v-if="state==2">×</div>
-        </td>
-        <td v-for="(state,colsIndex) in row">
-            <div style="color:#f00;" v-if="state==1">○</div>
-            <div style="color:#00f;" v-if="state==2">×</div>
-        </td>
-    </tr>
+            <tr v-for="(row,rowsIndex) in states">
+                <td v-for="(state,colsIndex) in row" @click="onSelect(rowsIndex, colsIndex)">
+                    <div style="color:#f00;" v-if="state==1">○</div>
+                    <div style="color:#00f;" v-if="state==2">×</div>
+                </td>
+            </tr>
         </table>
+  
 
 <div style="text-align:center;">
     <div style="color:#f00;" v-if="playerId==1">「○ プレイヤーさん、マスを選んでください」</div>
@@ -116,173 +81,139 @@
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+
     <script>
 
-new Vue({
-    el: '#app',
-    data: {
-        states: [
-            [-1, -1, -1],
-            [-1, -1, -1],
-            [-1, -1, -1]
-        ],
-        playerId: 1 // ○のプレイヤーから開始
-    }
+        new Vue({
+            el: '#app',
+            data: {
+                states: [], // 初期値はmountedの中で設定
+                playerId: 1, // ○ のプレイヤーから開始,
+                winnerText: ''
+            },
+            methods: {
+                init: function() {
 
-    methods: {
-        onSelect: function(rowsIndex, colsIndex) {
+                    this.states = [
+                        [-1, -1, -1],
+                        [-1, -1, -1],
+                        [-1, -1, -1]
+                    ];
 
-            if(this.states[rowsIndex][colsIndex] != -1) {
+                },
+                onSelect: function(rowsIndex, colsIndex) {
 
-                alert('そのマスは、すでに選択されています！');
+                    this.winnerText = '';
 
-            } else {
+                    if(this.states[rowsIndex][colsIndex] != -1) {
 
-                var states = JSON.parse(JSON.stringify(this.states))
-                states[rowsIndex][colsIndex] = this.playerId;
-                this.states = states;
-                this.playerId = (this.playerId == 1) ? 2 : 1;
+                        alert('そのマスは、すでに選択されています！');
 
-            }
+                    } else {
 
-        }
-    }
+                        var states = JSON.parse(JSON.stringify(this.states))
+                        states[rowsIndex][colsIndex] = this.playerId;
+                        this.states = states;
+                        this.playerId = (this.playerId == 1) ? 2 : 1;
+                        var winnerId = this.getWinnerId();
 
-onSelect: function(rowsIndex, colsIndex) {
+                        if(winnerId != -1) {
 
-    if(this.states[rowsIndex][colsIndex] != -1) {
+                            this.init();
+                            playerIds = {
+                                1: '○',
+                                2: '×'
+                            };
+                            this.winnerText = playerIds[winnerId] +' さんの勝ちです。おめでとうございます！';
 
-        // 省略
+                        } else if(this.isDraw()) {
 
-    } else {
+                            this.init();
+                            alert('引き分けです！');
 
-        // 省略
+                        }
 
-        var winnerId = this.getWinnerId();
+                    }
 
-        if(winnerId != -1) {
+                },
+                getWinnerId: function() {
 
-            this.states = [
-                [-1, -1, -1],
-                [-1, -1, -1],
-                [-1, -1, -1]
-            ];
-            playerIds = {
-                1: '○',
-                2: '×'
-            };
-            alert(playerIds[winnerId] +' さんの勝ちです。おめでとうございます！');
+                    for(var i = 0; i < 3 ; i++){
 
-        }
+                        // 横の列
+                        var row = this.states[i];
+                        if(this.isStatesFilled(row)) { return row[0];}
 
-    }
+                        // 縦の列
+                        var col = [
+                            this.states[0][i],
+                            this.states[1][i],
+                            this.states[2][i]
+                        ];
+                        if(this.isStatesFilled(col)) { return this.states[0][i]; }
 
-},
-getWinnerId: function() {
+                    }
 
-    for(var i = 0; i < 3 ; i++){
+                    // ななめ
+                    var skew1 = [
+                        this.states[0][0],
+                        this.states[1][1],
+                        this.states[2][2]
+                    ];
+                    if(this.isStatesFilled(skew1)) { return this.states[0][0]; }
 
-        // 横の列
-        var row = this.states[i];
-        if(this.isStatesFilled(row)) { return row[0];}
+                    var skew2 = [
+                        this.states[0][2],
+                        this.states[1][1],
+                        this.states[2][0]
+                    ];
+                    if(this.isStatesFilled(skew2)) { return this.states[0][2]; }
 
-        // 縦の列
-        var col = [
-            this.states[0][i],
-            this.states[1][i],
-            this.states[2][i]
-        ];
-        if(this.isStatesFilled(col)) { return this.states[0][i]; }
+                    return -1;
 
-    }
+                },
+                isStatesFilled: function(states) {
 
-    // ななめ
-    var skew1 = [
-        this.states[0][0],
-        this.states[1][1],
-        this.states[2][2]
-    ];
-    if(this.isStatesFilled(skew1)) { return this.states[0][0]; }
+                    return(
+                        states[0] != -1 &&
+                        states[0] == states[1] &&
+                        states[1] == states[2]
+                    );
 
-    var skew2 = [
-        this.states[0][2],
-        this.states[1][1],
-        this.states[2][0]
-    ];
-    if(this.isStatesFilled(skew2)) { return this.states[0][2]; }
+                },
+                isDraw: function() {
 
-    return -1;
+                    for(var i in this.states) {
 
-},
-isStatesFilled: function(states) {
+                        var row = this.states[i];
 
-    return(
-        states[0] != -1 &&
-        states[0] == states[1] &&
-        states[1] == states[2]
-    );
+                        for(var j in row) {
 
-}
+                            var state = row[j];
 
-onSelect: function(rowsIndex, colsIndex) {
+                            if(state == -1) {
 
-    if(this.states[rowsIndex][colsIndex] != -1) {
+                                return false;
 
-        // 省略
+                            }
 
-    } else {
+                        }
 
-        // 省略
+                    }
 
-        if(winnerId != -1) {
+                    return true;
 
-            // 省略
+                }
+            },
+            mounted: function() {
 
-        } else if(this.isDraw()) {
-
-            this.states = [
-                [-1, -1, -1],
-                [-1, -1, -1],
-                [-1, -1, -1]
-            ];
-            alert('引き分けです！');
-
-        }
-
-    }
-
-},
-
-// 省略
-
-isDraw: function() {
-
-    for(var i in this.states) {
-
-        var row = this.states[i];
-
-        for(var j in row) {
-
-            var state = row[j];
-
-            if(state == -1) {
-
-                return false;
+                this.init();
 
             }
-
-        }
-
-    }
-
-    return true;
-
-}
-
-
-})
+        })
 
     </script>
+
 </div>
 </section>
 </main>
