@@ -106,7 +106,7 @@
 
                     if(this.states[rowsIndex][colsIndex] != -1) {
 
-                        alert('そのマスは、すでに選択されています！');
+                        alert('そのマスは既に選択されている');
 
                     } else {
 
@@ -123,12 +123,12 @@
                                 1: '丸',
                                 2: '罰'
                             };
-                            this.winnerText = playerIds[winnerId] +' さんの勝ちです。おめでとうございます！';
+                            this.winnerText = playerIds[winnerId] +' の勝ち';
 
                         } else if(this.isDraw()) {
 
                             this.init();
-                            alert('引き分けです！');
+                            alert('引き分け');
 
                         }
 
