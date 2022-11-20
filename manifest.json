@@ -32,7 +32,6 @@
     "display": "standalone",
     "id":"/",
     "scope":"/"
-    "orientation":"any",
     "theme_color": "#404040",
     "background_color": "#404040"
 }
