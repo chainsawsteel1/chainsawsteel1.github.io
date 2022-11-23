@@ -484,6 +484,7 @@ h1.glow span{ animation:glow_anime_on 1s ease-out forwards; }
 
 
 .marquee {
+color: white;
 	animation: marquee-anim 10s linear infinite;
 }
 
