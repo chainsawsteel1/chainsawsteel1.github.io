@@ -478,3 +478,16 @@ h1.glow span{ animation:glow_anime_on 1s ease-out forwards; }
 .small {
   color: gray;
 }
+
+
+
+
+
+.marquee {
+	animation: marquee-anim 10s linear infinite;
+}
+
+@keyframes marquee-anim {
+	0%   { transform: translate(100%, 0); }
+	100% { transform: translate(-10%, 0); }
+}
