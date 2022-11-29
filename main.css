@@ -224,10 +224,12 @@ color:white;
 	background:#333;
     /*動き*/
 	transition: all 0.2s;
+       opacity:0;
 }
 
 /*アクティブクラスがついたら位置を0に*/
 #g-nav.panelactive{
+   opacity:1;
     left: 0;
 }
 
