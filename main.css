@@ -502,3 +502,8 @@ color: white;
     transform: translate(-100%);
   }
 }
+
+.load {
+  z-index: -5;
+  color:gold;
+}
