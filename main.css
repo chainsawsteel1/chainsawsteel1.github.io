@@ -506,4 +506,5 @@ color: white;
 .load {
   z-index: -99;
   color:gold;
+  position: fixed;
 }
