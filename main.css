@@ -426,6 +426,9 @@ a {
 body {
 background:black;
 }
+.load {
+  color: black;
+}
 }
 
 
@@ -505,6 +508,7 @@ color: white;
 
 .load {
   z-index: -99;
-  color:gold;
   position: fixed;
+  color: white;
+  text-align: center;
 }
