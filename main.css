@@ -504,6 +504,6 @@ color: white;
 }
 
 .load {
-  z-index: -5;
+  z-index: -99;
   color:gold;
 }
