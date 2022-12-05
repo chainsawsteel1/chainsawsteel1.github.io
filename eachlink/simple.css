@@ -1,5 +1,5 @@
 
-html {
+p {
 color: #fff;
 }
 
@@ -13,4 +13,8 @@ text-align: center;
 
 #container {
 overflow-wrap: normal;
+}
+
+h1 {
+    color: #fff;
 }
