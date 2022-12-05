@@ -1,11 +1,10 @@
-@media (prefers-color-scheme: dark) {
-    p {
-      background-color: #000;
-      color: #fff;
-    }
-  }
-  body {
-  background:black;
+
+ p {
+color: #fff;
+}
+
+body {
+background:black;
 }
 
 html {
