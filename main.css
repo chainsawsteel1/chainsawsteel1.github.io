@@ -463,17 +463,12 @@ h1.glow span{ animation:glow_anime_on 1s ease-out forwards; }
 	50% { opacity:1;text-shadow: 0 0 10px #fff,0 0 15px #fff; }
 	100% { opacity:1; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
 }
-@font-face {
-  font-family: 'unifont';
-  src: url('https://unifoundry.com/pub/unifont/unifont-15.0.01/font-builds/unifont_jp-15.0.01.ttf') format('ttf');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+font-family: 'Inter', sans-serif;
 }
-
-.myfont {
-  font-family: 'unifont', sans-serif; 
-}
-
-
-
 
 #container {
   overflow-wrap: normal;
