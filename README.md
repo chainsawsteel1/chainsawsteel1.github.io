@@ -1,3 +1,3 @@
 # chainsawsteel1.github.io
 これはリンク集  
-フォント:unifont
+フォント:inter
