@@ -466,7 +466,7 @@ h1.glow span{ animation:glow_anime_on 1s ease-out forwards; }
 
 @font-face {
   font-family: 'unifont';
-    src: url('/unifont_jp-15.0.01.otf') format('opentype');
+    src: url('/unifont-15.0.01.otf') format('opentype');
   }
   body{
     font-family: "unifont";
