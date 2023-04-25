@@ -495,7 +495,8 @@
           "url": "/wallpaper.html",
           "icons" : [{
           "src": "/android/android-launchericon-96-96.png",
-          "type": "image/png"}]
+          "type": "image/png"
+          }]
       },
       {
         "name": "文など色々",
@@ -503,7 +504,8 @@
         "url": "/documents/title.html",
         "icons": [{
         "src": "/android/android-launchericon-96-96.png",
-        "type": "image/png"}]
+        "type": "image/png"
+        }]
       },
       {
         "name": "コンタクト",
@@ -511,7 +513,8 @@
         "url": "/contact.html",
         "icons" : [{
         "src": "/android/android-launchericon-96-96.png",
-        "type": "image/png"}]
+        "type": "image/png"
+        }]
       },
       {
         "name": "マイアプリ",
@@ -519,7 +522,8 @@
         "url": "/app.html",
         "icons":[{
         "src": "/android/android-launchericon-96-96.png",
-        "type": "image/png"}]
+        "type": "image/png"
+        }]
       }
   ],
     "start_url": "/index.html",
