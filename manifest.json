@@ -483,27 +483,37 @@
       {
           "name": "ホーム",
           "description": "ホームへ跳ぶ",
-          "url": "/index.html"
+          "url": "/index.html",
+          "src": "/android/android-launchericon-96-96.png",
+          "type": "image/png"
       },
       {
           "name": "壁紙",
           "description": "壁紙へ跳ぶ",
-          "url": "/wallpaper.html"
+          "url": "/wallpaper.html",
+          "src": "/android/android-launchericon-96-96.png",
+          "type": "image/png"
       },
       {
         "name": "文など色々",
         "description": "文など色々へ跳ぶ",
-        "url": "/documents/title.html"
+        "url": "/documents/title.html",
+        "src": "/android/android-launchericon-96-96.png",
+        "type": "image/png"
       },
       {
         "name": "コンタクト",
         "description": "コンタクトへ跳ぶ",
+          "src": "/android/android-launchericon-96-96.png",
+          "type": "image/png",
         "url": "/contact.html"
       },
       {
         "name": "マイアプリ",
         "description": "マイアプリへ跳ぶ",
-        "url": "/app.html"
+        "url": "/app.html",
+          "src": "/android/android-launchericon-96-96.png",
+          "type": "image/png"
       }
   ],
     "start_url": "/index.html",
