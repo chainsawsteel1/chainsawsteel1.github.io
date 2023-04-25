@@ -4,11 +4,11 @@
     "description": "chainsawsteel1のサイト、SNSのアカウント一覧",
     "screenshots": [
         {
-            "src": "/main.jpg",
+            "src": "/pic/main.jpg",
             "type": "image/jpg"
           },
           {
-            "src": "/GONE410.png",
+            "src": "/pic/GONE410.png",
             "type": "image/png"
           }
     ],
