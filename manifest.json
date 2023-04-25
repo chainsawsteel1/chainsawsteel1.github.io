@@ -3,16 +3,19 @@
     "short_name": "ホーム",
     "description": "chainsawsteel1のサイト、SNSのアカウント一覧",
     "screenshots": [
-        {
+          {
             "src": "/pic/pwas1.png",
+            "sizes": "1080x2160",
             "type": "image/png"
           },
           {
             "src": "/pic/pwas2.png",
+            "sizes": "1080x2160",
             "type": "image/png"
           },
           {
             "src": "/pic/pwas3.png",
+            "sizes": "1080x2160",
             "type": "image/png"
           }
     ],
