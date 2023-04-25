@@ -1,2 +1,2 @@
-navigator.serviceWorker.register('./service-worker.js')
+navigator.serviceWorker.register('/sw.js')
  .catch(console.error.bind(console));
