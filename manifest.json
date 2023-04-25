@@ -1,38 +1,50 @@
 {
     "name": "chainsawsteel1ホーム",
     "short_name": "ホーム",
-    "description": "chainsawsteel1のサイト",
+    "description": "chainsawsteel1のサイト、SNSのアカウント一覧",
+    "screenshots": [
+        {
+            "src": "/main.jpg",
+            "type": "image/jpg"
+          },
+          {
+            "src": "/GONE410.png",
+            "type": "image/png"
+          }
+    ],
     "icons": [
-        {
-            "src": "/maskable_icon_x192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "/icon2.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/maskable_icon_x512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "/icon.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
-        }
+      {
+        "src": "/maskable_icon_x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/icon2.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/maskable_icon_x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/icon.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
     ],
     "start_url": "/index.html",
     "display": "standalone",
-    "id":"/",
-    "orientation":"any",
+    "id": "/",
+    "orientation": "any",
     "theme_color": "#404040",
     "version": "2",
-    "background_color": "#404040"
-}
+    "background_color": "#404040",
+    "dir": "auto",
+    "lang": "ja"
+  }
