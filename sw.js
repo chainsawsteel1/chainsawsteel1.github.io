@@ -1,54 +1,73 @@
-// This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
+'use strict';
 
-const CACHE = "pwabuilder-offline-page";
+const CACHE_NAME = 'cache-v1';
+const urlsToCache = [
+    './',
+    './styles/main.css',
+    './images/image.jpg',
+    './script/main.js'
+];
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+              .then((cache) => {
+                  console.log('Opened cache');
 
-// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "ToDo-replace-this-name.html";
-
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
+                  // 指定されたリソースをキャッシュに追加する
+                  return cache.addAll(urlsToCache);
+              })
+    );
 });
 
-self.addEventListener('install', async (event) => {
-  event.waitUntil(
-    caches.open(CACHE)
-      .then((cache) => cache.add(offlineFallbackPage))
-  );
+self.addEventListener('activate', (event) => {
+    var cacheWhitelist = [CACHE_NAME];
+
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    // ホワイトリストにないキャッシュ(古いキャッシュ)は削除する
+                    if (cacheWhitelist.indexOf(cacheName) === -1) {
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
+    );
 });
-
-if (workbox.navigationPreload.isSupported()) {
-  workbox.navigationPreload.enable();
-}
-
-workbox.routing.registerRoute(
-  new RegExp('/*'),
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: CACHE
-  })
-);
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        const preloadResp = await event.preloadResponse;
+    event.respondWith(
+        caches.match(event.request)
+              .then((response) => {
+                  if (response) {
+                      return response;
+                  }
 
-        if (preloadResp) {
-          return preloadResp;
-        }
+                  // 重要：リクエストを clone する。リクエストは Stream なので
+                  // 一度しか処理できない。ここではキャッシュ用、fetch 用と2回
+                  // 必要なので、リクエストは clone しないといけない
+                  let fetchRequest = event.request.clone();
 
-        const networkResp = await fetch(event.request);
-        return networkResp;
-      } catch (error) {
+                  return fetch(fetchRequest)
+                      .then((response) => {
+                          if (!response || response.status !== 200 || response.type !== 'basic') {
+                              return response;
+                          }
 
-        const cache = await caches.open(CACHE);
-        const cachedResp = await cache.match(offlineFallbackPage);
-        return cachedResp;
-      }
-    })());
-  }
+                          // 重要：レスポンスを clone する。レスポンスは Stream で
+                          // ブラウザ用とキャッシュ用の2回必要。なので clone して
+                          // 2つの Stream があるようにする
+                          let responseToCache = response.clone();
+
+                          caches.open(CACHE_NAME)
+                                .then((cache) => {
+                                    cache.put(event.request, responseToCache);
+                                });
+
+                          return response;
+                      });
+              })
+    );
 });
