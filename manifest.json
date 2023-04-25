@@ -4,11 +4,15 @@
     "description": "chainsawsteel1のサイト、SNSのアカウント一覧",
     "screenshots": [
         {
-            "src": "/pic/main.jpg",
-            "type": "image/jpg"
+            "src": "/pic/pwas1.png",
+            "type": "image/png"
           },
           {
-            "src": "/pic/GONE410.png",
+            "src": "/pic/pwas2.png",
+            "type": "image/png"
+          },
+          {
+            "src": "/pic/pwas3.png",
             "type": "image/png"
           }
     ],
@@ -38,6 +42,33 @@
         "purpose": "any"
       }
     ],
+    "shortcuts": [
+      {
+          "name": "ホーム",
+          "description": "ホームへ跳ぶ",
+          "url": "/index.html"
+      },
+      {
+          "name": "壁紙",
+          "description": "壁紙へ跳ぶ",
+          "url": "/wallpaper.html"
+      },
+      {
+        "name": "文など色々",
+        "description": "文など色々へ跳ぶ",
+        "url": "/documents/title.html"
+      },
+      {
+        "name": "コンタクト",
+        "description": "コンタクトへ跳ぶ",
+        "url": "/contact.html"
+      },
+      {
+        "name": "マイアプリ",
+        "description": "マイアプリへ跳ぶ",
+        "url": "/app.html"
+      }
+  ],
     "start_url": "/index.html",
     "display": "standalone",
     "id": "/",
