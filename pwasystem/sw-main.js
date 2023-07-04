@@ -1,32 +1,59 @@
-var cacheName = 'chainspage';
-var appShellFiles = [
+const CACHE_VERSION = 'v1';
+const CACHE_NAME = `${registration.scope}!${CACHE_VERSION}`;
+
+const urlsToCache = [
   '/*'
 ];
 
-self.addEventListener('install', (e) => {
-    console.log('[Service Worker] Install');
-    e.waitUntil((async () => {
-      const cache = await caches.open(cacheName);
-      console.log('[Service Worker] Caching all: app shell and content');
-      await cache.addAll(contentToCache);
-    })());
-  });
-  
-  self.addEventListener('fetch', (e) => {
-      if (!(
-         e.request.url.startsWith('http:') || e.request.url.startsWith('https:')
-      )) {
-          return; 
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+    .then((cache) => {
+      return cache.addAll(urlsToCache);
+    })
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return cacheNames.filter((cacheName) => {
+        return cacheName.startsWith(`${registration.scope}!`) &&
+               cacheName !== CACHE_NAME;
+      });
+    }).then((cachesToDelete) => {
+      return Promise.all(cachesToDelete.map((cacheName) => {
+        return caches.delete(cacheName);
+      }));
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+    .then((response) => {
+      if (response) {
+        return response;
       }
-  
-    e.respondWith((async () => {
-      const r = await caches.match(e.request);
-      console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
-      if (r) return r;
-      const response = await fetch(e.request);
-      const cache = await caches.open(cacheName);
-      console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
-      cache.put(e.request, response.clone());
-      return response;
-    })());
-  });
+
+      let fetchRequest = event.request.clone();
+
+      return fetch(fetchRequest)
+        .then((response) => {
+          if (!response || response.status !== 200 || response.type !== 'basic') {
+            return response;
+          }
+
+          let responseToCache = response.clone();
+
+          caches.open(CACHE_NAME)
+            .then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+
+          return response;
+        });
+    })
+  );
+});

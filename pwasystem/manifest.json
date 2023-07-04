@@ -590,7 +590,7 @@
       {
           "name": "ホーム",
           "description": "ホームへ跳ぶ",
-          "url": "/index.html",
+          "url": "/",
           "icons": [
             {
                 "src": "/pwasystem/icons/android/android-launchericon-96-96.png",
@@ -600,9 +600,9 @@
         ]
       },
       {
-          "name": "壁紙",
-          "description": "壁紙へ跳ぶ",
-          "url": "/wallpaper.html",
+          "name": "ニュース",
+          "description": "ニュースへ跳ぶ",
+          "url": "/news/",
           "icons": [
             {
                 "src": "/pwasystem/icons/android/android-launchericon-96-96.png",
@@ -612,33 +612,9 @@
         ]
       },
       {
-        "name": "文など色々",
-        "description": "文など色々へ跳ぶ",
-        "url": "/documents/title.html",
-        "icons": [
-          {
-              "src": "/pwasystem/icons/android/android-launchericon-96-96.png",
-              "type": "image/png",
-              "purpose": "any"
-          }
-      ]
-      },
-      {
-        "name": "コンタクト",
-        "description": "コンタクトへ跳ぶ",
-        "url": "/contact.html",
-        "icons": [
-          {
-              "src": "/pwasystem/icons/android/android-launchericon-96-96.png",
-              "type": "image/png",
-              "purpose": "any"
-          }
-      ]
-      },
-      {
-        "name": "マイアプリ",
-        "description": "マイアプリへ跳ぶ",
-        "url": "/app.html",
+        "name": "SNS",
+        "description": "SNSへ跳ぶ",
+        "url": "/sns/",
         "icons": [
           {
               "src": "/pwasystem/icons/android/android-launchericon-96-96.png",
