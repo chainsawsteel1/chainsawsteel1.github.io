@@ -12,11 +12,6 @@
             "src": "/pwasystem/shots/pwas2.png",
             "sizes": "1080x2160",
             "type": "image/png"
-          },
-          {
-            "src": "/pwasystem/shots/pwas3.png",
-            "sizes": "1080x2160",
-            "type": "image/png"
           }
     ],
     "icons": [

@@ -11,6 +11,7 @@ a {
 }
 
 table {
+    border-color: black;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
@@ -82,5 +83,9 @@ p {
     #content {
         background-color: black;
         color: white;
+    }
+
+    #table {
+        border-color: white;
     }
 }
