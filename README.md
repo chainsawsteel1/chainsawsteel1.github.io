@@ -1,2 +1,2 @@
 # chainsawsteel1.github.io
-これはリンク集  
+chAInsのホームページです

@@ -1,502 +1,86 @@
-body{
-margin:0;
-width: auto;
-  height: auto;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Roboto','Noto Sans JP';
+    background-color: black;
+    margin: 0%;
 }
 
-h1{
-	color:white;
-	font-size:1.2rem;
-text-align: center
+a {
+    color: skyblue;
 }
 
-h2{
-	font-size:1.2rem;
-	text-align: center;
-	margin: 0 0 30px 0;
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-p{
-	margin-top:20px;	
+th, td {
+    border: solid 1px black;
+    padding: 2px;
 }
 
-
-
-
-/* Loading背景画面設定　*/
-#splash {
-/*fixedで全面に固定*/
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  background:#333;
-  text-align:center;
-  color:#fff;
+p {
+    text-align: left;
 }
 
-/* Loading画像中央配置　*/
-#splash_logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Loading アイコンの大きさ設定　*/
-#splash_logo img {
-  width:100%;
-}
-
-
-#wrapper{
-/*描画されるテキストを中央寄せにする*/
-	display:flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#particle{
-    width:100%;
-	height: 100vh;
-	vertical-align: bottom;/*canvasタグ下に余白が生まれるのを防ぐ*/
-}
-
-
-
-
-
-
-
-#header{
-	position: relative;/*背景を設定するdivの基点とするためrelativeをかける*/
-  width: 100%;
-	height:100vh;
- 	overflow: hidden;/*はみ出しているところを隠す*/
-}
-
-#header-img{
-  position: fixed;/*背景を固定するためfixedをかける*/
-	z-index: -1;/*#container,#footerよりも下に配置するために数値を小さくする*/
-  top: 0;/*topの位置がJSで変化*/
-	/*以下画面で背景画像を表示させるための指定*/
-  width: 100%;
-	height:100vh;
-	background: url("../pic/main.jpg") no-repeat top center;/*背景画像の設定※オリジナルの画像に設定してください*/
-	background-size:cover;
-	transform-origin:center;/*変化する基点を中心からに設定*/
-
-}
-
-#container,
-#footer{
-padding: 20px;
-background:white;
-position: relative;/*#header-imgよりも配置を上にするためにrelativeをつける*/
-z-index: 2/*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
-}
-
-/*ロゴを中央に配置*/
-#header h1{
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 2;/*#header-imgよりも手前に配置*/
-}
-
-
-
-/*========= ナビゲーションのためのCSS ===============*/
-
-#g-nav{
-    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
-    position:fixed;
-    z-index: 999;
-    /*ナビのスタート位置と形状*/
-	top:-120%;
-    left:0;
-	width:100%;
-    height: 100vh;/*ナビの高さ*/
-	background:#454545;
-color:white;
-    /*動き*/
-	transition: all 0.4s;
-}
-
-/*アクティブクラスがついたら位置を0に*/
-#g-nav.panelactive{
-    top: 0;
-}
-
-/*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list{
-    /*ナビの数が増えた場合縦スクロール*/
+.nav {
+    text-align: center;
+    background-color: #454545;
     position: fixed;
-    z-index: 999; 
+    color: white;
     width: 100%;
-    height: 100vh;/*表示する高さ*/
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    margin: 0%;
 }
 
-/*ナビゲーション*/
-#g-nav ul {
-    /*ナビゲーション天地中央揃え*/
-    position: absolute;
-    z-index: 999;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+.top {
+    padding: 4%;
+    text-align: center;
+    background-color: #454545;
+    color: white;
 }
 
-/*リストのレイアウト設定*/
-
-#g-nav li{
-	list-style: none;
-    text-align: center; 
+.news {
+    padding: 4%;
+    text-align: center;
+    background-color: white;
+    color: black;
 }
 
-#g-nav li a{
-	color: #fff;
-	text-decoration: none;
-	padding:10px;
-	display: block;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	font-weight: bold;
+.content {
+    padding: 4%;
+    text-align: center;
+    background-color: white;
+    color: black;
 }
 
-/*========= ボタンのためのCSS ===============*/
-.openbtn{
-	position:fixed;
-    z-index: 9999;/*ボタンを最前面に*/
-	top:10px;
-	right: 10px;
-	cursor: pointer;
-    width: 50px;
-    height:50px;
-}
-	
-/*×に変化*/	
-.openbtn span{
-    display: inline-block;
-    transition: all .4s;
-    position: absolute;
-    left: 14px;
-    height: 3px;
-    border-radius: 2px;
-	background-color: #666;
-  	width: 45%;
-  }
-
-.openbtn span:nth-of-type(1) {
-	top:15px;	
+.bottom {
+    padding: 4%;
+    margin-bottom: 0%;
+    text-align: center;
+    background-color: #454545;
+    color: white;
 }
 
-.openbtn span:nth-of-type(2) {
-	top:23px;
+.bottom-p {
+    text-align: center;
+    color: white;
 }
 
-.openbtn span:nth-of-type(3) {
-	top:31px;
+.small {
+    text-align: center;
+    color: silver;
 }
-
-.openbtn.active span:nth-of-type(1) {
-    top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
-}
-
-
-/*========= ナビゲーションのためのCSS ===============*/
-
-#g-nav{
-    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
-    position:fixed;
-    z-index: 999;
-    /*ナビのスタート位置と形状*/
-	top:0;
-    left: -120%;
-	width:100%;
-    height: 100vh;/*ナビの高さ*/
-	background:#333;
-    /*動き*/
-	transition: all 0.4s;
-       opacity:0;
-}
-
-/*アクティブクラスがついたら位置を0に*/
-#g-nav.panelactive{
-   opacity:1;
-    left: 0;
-}
-
-
-/*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list{
-    /*ナビの数が増えた場合縦スクロール*/
-    position: fixed;
-    z-index: 999; 
-    width:100%;
-    height: 100vh;/*表示する高さ*/
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
-/*ナビゲーション*/
-#g-nav ul {
-    /*ナビゲーション天地中央揃え*/
-    position: absolute;
-    z-index: 999;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-}
-
-/*リストのレイアウト設定*/
-
-#g-nav li{
-	list-style: none;
-    text-align: center; 
-}
-
-#g-nav li a{
-	color: #fff;
-	text-decoration: none;
-	padding:10px;
-	display: block;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	font-weight: bold;
-}
-
-/*========= ボタンのためのCSS ===============*/
-.openbtn{
-	position:fixed;
-    z-index: 9999;/*ボタンを最前面に*/
-	top:10px;
-	left: 10px;
-	cursor: pointer;
-    width: 50px;
-    height:50px;
-}
-	
-/*×に変化*/	
-.openbtn span{
-    display: inline-block;
-    transition: all .4s;
-    position: absolute;
-    left: 14px;
-    height: 3px;
-    border-radius: 2px;
-	background-color: #666;
-  	width: 45%;
-  }
-
-.openbtn span:nth-of-type(1) {
-	top:15px;	
-}
-
-.openbtn span:nth-of-type(2) {
-	top:23px;
-}
-
-.openbtn span:nth-of-type(3) {
-	top:31px;
-}
-
-.openbtn.active span:nth-of-type(1) {
-    top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
-}
-
-.openbtn.active span:nth-of-type(2) {
-	opacity: 0;
-}
-
-.openbtn.active span:nth-of-type(3){
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
-}
-
-
-.scroll-top {
-	/*表示位置*/
-	position: fixed;
-	right: 20px;
-	bottom: 10px;
-	z-index: 2;
-	/*はじめは非表示*/
-	opacity: 0;
-	visibility: hidden; 
-	transition: opacity .5s, visibility .5s; /*それぞれに0.5秒の変化のアニメーション*/
-	/*縦書き*/
-	-webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-	/*改行禁止*/
-    white-space: nowrap;
-	/*矢印の動き*/
-}
-
-
-
-
-/*.scroll-viewクラスがついたら出現*/
-.scroll-top.scroll-view {
-	opacity: 1;
-	visibility: visible;
-}
-
-/*リンク全体の aタグの形状*/
-.scroll-top a {
-	text-decoration: none;
-	color: #666;
-	text-transform: uppercase;
-	font-size:0.9rem;
-    display: block;
-}
-
-/*スクロールリンクの形状*/
-
-.js-scroll a::after{
-	content:"";
-	position: absolute;
-	top:0;
-	right:0;
-	width:1px;
-	height: 50px;
-	background:#666;
-}
-
-.js-scroll a::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    right: -6px;
-    width: 1px;
-    height: 20px;
-    background: #666;
-    transform: skewX(-31deg);
-}
-
-
-/*ページトップリンクの形状*/
-
-.js-pagetop a::after{
-	content:"";
-	position: absolute;
-	top:0;
-	right:0;
-	width:1px;
-	height: 50px;
-	background:#666;
-}
-
-.js-pagetop a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -6px;
-    width: 1px;
-    height: 20px;
-    background: #666;
-    transform: skewX(31deg);
-}
-
-
-
-
 
 @media (prefers-color-scheme: dark) {
-  #container {
-    background-color:#222;
-    color: #fff;
-  }
-a {
-  color: skyblue;
-  text-decoration: none;
-}
-body {
-background:black;
-}
-.load {
-  color: white;
-}
-}
+    #news {
+        background-color: black;
+        color: white;
+    }
 
-
-#footer{
-  background:#333;
-  color:#fff;
-  text-align:center;
-}
-
-#footer a{
-  color: #fff;
-}
-
-
-
-a {
-  color: deepskyblue;
-  text-decoration: none;
-}
-
-
-
-
-
-h1 span{opacity: 0;}
-
-/*アニメーションで透過を0から1に変化させtext-shadowをつける*/
-h1.glow span{ animation:glow_anime_on 1s ease-out forwards; }
-
-@keyframes glow_anime_on{
-	0% { opacity:0; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
-	50% { opacity:1;text-shadow: 0 0 10px #fff,0 0 15px #fff; }
-	100% { opacity:1; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
-}
-
-@font-face {
-  font-family: 'unifont';
-    src: url('/unifont-15.0.01.otf') format('opentype');
-  }
-  body{
-    font-family: "unifont";
-  }
-
-
-
-
-
-.marquee {
-white-space: nowrap;
-color: white;
-  display: inline-block;
-  padding-left: 100%;
-  white-space: nowrap;
-  animation: marquee 120s linear infinite;
-}
-
-@keyframes marquee {
-  from {
-    transform: translate(0);
-  }
-  to {
-    transform: translate(-100%);
-  }
-}
-
-.load {
-  z-index: -99;
-  position: fixed;
-  color: black;
-  text-align: center;
+    #content {
+        background-color: black;
+        color: white;
+    }
 }
