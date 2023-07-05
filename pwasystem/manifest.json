@@ -600,9 +600,9 @@
         ]
       },
       {
-          "name": "ニュース",
-          "description": "ニュースへ跳ぶ",
-          "url": "/news/",
+          "name": "ブログ",
+          "description": "ブログへ跳ぶ",
+          "url": "/blog/",
           "icons": [
             {
                 "src": "/pwasystem/icons/android/android-launchericon-96-96.png",

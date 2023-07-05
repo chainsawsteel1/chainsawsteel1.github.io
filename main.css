@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@media (prefers-color-scheme: dark) {
+    #news {
+        background-color: black;
+        color: white;
+    }
+
+    #content {
+        background-color: black;
+        color: white;
+    }
+
+    #table {
+        border-color: white;
+    }
+}
+
 body {
     font-family: 'Roboto','Noto Sans JP';
     background-color: black;
@@ -70,18 +86,13 @@ th, td {
     color: silver;
 }
 
-@media (prefers-color-scheme: dark) {
-    #news {
-        background-color: black;
-        color: white;
-    }
-
-    #content {
-        background-color: black;
-        color: white;
-    }
-
-    #table {
-        border-color: white;
-    }
-}
+.span_rainbow {
+    text-transform: uppercase;
+    background: linear-gradient(to right, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
+    background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: example6 0.5s linear infinite;
+  }
