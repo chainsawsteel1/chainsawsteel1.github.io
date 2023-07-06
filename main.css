@@ -16,8 +16,13 @@
     }
 }
 
+@font-face {
+    font-family: blobmoji;
+    src: url(/Blobmoji.ttf);
+}
+
 body {
-    font-family: 'Roboto','Noto Sans JP';
+    font-family: 'blobmoji','Roboto','Noto Sans JP';
     background-color: black;
     margin: 0%;
 }
