@@ -22,7 +22,7 @@
 }
 
 body {
-    font-family: 'blobmoji','Roboto','Noto Sans JP';
+    font-family: 'Roboto','Noto Sans JP';
     background-color: black;
     margin: 0%;
 }
@@ -89,4 +89,8 @@ th, td {
 .small {
     text-align: center;
     color: silver;
+}
+
+.blob {
+    font-family: 'blobmoji','Roboto','Noto Sans JP';
 }
