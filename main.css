@@ -39,8 +39,15 @@ table {
 }
 
 th, td {
-    border: solid 1px black;
     padding: 2px;
+}
+
+.color-a {
+    color: gainsboro;
+}
+
+.color-a:hover {
+    color: white;
 }
 
 .nav {
