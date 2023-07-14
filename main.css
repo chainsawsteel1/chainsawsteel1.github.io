@@ -43,11 +43,21 @@ th, td {
 }
 
 .color-a {
-    color: gainsboro;
+    color: gray;
+    text-decoration: none;
 }
 
 .color-a:hover {
     color: white;
+}
+
+.color-b {
+    color: gray;
+    text-decoration: none;
+}
+
+.color-b:hover {
+    color: black;
 }
 
 .nav {
@@ -57,6 +67,12 @@ th, td {
     color: white;
     width: 100%;
     margin: 0%;
+}
+
+.navs {
+    position: fixed;
+    right: 5%;
+    bottom: 50%;
 }
 
 .top {
