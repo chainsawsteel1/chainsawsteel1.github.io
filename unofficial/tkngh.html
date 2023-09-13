@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="ja-JP">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="theme-color" content="#ffffff">
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="非公式TKNGHサービスリスト">
+        <meta property="og:description" content="TKNGHサービスリスト非公式です">
+        <meta property="og:site_name" content="非公式TKNGHサービスリスト">
+        <meta property="og:url" content="https://chainsawsteel1.github.io/unofficial/tkngh">
+        <meta property="og:locale" content="ja_JP" />
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="manifest" crossorigin="use-credentials" href="https://chainsawsteel1.github.io/pwasystem/manifest.json">    
+        <title>非公式TKNGHサービスリスト</title>    
+    </head>
+
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+          navigator.serviceWorker.register('/pwasystem/sw.js')
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+        body {
+            font-family: 'Sawarabi Mincho', serif;
+            margin: 10%;
+            background-color: black;
+            text-align: center;
+            color: aliceblue;
+            justify-content: space-between;
+        }
+        .top {
+            
+        }
+        .button-gp {
+            position: fixed;
+            width: ;
+            bottom: 30%;
+            left: 37%;
+            text-align: center;
+            width: 500px;
+        }
+        .button {
+            float: left;
+            margin: 0 auto;
+            border-radius: 20px;
+            background: gainsboro;
+            height: 100px;
+            width: 100px;
+            transition: .1s ease-in-out;
+            
+        }
+        .button:hover {
+            background: gray;
+            border-radius: 0px;
+        }
+        .padd {
+            float: left;
+            padding: 50px;
+        }
+    </style>
+
+    <body>
+        <div class="top">
+            <h1>非公式TKNGHサービスリスト</h1>
+        </div>
+
+        <div class="button-gp">
+            <div class="button">
+                <a href="https://m.tkngh.jp" target="_blank"><img src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" alt="misskeyicon" width="100px" height="100px"></a>
+            </div>
+    
+            <div class="padd"></div>
+    
+            <div class="button">
+                <a href="https://movie.tkngh.jp" target="_blank"><img src="https://joinpeertube.org/img/peertube-logo-background.svg" alt="peertubeicon" width="100px" height="100px"></a>
+            </div>
+            
+            <div class="padd"></div>
+    
+            <div class="button">
+                <a href="https://cloud.tkngh.jp" target="_blank"><img src="https://nextcloud.com/wp-content/uploads/2022/10/nextcloud-logo-blue-transparent.svg" alt="nextcloudicon" width="100px" height="100px"></a>
+            </div>
+        </div>
+    </body>
+</html>
