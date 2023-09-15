@@ -14,20 +14,9 @@
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" href="/main.css">
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="/main.j"></script>
         <title>Home - chAIns's Website</title>
     </head>
-
-    <script>
-        $(window).on('load resize', function(){
-        var winW = $(window).width();
-        var devW = 500;
-        if (winW <= devW) {
-            $(".warn").css("animation-name","warn");
-        } else {
-            $(".warn").css("animation-name","none");
-        }
-        });
-    </script>
 
     <body>
         <div class="warn">
