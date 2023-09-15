@@ -13,10 +13,33 @@
         <meta property="og:locale" content="ja_JP" />
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" href="/main.css">
-        <title>Home - chAIns's Website</title>    
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <title>Home - chAIns's Website</title>
     </head>
 
+    <script>
+        $(window).on('load resize', function(){
+        var winW = $(window).width();
+        var devW = 500;
+        if (winW <= devW) {
+            $(".warn").css("animation-name","warn");
+        } else {
+            $(".warn").css("animation-name","none");
+        }
+        });
+    </script>
+
     <body>
+        <div class="warn">
+            <p>
+                横幅の狭い画面での閲覧は想定していません。
+                <br>
+                ウィンドウサイズを大きくするか
+                <br>
+                横画面で見ましょうね。
+            </p>
+        </div>
+
         <div class="top">
             <h1>chAIns's Website</h1>
             <h2>よこそう私のサイトへ</h2>

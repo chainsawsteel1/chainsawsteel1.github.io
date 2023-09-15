@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
 
+@keyframes warn {
+    0% {
+        bottom: 10%;
+        right: -100%;
+    }
+    10% {
+        bottom: 10%;
+        right: 5%;
+    }
+    90% {
+        bottom: 10%;
+        right: 5%;
+    }
+    100% {
+        bottom: 10%;
+        right: -100%;
+    }
+}
+
+@keyframes none {
+    0% {
+        bottom: 10%;
+        right: -100%;
+    }
+    100% {
+        bottom: 10%;
+        right: -100%;
+    }
+}
+
 body {
     background-color: black;
     color: aliceblue;
@@ -64,4 +94,16 @@ a {
     background-color: #454545;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.warn {
+    background-color: white;
+    color: black;
+    position: fixed;
+    padding: 10px;
+    border-radius: 7px;
+    opacity: 90%;
+    animation-duration: 4s;
+    bottom: 10%;
+    right: -100%;
 }

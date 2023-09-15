@@ -13,3 +13,6 @@ https://fonts.google.com/specimen/Sawarabi+Gothic
 
 * iconmonstr
 https://iconmonstr.com
+
+* jQuery
+https://jquery.com/
