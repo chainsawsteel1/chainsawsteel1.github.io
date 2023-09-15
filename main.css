@@ -79,16 +79,6 @@ a {
     border-radius: 0px;
 }
 
-.gicon {
-    background-color: white;
-    border-radius: 7px;
-    transition: .1s ease-in-out;
-}
-
-.gicon:hover {
-    border-radius: 0px;
-}
-
 .bottom {
     padding: 20px;
     background-color: #454545;
