@@ -8,11 +8,8 @@ chAInsのホームページです
 * ress
 https://github.com/filipelinhares/ress
   
-* Noto Sans
-https://fonts.google.com/noto/specimen/Noto+Sans+JP
-  
-* Roboto
-https://fonts.google.com/specimen/Roboto
-  
-* Blobmoji
-https://github.com/C1710/blobmoji
+* Sawarabi Gothic
+https://fonts.google.com/specimen/Sawarabi+Gothic
+
+* iconmonstr
+https://iconmonstr.com
