@@ -12,3 +12,11 @@ $(window).on("load", function () {
     $(".load").css("animation-name","load");
     $('.loadmark').addClass('okload');
 });
+
+$(function() {
+    $(".ibox").click(function() {
+        var id = $(this).attr("id").replace(/^q(.+)$/, "a$1");
+        $("#" + id).toggle();
+        return false;
+    });
+});
