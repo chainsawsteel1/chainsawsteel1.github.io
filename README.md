@@ -5,14 +5,13 @@ chAInsのホームページです
 ここを見るとchAInsについて詳しくなれるかも
   
 ## 使ったもの
-* ress
-https://github.com/filipelinhares/ress
+* [ress](https://github.com/filipelinhares/ress)
   
-* Sawarabi Gothic
-https://fonts.google.com/specimen/Sawarabi+Gothic
+* [JPA Fonts](https://jpafonts.osdn.jp)
 
-* iconmonstr
-https://iconmonstr.com
+* [iconmonstr](https://iconmonstr.com)
 
-* jQuery
-https://jquery.com/
+* [jQuery](https://jquery.com)
+
+## JPAフォントについて
+このサイトは[IPAフォントライセンスv1.0](https://moji.or.jp/ipafont/license)で公開されている[JPAフォント](https://jpafonts.osdn.jp)を使用しています。
