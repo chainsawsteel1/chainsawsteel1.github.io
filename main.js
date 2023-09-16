@@ -8,6 +8,6 @@ if (winW <= devW) {
 }
 });
 
-$(document).ready(function () {
-    $(".ready").css("animation-name","ready");
-  });
+$(window).on("load", function () {
+    $(".load").css("animation-name","load");
+});

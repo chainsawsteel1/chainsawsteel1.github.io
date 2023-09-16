@@ -19,7 +19,7 @@
     }
 }
 
-@keyframes ready {
+@keyframes load {
     0% {
         bottom: 10%;
         right: -100%;
@@ -116,7 +116,7 @@ a {
     right: -100%;
 }
 
-.ready {
+.load {
     background-color: white;
     color: black;
     position: fixed;
