@@ -2,6 +2,25 @@
 
 @keyframes warn {
     0% {
+        bottom: 15%;
+        right: -100%;
+    }
+    10% {
+        bottom: 15%;
+        right: 5%;
+    }
+    90% {
+        bottom: 15%;
+        right: 5%;
+    }
+    100% {
+        bottom: 15%;
+        right: -100%;
+    }
+}
+
+@keyframes ready {
+    0% {
         bottom: 10%;
         right: -100%;
     }
@@ -87,6 +106,17 @@ a {
 }
 
 .warn {
+    background-color: white;
+    color: black;
+    position: fixed;
+    padding: 10px;
+    border-radius: 7px;
+    animation-duration: 8s;
+    bottom: 15%;
+    right: -100%;
+}
+
+.ready {
     background-color: white;
     color: black;
     position: fixed;

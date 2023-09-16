@@ -7,3 +7,7 @@ if (winW <= devW) {
     $(".warn").css("animation-name","none");
 }
 });
+
+$(document).ready(function () {
+    $(".ready").css("animation-name","ready");
+  });
