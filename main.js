@@ -1,6 +1,6 @@
 $(window).on('load resize', function(){
 var winW = $(window).width();
-var devW = 500;
+var devW = 650;
 if (winW <= devW) {
     $(".warn").css("animation-name","warn");
 } else {
