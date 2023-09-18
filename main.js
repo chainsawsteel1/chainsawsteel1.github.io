@@ -11,6 +11,7 @@ if (winW <= devW) {
 $(window).on("load", function () {
     $(".load").css("animation-name","load");
     $('.loadmark').addClass('okload');
+    $('.font').addClass('okload-b');
 });
 
 $(function() {

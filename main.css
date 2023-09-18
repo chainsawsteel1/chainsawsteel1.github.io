@@ -141,7 +141,41 @@ a {
     padding: 0%;
 }
 
+@keyframes fade{
+    0%{
+        opacity: 100%;
+    }
+    99%{
+        z-index: 10000;
+    }
+    100%{
+        z-index: -10000;
+        opacity: 0%;
+    }
+}
+
+@keyframes fade-b{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
 .okload {
     opacity: 0%;
+    animation-duration: 1s;
+    animation-name: fade;
     z-index: -10000;
+    
+}
+
+.okload-b {
+    opacity: 100%;
+    animation-duration: 1s;
+    animation-name: fade-b;
 }
