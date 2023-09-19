@@ -15,9 +15,7 @@ $(window).on("load", function () {
 });
 
 $(function() {
-    $(".ibox").click(function() {
-        var id = $(this).attr("id").replace(/^q(.+)$/, "a$1");
-        $("#" + id).toggle();
-        return false;
+    $(".iboxo").click(function() {
+        $(".ibox").slideToggle();
     });
 });
