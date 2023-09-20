@@ -151,6 +151,29 @@ iframe:hover {
     animation-duration: 8s;
     bottom: 18%;
     right: -100%;
+    cursor: pointer;
+}
+
+.warnb {
+    position: fixed;
+    background-color: white;
+    color: black;
+    padding: 50px;
+    cursor: pointer;
+    height: 500px;
+    width: 300px;
+    z-index: -10000;
+    opacity: 0%;
+    border-radius: 7px;
+}
+
+.warnbg {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -100;
+    position: fixed;
+    opacity: 50%;
 }
 
 .load {
@@ -181,7 +204,6 @@ iframe:hover {
     animation-duration: .5s;
     animation-name: fade;
     z-index: -10000;
-    
 }
 
 .okload-b {
@@ -192,4 +214,42 @@ iframe:hover {
 
 .ibox{
     display:none;
+}
+
+@keyframes viewb {
+    0% {
+        size: 0px;
+        opacity: 0%;
+    }
+    100% {
+        size: 100%;
+        opacity: 100%;
+    }
+}
+
+@keyframes viewbg {
+    0% {
+        size: 0px;
+        opacity: 0%;
+    }
+    100% {
+        size: 100%;
+        opacity: 50%;
+    }
+}
+
+.viewb {
+    z-index: 10000;
+    opacity: 100%;
+    animation-duration: .1s;
+    animation-name: viewb;
+    size: 0%;
+}
+
+.viewbg {
+    z-index: 1000;
+    opacity: 50%;
+    animation-duration: .1s;
+    animation-name: viewbg;
+    size: 0%;
 }

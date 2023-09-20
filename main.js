@@ -19,3 +19,17 @@ $(function() {
         $(".ibox").slideToggle();
     });
 });
+
+// $(function() {
+//     $(".warn").click(function() {
+//         $('.warnb').addClass('viewb');
+//         $('.warnbg').addClass('viewbg')
+//     });
+// });
+
+// $(function() {
+//     $(".warnb").click(function() {
+//         $('.warnb').removeClass('viewb');
+//         $('.warnbg').removeClass('viewbg')
+//     });
+// });
