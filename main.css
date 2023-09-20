@@ -177,7 +177,7 @@ iframe:hover {
 
 .okload {
     opacity: 0%;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-name: fade;
     z-index: -10000;
     
@@ -185,7 +185,7 @@ iframe:hover {
 
 .okload-b {
     opacity: 100%;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-name: fade-b;
 }
 
