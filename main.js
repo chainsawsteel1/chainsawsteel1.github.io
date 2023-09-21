@@ -20,16 +20,16 @@ $(function() {
     });
 });
 
-// $(function() {
-//     $(".warn").click(function() {
-//         $('.warnb').addClass('viewb');
-//         $('.warnbg').addClass('viewbg')
-//     });
-// });
+$(function() {
+    $(".warn").click(function() {
+        $('.warnb').removeClass('viewbu');
+        $('.warnb').addClass('viewb');
+    });
+});
 
-// $(function() {
-//     $(".warnb").click(function() {
-//         $('.warnb').removeClass('viewb');
-//         $('.warnbg').removeClass('viewbg')
-//     });
-// });
+$(function() {
+    $(".warnb").click(function() {
+        $('.warnb').addClass('viewbu');
+        $('.warnb').removeClass('viewb');
+    });
+});

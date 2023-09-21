@@ -65,12 +65,38 @@
 @keyframes fade-b{
     0%{
         opacity: 0%;
+        display:none;
     }
     50%{
         opacity: 0%;
+        display:none;
     }
     100%{
         opacity: 100%;
+    }
+}
+
+@keyframes viewb {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 90%;
+        z-index: 10000;
+    }
+}
+
+@keyframes viewbu {
+    0% {
+        z-index: 10000;
+        opacity: 90%;
+    }
+    99% {
+        z-index: 10000;
+    }
+    100% {
+        opacity: 0%;
+        z-index: -10000;
     }
 }
 
@@ -164,16 +190,6 @@ iframe:hover {
     width: 300px;
     z-index: -10000;
     opacity: 0%;
-    border-radius: 7px;
-}
-
-.warnbg {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: -100;
-    position: fixed;
-    opacity: 50%;
 }
 
 .load {
@@ -216,40 +232,20 @@ iframe:hover {
     display:none;
 }
 
-@keyframes viewb {
-    0% {
-        size: 0px;
-        opacity: 0%;
-    }
-    100% {
-        size: 100%;
-        opacity: 100%;
-    }
-}
-
-@keyframes viewbg {
-    0% {
-        size: 0px;
-        opacity: 0%;
-    }
-    100% {
-        size: 100%;
-        opacity: 50%;
-    }
-}
-
 .viewb {
     z-index: 10000;
-    opacity: 100%;
-    animation-duration: .1s;
+    opacity: 90%;
+    animation-duration: .25s;
     animation-name: viewb;
-    size: 0%;
+    width: 100%;
+    height: 100%;
 }
 
-.viewbg {
-    z-index: 1000;
-    opacity: 50%;
-    animation-duration: .1s;
-    animation-name: viewbg;
-    size: 0%;
+.viewbu {
+    z-index: -10000;
+    opacity: 0%;
+    animation-duration: .25s;
+    animation-name: viewbu;
+    width: 100%;
+    height: 100%;
 }
