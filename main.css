@@ -118,10 +118,10 @@
         background: linear-gradient(black, rgb(100, 30, 30));
     }
     31% {
-        background: linear-gradient(black, rgb(119, 106, 46));
+        background: linear-gradient(black, rgb(121, 106, 40));
     }
     49% {
-        background: linear-gradient(black, rgb(119, 106, 46));
+        background: linear-gradient(black, rgb(121, 106, 40));
     }
     51% {
         background: linear-gradient(black, rgb(43, 104, 31));
@@ -130,16 +130,172 @@
         background: linear-gradient(black, rgb(43, 104, 31));
     }
     71% {
-        background: linear-gradient(black, rgb(46, 78, 104));
+        background: linear-gradient(black, rgb(38, 77, 109));
     }
     89% {
-        background: linear-gradient(black, rgb(46, 78, 104));
+        background: linear-gradient(black, rgb(38, 77, 109));
     }
     91% {
         background: linear-gradient(black, rgb(81, 19, 110));
     }
     100% {
         background: linear-gradient(black, rgb(81, 19, 110));
+    }
+}
+
+@keyframes bg-tb {
+    0% {
+        background-color: rgb(52, 14, 70);
+    }
+    9% {
+        background-color: rgb(52, 14, 70);
+    }
+    11% {
+        background-color: rgb(71, 22, 22);
+    }
+    29% {
+        background-color: rgb(71, 22, 22);
+    }
+    31% {
+        background-color: rgb(94, 82, 32);
+    }
+    49% {
+        background-color: rgb(94, 82, 32);
+    }
+    51% {
+        background-color: rgb(30, 71, 22);
+    }
+    69% {
+        background-color: rgb(30, 71, 22);
+    }
+    71% {
+        background-color: rgb(26, 53, 75);
+    }
+    89% {
+        background-color: rgb(26, 53, 75);
+    }
+    91% {
+        background-color: rgb(52, 14, 70);
+    }
+    100% {
+        background-color: rgb(52, 14, 70);
+    }
+}
+
+@keyframes bg-ic {
+    0% {
+        background-color: rgb(196, 161, 212);
+    }
+    9% {
+        background-color: rgb(196, 161, 212);
+    }
+    11% {
+        background-color: rgb(190, 141, 141);
+    }
+    29% {
+        background-color: rgb(190, 141, 141);
+    }
+    31% {
+        background-color: rgb(185, 178, 148);
+    }
+    49% {
+        background-color: rgb(185, 178, 148);
+    }
+    51% {
+        background-color: rgb(170, 196, 165);
+    }
+    69% {
+        background-color: rgb(170, 196, 165);
+    }
+    71% {
+        background-color: rgb(152, 179, 201);
+    }
+    89% {
+        background-color: rgb(152, 179, 201);
+    }
+    91% {
+        background-color: rgb(196, 161, 212);
+    }
+    100% {
+        background-color: rgb(196, 161, 212);
+    }
+}
+
+@keyframes bg-ch-ic {
+    0% {
+        color: rgb(196, 161, 212);
+    }
+    9% {
+        color: rgb(196, 161, 212);
+    }
+    11% {
+        color: rgb(190, 141, 141);
+    }
+    29% {
+        color: rgb(190, 141, 141);
+    }
+    31% {
+        color: rgb(185, 178, 148);
+    }
+    49% {
+        color: rgb(185, 178, 148);
+    }
+    51% {
+        color: rgb(170, 196, 165);
+    }
+    69% {
+        color: rgb(170, 196, 165);
+    }
+    71% {
+        color: rgb(152, 179, 201);
+    }
+    89% {
+        color: rgb(152, 179, 201);
+    }
+    91% {
+        color: rgb(196, 161, 212);
+    }
+    100% {
+        color: rgb(196, 161, 212);
+    }
+}
+
+@keyframes bg-ch {
+    0% {
+        color: rgb(249, 237, 255);
+    }
+    9% {
+        color: rgb(249, 237, 255);
+    }
+    11% {
+        color: rgb(255, 237, 237);
+    }
+    29% {
+        color: rgb(255, 237, 237);
+    }
+    31% {
+        color: rgb(255, 251, 235);
+    }
+    49% {
+        color: rgb(255, 251, 235);
+    }
+    51% {
+        color: rgb(240, 255, 237);
+    }
+    69% {
+        color: rgb(240, 255, 237);
+    }
+    71% {
+        color: rgb(240, 249, 255);
+    }
+    89% {
+        color: rgb(240, 249, 255);
+    }
+    91% {
+        color: rgb(249, 237, 255);
+    }
+    100% {
+        color: rgb(249, 237, 255);
     }
 }
 
@@ -152,15 +308,17 @@
 body {
     color: aliceblue;
     text-align: center;
-    animation-name: bg;
+    animation-name: bg, bg-ch;
     animation-duration: 20s;
     animation-iteration-count: infinite;
 }
 
 a {
-    color: skyblue;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    animation-name: bg-ch-ic;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
 iframe {
@@ -182,14 +340,19 @@ iframe:hover {
 
 .top {
     padding: 20px;
-    background-color: #454545;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    animation-name: bg-tb;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
 .icon {
     border-radius: 10px;
     transition: .1s ease-in-out;
+    animation-name: bg-ic;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
 .icon:hover {
@@ -197,9 +360,11 @@ iframe:hover {
 }
 
 .snsicon {
-    background-color: white;
     border-radius: 7px;
     transition: .1s ease-in-out;
+    animation-name: bg-ic;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
 .snsicon:hover {
@@ -208,9 +373,11 @@ iframe:hover {
 
 .bottom {
     padding: 20px;
-    background-color: #454545;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    animation-name: bg-tb;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
 .warn {
