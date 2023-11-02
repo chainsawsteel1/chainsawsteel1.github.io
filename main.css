@@ -299,6 +299,45 @@
     }
 }
 
+@keyframes bg-ic-ch {
+    0% {
+        background-color: rgb(249, 237, 255);
+    }
+    9% {
+        background-color: rgb(249, 237, 255);
+    }
+    11% {
+        background-color: rgb(255, 237, 237);
+    }
+    29% {
+        background-color: rgb(255, 237, 237);
+    }
+    31% {
+        background-color: rgb(255, 251, 235);
+    }
+    49% {
+        background-color: rgb(255, 251, 235);
+    }
+    51% {
+        background-color: rgb(240, 255, 237);
+    }
+    69% {
+        background-color: rgb(240, 255, 237);
+    }
+    71% {
+        background-color: rgb(240, 249, 255);
+    }
+    89% {
+        background-color: rgb(240, 249, 255);
+    }
+    91% {
+        background-color: rgb(249, 237, 255);
+    }
+    100% {
+        background-color: rgb(249, 237, 255);
+    }
+}
+
 .font {
     font-family: JPAGothic, sans-serif;
     margin-left: 10%;
@@ -356,6 +395,18 @@ iframe:hover {
 }
 
 .icon:hover {
+    border-radius: 0px;
+}
+
+.chicon {
+    border-radius: 10px;
+    transition: .1s ease-in-out;
+    animation-name: bg-ic-ch;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.chicon:hover {
     border-radius: 0px;
 }
 
