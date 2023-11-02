@@ -104,16 +104,57 @@
     }
 }
 
+@keyframes bg {
+    0% {
+        background: linear-gradient(black, rgb(81, 19, 110));
+    }
+    9% {
+        background: linear-gradient(black, rgb(81, 19, 110));
+    }
+    11% {
+        background: linear-gradient(black, rgb(100, 30, 30));
+    }
+    29% {
+        background: linear-gradient(black, rgb(100, 30, 30));
+    }
+    31% {
+        background: linear-gradient(black, rgb(119, 106, 46));
+    }
+    49% {
+        background: linear-gradient(black, rgb(119, 106, 46));
+    }
+    51% {
+        background: linear-gradient(black, rgb(43, 104, 31));
+    }
+    69% {
+        background: linear-gradient(black, rgb(43, 104, 31));
+    }
+    71% {
+        background: linear-gradient(black, rgb(46, 78, 104));
+    }
+    89% {
+        background: linear-gradient(black, rgb(46, 78, 104));
+    }
+    91% {
+        background: linear-gradient(black, rgb(81, 19, 110));
+    }
+    100% {
+        background: linear-gradient(black, rgb(81, 19, 110));
+    }
+}
+
 .font {
     font-family: JPAGothic, sans-serif;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 body {
-    background-color: black;
     color: aliceblue;
     text-align: center;
+    animation-name: bg;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
 a {
@@ -170,6 +211,7 @@ iframe:hover {
     background-color: #454545;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    opa
 }
 
 .warn {
