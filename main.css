@@ -104,42 +104,228 @@
     }
 }
 
-@keyframes bg {
+@keyframes bg1 {
     0% {
-        background: linear-gradient(black, rgb(81, 19, 110));
+        opacity: 100%;
     }
     9% {
-        background: linear-gradient(black, rgb(81, 19, 110));
+        opacity: 100%;
+    }
+    10% {
+        opacity: 100%;
     }
     11% {
-        background: linear-gradient(black, rgb(100, 30, 30));
+        opacity: 0%;
     }
     29% {
-        background: linear-gradient(black, rgb(100, 30, 30));
+        opacity: 0%;
     }
     31% {
-        background: linear-gradient(black, rgb(121, 106, 40));
+        opacity: 0%;
     }
     49% {
-        background: linear-gradient(black, rgb(121, 106, 40));
+        opacity: 0%;
     }
     51% {
-        background: linear-gradient(black, rgb(43, 104, 31));
+        opacity: 0%;
     }
     69% {
-        background: linear-gradient(black, rgb(43, 104, 31));
+        opacity: 0%;
     }
     71% {
-        background: linear-gradient(black, rgb(38, 77, 109));
+        opacity: 0%;
     }
     89% {
-        background: linear-gradient(black, rgb(38, 77, 109));
+        opacity: 0%;
+    }
+    90% {
+        opacity: 100%;
     }
     91% {
-        background: linear-gradient(black, rgb(81, 19, 110));
+        opacity: 100%;
     }
     100% {
-        background: linear-gradient(black, rgb(81, 19, 110));
+        opacity: 100%;
+    }
+}
+
+@keyframes bg2 {
+    0% {
+        opacity: 0%;
+    }
+    9% {
+        opacity: 0%;
+    }
+    10% {
+        opacity: 100%;
+    }
+    11% {
+        opacity: 100%;
+    }
+    29% {
+        opacity: 100%;
+    }
+    30% {
+        opacity: 100%;
+    }
+    31% {
+        opacity: 0%;
+    }
+    49% {
+        opacity: 0%;
+    }
+    51% {
+        opacity: 0%;
+    }
+    69% {
+        opacity: 0%;
+    }
+    71% {
+        opacity: 0%;
+    }
+    89% {
+        opacity: 0%;
+    }
+    91% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes bg3 {
+    0% {
+        opacity: 0%;
+    }
+    9% {
+        opacity: 0%;
+    }
+    11% {
+        opacity: 0%;
+    }
+    29% {
+        opacity: 0%;
+    }
+    30% {
+        opacity: 100%;
+    }
+    31% {
+        opacity: 100%;
+    }
+    49% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    51% {
+        opacity: 0%;
+    }
+    69% {
+        opacity: 0%;
+    }
+    71% {
+        opacity: 0%;
+    }
+    89% {
+        opacity: 0%;
+    }
+    91% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes bg4 {
+    0% {
+        opacity: 0%;
+    }
+    9% {
+        opacity: 0%;
+    }
+    11% {
+        opacity: 0%;
+    }
+    29% {
+        opacity: 0%;
+    }
+    31% {
+        opacity: 0%;
+    }
+    49% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    51% {
+        opacity: 100%;
+    }
+    69% {
+        opacity: 100%;
+    }
+    70% {
+        opacity: 100%;
+    }
+    71% {
+        opacity: 0%;
+    }
+    89% {
+        opacity: 0%;
+    }
+    91% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes bg5 {
+    0% {
+        opacity: 0%;
+    }
+    9% {
+        opacity: 0%;
+    }
+    11% {
+        opacity: 0%;
+    }
+    29% {
+        opacity: 0%;
+    }
+    31% {
+        opacity: 0%;
+    }
+    49% {
+        opacity: 0%;
+    }
+    51% {
+        opacity: 0%;
+    }
+    69% {
+        opacity: 0%;
+    }
+    70% {
+        opacity: 100%;
+    }
+    71% {
+        opacity: 100%;
+    }
+    89% {
+        opacity: 100%;
+    }
+    90% {
+        opacity: 100%;
+    }
+    91% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 0%;
     }
 }
 
@@ -338,10 +524,66 @@
     }
 }
 
+.b1 {
+    background: linear-gradient(black, rgb(81, 19, 110));
+    animation-name: bg1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.b2 {
+    background: linear-gradient(black, rgb(100, 30, 30));
+    animation-name: bg2;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.b3 {
+    background: linear-gradient(black, rgb(121, 106, 40));
+    animation-name: bg3;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.b4 {
+    background: linear-gradient(black, rgb(43, 104, 31));
+    animation-name: bg4;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.b5 {
+    background: linear-gradient(black, rgb(38, 77, 109));
+    animation-name: bg5;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 .font {
     font-family: JPAGothic, sans-serif;
     margin-left: 10%;
     margin-right: 10%;
+    z-index: 500;
 }
 
 body {
@@ -486,7 +728,7 @@ iframe:hover {
 }
 
 .okload-b {
-    opacity: 100%;
+
     animation-duration: .5s;
     animation-name: fade-b;
 }
