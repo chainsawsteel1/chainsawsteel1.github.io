@@ -345,11 +345,11 @@
 }
 
 body {
-    color: aliceblue;
     text-align: center;
     animation-name: bg, bg-ch;
     animation-duration: 20s;
     animation-iteration-count: infinite;
+    background: black;
 }
 
 a {
