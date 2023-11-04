@@ -17,6 +17,19 @@
         <title>Home - chAIns's Website</title>
     </head>
 
+    <script>
+        //wip
+        $(window).on('load', function(){
+        var statusn = 404;
+        var status = 404;
+        if (statusn = status) {
+        $('.h404').addClass('view');
+            } else {
+        $('.h404').removeClass('view');
+        }
+        });
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -34,9 +47,15 @@
         .h404 {
             position: fixed;
             background-color: white;
-            z-index: 100;
+            z-index: -10000;
+            opacity: 0%;
             height: auto;
             width: auto;
+        }
+
+        .view {
+            z-index: 100;
+            opacity: 100%;
         }
     </style>
 
