@@ -55,10 +55,10 @@
     }
     99%{
         z-index: 10000;
+        opacity: 0%;
     }
     100%{
         z-index: -10000;
-        opacity: 0%;
     }
 }
 
@@ -580,7 +580,8 @@
 }
 
 .font {
-    font-family: JPAGothic, sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-left: 10%;
     margin-right: 10%;
     z-index: 500;

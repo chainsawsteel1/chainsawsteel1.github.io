@@ -7,11 +7,10 @@ chAInsのホームページです
 ## 使ったもの
 * [ress](https://github.com/filipelinhares/ress)
   
-* [JPA Fonts](https://jpafonts.osdn.jp)
+* [Roboto](https://fonts.google.com/specimen/Roboto)
+
+* [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP)
 
 * [iconmonstr](https://iconmonstr.com)
 
 * [jQuery](https://jquery.com)
-
-## JPAフォントについて
-このサイトは[IPAフォントライセンスv1.0](https://moji.or.jp/ipafont/license)で公開されている[JPAフォント](https://jpafonts.osdn.jp)を使用しています。
