@@ -674,18 +674,6 @@ iframe:hover {
     animation-iteration-count: infinite;
 }
 
-.warn {
-    background-color: white;
-    color: black;
-    position: fixed;
-    padding: 10px;
-    border-radius: 7px;
-    animation-duration: 8s;
-    bottom: 18%;
-    right: -100%;
-    cursor: pointer;
-}
-
 .warnb {
     position: fixed;
     background-color: white;
@@ -697,7 +685,7 @@ iframe:hover {
     z-index: -10000;
     opacity: 0%;
 }
-
+/* ロード完了表示 */
 .load {
     background-color: white;
     color: black;
@@ -707,6 +695,20 @@ iframe:hover {
     animation-duration: 8s;
     bottom: 10%;
     right: -100%;
+    z-index: 100;
+}
+/* 画面サイズ警告 */
+.warn {
+    background-color: white;
+    color: black;
+    position: fixed;
+    padding: 10px;
+    border-radius: 7px;
+    animation-duration: 8s;
+    bottom: 18%;
+    right: -100%;
+    cursor: pointer;
+    z-index: 100;
 }
 
 .loadmark {
@@ -729,7 +731,6 @@ iframe:hover {
 }
 
 .okload-b {
-
     animation-duration: .5s;
     animation-name: fade-b;
 }
@@ -758,4 +759,44 @@ iframe:hover {
 
 .black {
     color: black;
+}
+
+.maincnt{
+    position: sticky;
+}
+
+.blog{
+    position: sticky;
+}
+
+@keyframes viewanim {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes hideanim {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+.viewcnt{
+    z-index: 0;
+    opacity: 100%;
+    animation-name: viewanim;
+    animation-duration: .5s;
+}
+
+.hidecnt{
+    z-index: -10000;
+    opacity: 0%;
+    animation-name: hideanim;
+    animation-duration: .5s;
 }
