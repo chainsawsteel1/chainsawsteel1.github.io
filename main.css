@@ -104,451 +104,6 @@
     }
 }
 
-@keyframes bg1 {
-    0% {
-        opacity: 100%;
-    }
-    9% {
-        opacity: 100%;
-    }
-    11% {
-        opacity: 0%;
-    }
-    29% {
-        opacity: 0%;
-    }
-    31% {
-        opacity: 0%;
-    }
-    49% {
-        opacity: 0%;
-    }
-    51% {
-        opacity: 0%;
-    }
-    69% {
-        opacity: 0%;
-    }
-    71% {
-        opacity: 0%;
-    }
-    89% {
-        opacity: 0%;
-    }
-    91% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes bg2 {
-    0% {
-        opacity: 0%;
-    }
-    9% {
-        opacity: 0%;
-    }
-    11% {
-        opacity: 100%;
-    }
-    29% {
-        opacity: 100%;
-    }
-    31% {
-        opacity: 0%;
-    }
-    49% {
-        opacity: 0%;
-    }
-    51% {
-        opacity: 0%;
-    }
-    69% {
-        opacity: 0%;
-    }
-    71% {
-        opacity: 0%;
-    }
-    89% {
-        opacity: 0%;
-    }
-    91% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 0%;
-    }
-}
-
-@keyframes bg3 {
-    0% {
-        opacity: 0%;
-    }
-    9% {
-        opacity: 0%;
-    }
-    11% {
-        opacity: 0%;
-    }
-    29% {
-        opacity: 0%;
-    }
-    31% {
-        opacity: 100%;
-    }
-    49% {
-        opacity: 100%;
-    }
-    51% {
-        opacity: 0%;
-    }
-    69% {
-        opacity: 0%;
-    }
-    71% {
-        opacity: 0%;
-    }
-    89% {
-        opacity: 0%;
-    }
-    91% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 0%;
-    }
-}
-
-@keyframes bg4 {
-    0% {
-        opacity: 0%;
-    }
-    9% {
-        opacity: 0%;
-    }
-    11% {
-        opacity: 0%;
-    }
-    29% {
-        opacity: 0%;
-    }
-    31% {
-        opacity: 0%;
-    }
-    49% {
-        opacity: 0%;
-    }
-    51% {
-        opacity: 100%;
-    }
-    69% {
-        opacity: 100%;
-    }
-    71% {
-        opacity: 0%;
-    }
-    89% {
-        opacity: 0%;
-    }
-    91% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 0%;
-    }
-}
-
-@keyframes bg5 {
-    0% {
-        opacity: 0%;
-    }
-    9% {
-        opacity: 0%;
-    }
-    11% {
-        opacity: 0%;
-    }
-    29% {
-        opacity: 0%;
-    }
-    31% {
-        opacity: 0%;
-    }
-    49% {
-        opacity: 0%;
-    }
-    51% {
-        opacity: 0%;
-    }
-    69% {
-        opacity: 0%;
-    }
-    71% {
-        opacity: 100%;
-    }
-    89% {
-        opacity: 100%;
-    }
-    91% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 0%;
-    }
-}
-
-@keyframes bg-tb {
-    0% {
-        background-color: rgb(52, 14, 70);
-    }
-    9% {
-        background-color: rgb(52, 14, 70);
-    }
-    11% {
-        background-color: rgb(71, 22, 22);
-    }
-    29% {
-        background-color: rgb(71, 22, 22);
-    }
-    31% {
-        background-color: rgb(94, 82, 32);
-    }
-    49% {
-        background-color: rgb(94, 82, 32);
-    }
-    51% {
-        background-color: rgb(30, 71, 22);
-    }
-    69% {
-        background-color: rgb(30, 71, 22);
-    }
-    71% {
-        background-color: rgb(26, 53, 75);
-    }
-    89% {
-        background-color: rgb(26, 53, 75);
-    }
-    91% {
-        background-color: rgb(52, 14, 70);
-    }
-    100% {
-        background-color: rgb(52, 14, 70);
-    }
-}
-
-@keyframes bg-ic {
-    0% {
-        background-color: rgb(196, 161, 212);
-    }
-    9% {
-        background-color: rgb(196, 161, 212);
-    }
-    11% {
-        background-color: rgb(190, 141, 141);
-    }
-    29% {
-        background-color: rgb(190, 141, 141);
-    }
-    31% {
-        background-color: rgb(185, 178, 148);
-    }
-    49% {
-        background-color: rgb(185, 178, 148);
-    }
-    51% {
-        background-color: rgb(170, 196, 165);
-    }
-    69% {
-        background-color: rgb(170, 196, 165);
-    }
-    71% {
-        background-color: rgb(152, 179, 201);
-    }
-    89% {
-        background-color: rgb(152, 179, 201);
-    }
-    91% {
-        background-color: rgb(196, 161, 212);
-    }
-    100% {
-        background-color: rgb(196, 161, 212);
-    }
-}
-
-@keyframes bg-ch-ic {
-    0% {
-        color: rgb(196, 161, 212);
-    }
-    9% {
-        color: rgb(196, 161, 212);
-    }
-    11% {
-        color: rgb(190, 141, 141);
-    }
-    29% {
-        color: rgb(190, 141, 141);
-    }
-    31% {
-        color: rgb(185, 178, 148);
-    }
-    49% {
-        color: rgb(185, 178, 148);
-    }
-    51% {
-        color: rgb(170, 196, 165);
-    }
-    69% {
-        color: rgb(170, 196, 165);
-    }
-    71% {
-        color: rgb(152, 179, 201);
-    }
-    89% {
-        color: rgb(152, 179, 201);
-    }
-    91% {
-        color: rgb(196, 161, 212);
-    }
-    100% {
-        color: rgb(196, 161, 212);
-    }
-}
-
-@keyframes bg-ch {
-    0% {
-        color: rgb(249, 237, 255);
-    }
-    9% {
-        color: rgb(249, 237, 255);
-    }
-    11% {
-        color: rgb(255, 237, 237);
-    }
-    29% {
-        color: rgb(255, 237, 237);
-    }
-    31% {
-        color: rgb(255, 251, 235);
-    }
-    49% {
-        color: rgb(255, 251, 235);
-    }
-    51% {
-        color: rgb(240, 255, 237);
-    }
-    69% {
-        color: rgb(240, 255, 237);
-    }
-    71% {
-        color: rgb(240, 249, 255);
-    }
-    89% {
-        color: rgb(240, 249, 255);
-    }
-    91% {
-        color: rgb(249, 237, 255);
-    }
-    100% {
-        color: rgb(249, 237, 255);
-    }
-}
-
-@keyframes bg-ic-ch {
-    0% {
-        background-color: rgb(249, 237, 255);
-    }
-    9% {
-        background-color: rgb(249, 237, 255);
-    }
-    11% {
-        background-color: rgb(255, 237, 237);
-    }
-    29% {
-        background-color: rgb(255, 237, 237);
-    }
-    31% {
-        background-color: rgb(255, 251, 235);
-    }
-    49% {
-        background-color: rgb(255, 251, 235);
-    }
-    51% {
-        background-color: rgb(240, 255, 237);
-    }
-    69% {
-        background-color: rgb(240, 255, 237);
-    }
-    71% {
-        background-color: rgb(240, 249, 255);
-    }
-    89% {
-        background-color: rgb(240, 249, 255);
-    }
-    91% {
-        background-color: rgb(249, 237, 255);
-    }
-    100% {
-        background-color: rgb(249, 237, 255);
-    }
-}
-
-.b1 {
-    background: linear-gradient(black, rgb(81, 19, 110));
-    animation-name: bg1;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.b2 {
-    background: linear-gradient(black, rgb(100, 30, 30));
-    animation-name: bg2;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.b3 {
-    background: linear-gradient(black, rgb(112, 98, 35));
-    animation-name: bg3;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.b4 {
-    background: linear-gradient(black, rgb(43, 94, 33));
-    animation-name: bg4;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.b5 {
-    background: linear-gradient(black, rgb(38, 77, 109));
-    animation-name: bg5;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
 .font {
     font-family: 'Roboto', 'Noto Sans JP', sans-serif;
     margin-left: 10%;
@@ -558,18 +113,16 @@
 
 body {
     text-align: center;
-    animation-name: bg, bg-ch;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    background: black;
+    background: linear-gradient(rgb(90, 90, 90), rgb(0, 0, 0));
+    color: white;
 }
 
 a {
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    animation-name: bg-ch-ic;
-    animation-duration: 20s;
     animation-iteration-count: infinite;
+    color: gainsboro;
+
 }
 
 iframe {
@@ -593,17 +146,13 @@ iframe:hover {
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    animation-name: bg-tb;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
+    background-color: rgb(40, 40, 40);
 }
 
 .icon {
     border-radius: 10px;
     transition: .1s ease-in-out;
-    animation-name: bg-ic;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
+    background-color: gainsboro;
 }
 
 .icon:hover {
@@ -613,9 +162,7 @@ iframe:hover {
 .chicon {
     border-radius: 10px;
     transition: .1s ease-in-out;
-    animation-name: bg-ic-ch;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
+    background-color: rgb(255, 255, 255);
 }
 
 .chicon:hover {
@@ -625,9 +172,7 @@ iframe:hover {
 .snsicon {
     border-radius: 7px;
     transition: .1s ease-in-out;
-    animation-name: bg-ic;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
+    background-color: gainsboro;
 }
 
 .snsicon:hover {
@@ -638,9 +183,7 @@ iframe:hover {
     padding: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    animation-name: bg-tb;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
+    background-color: rgb(40, 40, 40);
 }
 
 .warnb {
