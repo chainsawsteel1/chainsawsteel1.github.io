@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+JP&display=swap');
 
 @keyframes warn {
     0% {
@@ -105,7 +105,7 @@
 }
 
 .font {
-    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
     margin-left: 10%;
     margin-right: 10%;
     z-index: 500;

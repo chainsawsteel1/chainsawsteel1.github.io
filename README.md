@@ -7,7 +7,7 @@ chAInsのホームページです
 ## 使ったもの
 * [ress](https://github.com/filipelinhares/ress)
   
-* [Roboto](https://fonts.google.com/specimen/Roboto)
+* [Inter](https://fonts.google.com/specimen/Inter)
 
 * [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP)
 
