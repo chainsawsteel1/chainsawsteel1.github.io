@@ -41,9 +41,11 @@ $(function () {
 $(function () {
     $(".btnblog").click(function () {
         $('.maincnt').removeClass('viewcnt');
-        $('.blog').addClass('viewcnt');
         $('.maincnt').addClass('hidecnt');
         $('.blog').removeClass('hidecnt');
+        $('.blog').addClass('viewcnt');
+        $('.blogcnt').removeClass('viewcnt');
+        $('.blogcnt').addClass('hidecnt');
         window.scroll({
             top: 0,
             behavior: "smooth",
@@ -54,9 +56,11 @@ $(function () {
 $(function () {
     $(".btnmain").click(function () {
         $('.maincnt').addClass('viewcnt');
-        $('.blog').removeClass('viewcnt');
         $('.maincnt').removeClass('hidecnt');
         $('.blog').addClass('hidecnt');
+        $('.blog').removeClass('viewcnt');
+        $('.blogcnt').addClass('hidecnt');
+        $('.blogcnt').removeClass('viewcnt');
         window.scroll({
             top: 10000000000,
             behavior: "smooth",
@@ -69,14 +73,13 @@ var anchor = location.hash;
 $(function () {
     if (anchor == "#blog") {
         $('.maincnt').removeClass('viewcnt');
-        $('.blog').addClass('viewcnt');
         $('.maincnt').addClass('hidecnt');
         $('.blog').removeClass('hidecnt');
+        $('.blog').addClass('viewcnt');
+        $('.blogcnt').removeClass('viewcnt');
+        $('.blogcnt').addClass('hidecnt');
     }
 });
-
-//ハッシュ取得
-var anchor = location.hash;
 $(function () {
     if (anchor == "#blogcntv") {
         $('.maincnt').removeClass('viewcnt');
