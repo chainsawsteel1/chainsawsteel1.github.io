@@ -28,9 +28,11 @@
 
     sample().done(function (data, status, xhr) {
         $('.h404').removeClass('view');
+        $('.w404').addClass('view');
 
     }).fail(function (XMLHttpRequest, status, errorThrown) {
         $('.h404').addClass('view');
+        $('.w404').removeClass('view');
     });
 </script>
 
@@ -57,6 +59,15 @@
         width: auto;
     }
 
+    .w404 {
+        position: fixed;
+        background-color: white;
+        z-index: -10000;
+        opacity: 0%;
+        height: auto;
+        width: auto;
+    }
+
     .view {
         z-index: 100;
         opacity: 100%;
@@ -68,6 +79,11 @@
         404 Not Found
         <br>
         存在しないパスを指定しているようです
+    </p>
+    <p class="w404">
+        貴方は404用ページを表示しているようです。
+        <br>
+        一部の機能が動作しません
     </p>
     <iframe src="/index.html" frameborder="0"></iframe>
 </body>

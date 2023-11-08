@@ -44,6 +44,10 @@ $(function () {
         $('.blog').addClass('viewcnt');
         $('.maincnt').addClass('hidecnt');
         $('.blog').removeClass('hidecnt');
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
     });
 });
 //戻るボタン
@@ -53,5 +57,9 @@ $(function () {
         $('.blog').removeClass('viewcnt');
         $('.maincnt').removeClass('hidecnt');
         $('.blog').addClass('hidecnt');
+        window.scroll({
+            top: 100,
+            behavior: "smooth",
+          });
     });
 });

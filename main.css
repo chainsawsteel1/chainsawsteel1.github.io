@@ -197,6 +197,18 @@ iframe:hover {
     z-index: -10000;
     opacity: 0%;
 }
+
+.f5 {
+    position: fixed;
+    background-color: white;
+    color: black;
+    padding: 50px;
+    cursor: pointer;
+    height: 500px;
+    width: 300px;
+    z-index: -10000;
+    opacity: 0%;
+}
 /* ロード完了表示 */
 .load {
     background-color: white;
