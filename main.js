@@ -58,8 +58,36 @@ $(function () {
         $('.maincnt').removeClass('hidecnt');
         $('.blog').addClass('hidecnt');
         window.scroll({
-            top: 100,
+            top: 10000000000,
             behavior: "smooth",
-          });
+        });
+    });
+});
+
+
+//ハッシュ取得
+var anchor = location.hash;
+$(function () {
+    if (anchor == "#blogcntv") {
+        $('.maincnt').removeClass('viewcnt');
+        $('.blogcnt').addClass('viewcnt');
+        $('.maincnt').addClass('hidecnt');
+        $('.blogcnt').removeClass('hidecnt');
+    }
+});
+//パラメータ取得
+var query = location.search;
+$(function () {
+    if (query == "?page=2") {
+        // パラメータの値が ?page=2 の場合に実行する処理
+    }
+});
+
+
+
+$(function () {
+    $(".gocnt").click(function () {
+        $('.f5').removeClass('viewbu');
+        $('.f5').addClass('viewb');
     });
 });
