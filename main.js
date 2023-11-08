@@ -64,6 +64,16 @@ $(function () {
     });
 });
 
+//ハッシュ取得
+var anchor = location.hash;
+$(function () {
+    if (anchor == "#blog") {
+        $('.maincnt').removeClass('viewcnt');
+        $('.blog').addClass('viewcnt');
+        $('.maincnt').addClass('hidecnt');
+        $('.blog').removeClass('hidecnt');
+    }
+});
 
 //ハッシュ取得
 var anchor = location.hash;
@@ -78,8 +88,8 @@ $(function () {
 //パラメータ取得
 var query = location.search;
 $(function () {
-    if (query == "?page=2") {
-        // パラメータの値が ?page=2 の場合に実行する処理
+    if (query == "?page=1") {
+        // パラメータの値が ?page=1 の場合に実行する処理
     }
 });
 
