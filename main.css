@@ -88,10 +88,38 @@
     }
 }
 
+@keyframes viewbf {
+    0% {
+        opacity: 0%;
+        height: 0%;
+    }
+    100% {
+        opacity: 100%;
+        z-index: 10000;
+        height: 100%;
+    }
+}
+
 @keyframes viewbu {
     0% {
         z-index: 10000;
         opacity: 90%;
+        height: 100%;
+    }
+    99% {
+        z-index: 10000;
+    }
+    100% {
+        opacity: 0%;
+        z-index: -10000;
+        height: 0%;
+    }
+}
+
+@keyframes viewbuf {
+    0% {
+        z-index: 10000;
+        opacity: 100%;
         height: 100%;
     }
     99% {
@@ -272,11 +300,29 @@ iframe:hover {
     height: 100%;
 }
 
+.viewbf {
+    z-index: 10000;
+    opacity: 100%;
+    animation-duration: .25s;
+    animation-name: viewbf;
+    width: 100%;
+    height: 100%;
+}
+
 .viewbu {
     z-index: -10000;
     opacity: 0%;
     animation-duration: .25s;
     animation-name: viewbu;
+    width: 100%;
+    height: 100%;
+}
+
+.viewbuf {
+    z-index: -10000;
+    opacity: 0%;
+    animation-duration: .25s;
+    animation-name: viewbuf;
     width: 100%;
     height: 100%;
 }

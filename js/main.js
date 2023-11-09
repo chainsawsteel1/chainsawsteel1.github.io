@@ -62,7 +62,7 @@ $(function () {
         $('.blogcnt').addClass('hidecnt');
         $('.blogcnt').removeClass('viewcnt');
         window.scroll({
-            top: 10000000000,
+            top: 0,
             behavior: "smooth",
         });
     });
@@ -100,7 +100,7 @@ $(function () {
 
 $(function () {
     $(".gocnt").click(function () {
-        $('.f5').removeClass('viewbu');
-        $('.f5').addClass('viewb');
+        $('.f5').removeClass('viewbuf');
+        $('.f5').addClass('viewbf');
     });
 });
