@@ -106,12 +106,13 @@ $(function () {
     }
 });
 
-
-
-
 $(function () {
     $(".gocnt").click(function () {
-        $('.f5').removeClass('viewbuf');
-        $('.f5').addClass('viewbf');
+        $('.maincnt').addClass('hidecnt');
+        $('.maincnt').removeClass('viewcnt');
+        $('.blog').addClass('hidecnt');
+        $('.blog').removeClass('viewcnt');
+        $('.blogcnt').addClass('viewcnt');
+        $('.blogcnt').removeClass('hidecnt');
     });
 });
