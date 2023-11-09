@@ -14,12 +14,6 @@ $(window).on("load", function () {
     $('.loadmark').addClass('okload');
     $('.font').addClass('okload-b');
 });
-//相互リンク置き場
-$(function () {
-    $(".iboxo").click(function () {
-        $(".ibox").slideToggle();
-    });
-});
 //通知押したときの
 $(function () {
     $(".warn").click(function () {
@@ -63,18 +57,38 @@ function viewmain() {
     hideblog();
     hideblogcnt();
     hidelink();
-  }
+}
+
+function viewblog() {
+    $('.blog').addClass('viewcnt');
+    $('.blog').removeClass('hidecnt');
+    hidemain();
+    hideblogcnt();
+    hidelink();
+}
+
+function viewblogcnt() {
+    $('.blogcnt').addClass('viewcnt');
+    $('.blogcnt').removeClass('hidecnt');
+    hidemain();
+    hideblog();
+    hidelink();
+}
+
+function viewlink() {
+    $('.clink').addClass('viewcnt');
+    $('.clink').removeClass('hidecnt');
+    hidemain();
+    hideblogcnt();
+    hideblog();
+}
 
 
 //ブログボタン
 //.blog
 $(function () {
     $(".btnblog").click(function () {
-        $('.blog').addClass('viewcnt');
-        $('.blog').removeClass('hidecnt');
-        hidemain();
-        hideblogcnt();
-        hidelink();
+        viewblog();
         window.scroll({
             top: 0,
             behavior: "smooth",
@@ -104,11 +118,7 @@ $(function () {
 //ブログ表示
 $(function () {
     $(".btnmain").click(function () {
-        $('.blog').addClass('viewcnt');
-        $('.blog').removeClass('hidecnt');
-        hidemain();
-        hideblogcnt();
-        hidelink();
+        viewblog();
         window.scroll({
             top: 3000,
             behavior: "smooth",
@@ -118,11 +128,7 @@ $(function () {
 //MD表示
 $(function () {
     $(".gocnt").click(function () {
-        $('.blogcnt').addClass('viewcnt');
-        $('.blogcnt').removeClass('hidecnt');
-        hidemain();
-        hideblog();
-        hidelink();
+        viewblogcnt();
         window.scroll({
             top: 0,
             behavior: "smooth",
@@ -132,11 +138,7 @@ $(function () {
 //.clink
 $(function () {
     $(".vlink").click(function () {
-        $('.clink').addClass('viewcnt');
-        $('.clink').removeClass('hidecnt');
-        hidemain();
-        hideblogcnt();
-        hideblog();
+        viewlink();
         window.scroll({
             top: 0,
             behavior: "smooth",
@@ -148,28 +150,16 @@ $(function () {
 var anchor = location.hash;
 $(function () {
     if (anchor == "#blog") {
-        $('.blog').addClass('viewcnt');
-        $('.blog').removeClass('hidecnt');
-        hidemain();
-        hideblogcnt();
-        hidelink();
+        viewblog();
     }
 });
 $(function () {
     if (anchor == "#blogcntv") {
-        $('.blogcnt').addClass('viewcnt');
-        $('.blogcnt').removeClass('hidecnt');
-        hidemain();
-        hideblog();
-        hidelink();
+        viewblogcnt();
     }
 });
 $(function () {
     if (anchor == "#vlink") {
-        $('.clink').addClass('viewcnt');
-        $('.clink').removeClass('hidecnt');
-        hidemain();
-        hideblogcnt();
-        hideblog();
+        viewlink();
     }
 });
