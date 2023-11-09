@@ -14,3 +14,7 @@ chAInsのホームページです
 * [iconmonstr](https://iconmonstr.com)
 
 * [jQuery](https://jquery.com)
+
+## MDファイルのやつ
+[Meatwo310.github.io](https://github.com/Meatwo310/Meatwo310.github.io/blob/main/md.html) (Apache-2.0 license)
+のコードの一部を使わせていただきました。
