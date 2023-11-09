@@ -1,7 +1,7 @@
 //画面サイズ
 $(window).on('load resize', function () {
     var winW = $(window).width();
-    var devW = 400;
+    var devW = 390;
     if (winW <= devW) {
         $(".warn").css("animation-name", "warn");
     } else {
