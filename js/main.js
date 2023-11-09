@@ -38,6 +38,7 @@ $(function () {
 
 
 //ブログボタン
+//.blog
 $(function () {
     $(".btnblog").click(function () {
         $('.maincnt').removeClass('viewcnt');
@@ -53,8 +54,9 @@ $(function () {
     });
 });
 //戻るボタン
+//.blogcnt
 $(function () {
-    $(".btnmain").click(function () {
+    $(".backtobl").click(function () {
         $('.maincnt').addClass('viewcnt');
         $('.maincnt').removeClass('hidecnt');
         $('.blog').addClass('hidecnt');
@@ -62,7 +64,22 @@ $(function () {
         $('.blogcnt').addClass('hidecnt');
         $('.blogcnt').removeClass('viewcnt');
         window.scroll({
-            top: 0,
+            top: 3000,
+            behavior: "smooth",
+        });
+    });
+});
+//.blogback
+$(function () {
+    $(".btnmain").click(function () {
+        $('.maincnt').addClass('hidecnt');
+        $('.maincnt').removeClass('viewcnt');
+        $('.blog').addClass('viewcnt');
+        $('.blog').removeClass('hidecnt');
+        $('.blogcnt').addClass('hidecnt');
+        $('.blogcnt').removeClass('viewcnt');
+        window.scroll({
+            top: 3000,
             behavior: "smooth",
         });
     });
@@ -88,13 +105,7 @@ $(function () {
         $('.blogcnt').removeClass('hidecnt');
     }
 });
-//パラメータ取得
-var query = location.search;
-$(function () {
-    if (query == "?page=1") {
-        // パラメータの値が ?page=1 の場合に実行する処理
-    }
-});
+
 
 
 
