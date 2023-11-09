@@ -15,6 +15,8 @@ chAInsのホームページです
 
 * [jQuery](https://jquery.com)
 
+* [Showdown](https://github.com/showdownjs/showdown)
+
 ## MDファイルのやつ
 [Meatwo310.github.io](https://github.com/Meatwo310/Meatwo310.github.io/blob/main/md.html) (Apache-2.0 license)
 のコードの一部を使わせていただきました。
