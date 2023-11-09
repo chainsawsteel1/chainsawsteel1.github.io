@@ -339,6 +339,10 @@ iframe:hover {
     position: fixed;
 }
 
+.clink{
+    position: fixed;
+}
+
 @keyframes viewanim {
     0% {
         opacity: 0%;
