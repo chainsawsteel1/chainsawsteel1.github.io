@@ -8,7 +8,7 @@ const loadMarkdown = async () => {
     converter.setFlavor('github');
 
     // ?記号以降の文字列を取得
-    let filename = "/md/" + (window.location.search.substring(1) + ".md");
+    let filename = "/md/" + (window.location.search.substring(1) + ".md" || '/404.md');
 
     let text = await (await fetch(filename)).text();
     console.log(text);
