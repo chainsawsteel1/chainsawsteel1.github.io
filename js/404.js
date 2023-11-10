@@ -1,4 +1,4 @@
-function sample() {
+function notf() {
     return $.ajax({
         type: "GET",
         url: $(location).attr('search'),
@@ -6,7 +6,7 @@ function sample() {
     })
 }
 
-sample().done(function (data, status, xhr) {
+notf().done(function (data, status, xhr) {
     $('.h404').removeClass('view');
     $('.w404').addClass('view');
 

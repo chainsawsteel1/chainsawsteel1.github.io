@@ -1,3 +1,12 @@
+function notf() {
+  return $.ajax({
+    type: "GET",
+    url: let = "/md/" + (window.location.search.substring(1)) + ".md",
+    cache: false,
+  })
+}
+
+notf().done(function (data, status, xhr) {
 /**
  * @return {Promise<void>}
  */
@@ -30,7 +39,7 @@ const loadMarkdown = async () => {
     }
   } catch (e) {
     console.error(e);
-    document.getElementById("blogmd").innerHTML = `<p>ファイル見つからん</p>`;
+    document.getElementById("blogmd").innerHTML = `<h2>存在しないMDファイルを指定しているようです</h2>`;
   }
 }
 
@@ -41,3 +50,7 @@ window.addEventListener(
 );
 
 loadMarkdown();
+
+}).fail(function (XMLHttpRequest, status, errorThrown) {
+  document.getElementById("blogmd").innerHTML = `<h2>存在しないMDファイルを指定しているようです</h2>`;
+});
