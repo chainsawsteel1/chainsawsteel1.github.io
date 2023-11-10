@@ -1,15 +1,16 @@
+body {
+    background: linear-gradient(rgb(109, 161, 185), rgb(219, 241, 243));
+    color: var(--ch-color);
+    transition: .5s;
+}
+
 :root {
     --nbg-color: white;
     --nch-color: black;
     --ch-color: black;
     --ach-color: rgb(97, 97, 97);
-    --tb-color: rgb(196, 196, 196);
-    --ic-color: gainsboro;
-}
-
-body {
-    background: linear-gradient(rgb(233, 233, 233), rgb(148, 148, 148));
-    color: var(--ch-color);
+    --tb-color: white;
+    --ic-color: white;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,12 +19,12 @@ body {
         --nch-color: white;
         --ch-color: white;
         --ach-color: rgb(189, 189, 189);
-        --tb-color: rgb(40, 40, 40);
-        --ic-color: gainsboro;
+        --tb-color: black;
+        --ic-color: white;
     }
 
     body {
-        background: linear-gradient(rgb(78, 78, 78), rgb(0, 0, 0));
+        background: linear-gradient(rgb(65, 79, 116), rgb(77, 142, 167), rgb(187, 118, 39));
     }
 }
 
