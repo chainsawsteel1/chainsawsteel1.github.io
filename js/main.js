@@ -120,7 +120,7 @@ $(function () {
     $(".btnmain").click(function () {
         viewblog();
         window.scroll({
-            top: 3000,
+            top: 0,
             behavior: "smooth",
         });
     });
