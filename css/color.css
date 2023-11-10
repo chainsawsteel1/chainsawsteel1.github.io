@@ -1,0 +1,73 @@
+:root {
+    --nbg-color: white;
+    --nch-color: black;
+    --ch-color: black;
+    --ach-color: rgb(97, 97, 97);
+    --tb-color: rgb(196, 196, 196);
+    --ic-color: gainsboro;
+}
+
+body {
+    background: linear-gradient(rgb(233, 233, 233), rgb(148, 148, 148));
+    color: var(--ch-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --nbg-color: black;
+        --nch-color: white;
+        --ch-color: white;
+        --ach-color: rgb(189, 189, 189);
+        --tb-color: rgb(40, 40, 40);
+        --ic-color: gainsboro;
+    }
+
+    body {
+        background: linear-gradient(rgb(78, 78, 78), rgb(0, 0, 0));
+    }
+}
+
+a {
+    color: var(--ach-color);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.top {
+    background-color: var(--tb-color);
+}
+
+.bottom {
+    background-color: var(--tb-color);
+}
+
+.icon {
+    background-color: var(--ic-color);
+}
+
+.snsicon {
+    background-color: var(--ic-color);
+}
+
+.chicon {
+    background-color: rgb(255, 255, 255);
+}
+
+.warn {
+    background-color: var(--nbg-color);
+    color: nc;
+}
+
+.warnb {
+    background-color: var(--nbg-color);
+    color: var(--nch-color);
+}
+
+.load {
+    background-color: var(--nbg-color);
+    color: var(--nch-color);
+}
+
+.loadmark {
+    background-color: var(--nbg-color);
+    color: var(--nch-color);
+}
