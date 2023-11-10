@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(rgb(109, 161, 185), rgb(219, 241, 243));
+    background-color: rgb(216, 237, 255);
     color: var(--ch-color);
     transition: .5s;
 }
@@ -24,7 +24,7 @@ body {
     }
 
     body {
-        background: linear-gradient(rgb(65, 79, 116), rgb(77, 142, 167), rgb(187, 118, 39));
+        background-color: rgb(6, 32, 22);
     }
 }
 
