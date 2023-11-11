@@ -30,15 +30,23 @@ $(function () {
 });
 
 
-window.addEventListener("scroll", scroll_event);
-function scroll_event() {
+window.addEventListener("scroll", scroll_top);
+window.addEventListener("scroll", scroll_btm);
+function scroll_top() {
   if (window.scrollY > 100) {
     $(".scrltop").css("opacity", "100%");;
   } else if (window.scrollY < 100) {
     $(".scrltop").css("opacity", "0%");
   }
 }
-
+function scroll_btm() {
+    if (window.scrollY > 100) {
+      $(".scrlbtm").css("opacity", "0%");
+    } else if (window.scrollY < 100) {
+      $(".scrlbtm").css("opacity", "100%");
+    }
+  }
+  
 
 function hidemain() {
     $('.maincnt').addClass('hidecnt');
@@ -168,6 +176,14 @@ $(function () {
     $(".scrltop").click(function () {
         window.scroll({
             top: 0,
+            behavior: "smooth",
+        });
+    });
+});
+$(function () {
+    $(".scrlbtm").click(function () {
+        window.scroll({
+            top: 10000,
             behavior: "smooth",
         });
     });

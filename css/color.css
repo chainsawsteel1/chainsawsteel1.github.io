@@ -34,10 +34,6 @@ body {
     .snsicon {
         filter: invert(100%);
     }
-
-    .sscrltop {
-        filter: invert(100%);
-    }
 }
 
 a {
@@ -83,8 +79,4 @@ a {
 .loadmark {
     background-color: var(--nbg-color);
     color: var(--nch-color);
-}
-
-.scrltop {
-    background-color: var(--nbg-color);
 }

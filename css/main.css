@@ -305,14 +305,16 @@ iframe:hover {
 
 .scrltop {
     position: fixed;
-    border-radius: 7px;
     bottom: 2%;
     right: 2%;
     z-index: 1;
-    transition: .1s ease-in-out;
     opacity: 0%;
 }
 
-.scrltop:hover {
-    border-radius: 0px;
+.scrlbtm {
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    z-index: 1;
+    opacity: 100%;
 }
