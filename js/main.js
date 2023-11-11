@@ -30,6 +30,15 @@ $(function () {
 });
 
 
+window.addEventListener("scroll", scroll_event);
+function scroll_event() {
+  if (window.scrollY > 100) {
+    $(".scrltop").css("opacity", "100%");;
+  } else if (window.scrollY < 100) {
+    $(".scrltop").css("opacity", "0%");
+  }
+}
+
 
 function hidemain() {
     $('.maincnt').addClass('hidecnt');
@@ -148,6 +157,15 @@ $(function () {
 $(function () {
     $(".top").click(function () {
         viewmain();
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
+});
+
+$(function () {
+    $(".scrltop").click(function () {
         window.scroll({
             top: 0,
             behavior: "smooth",
