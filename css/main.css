@@ -115,6 +115,10 @@ body {
     text-align: center;
 }
 
+button {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     animation-iteration-count: infinite;
@@ -141,6 +145,7 @@ iframe:hover {
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    cursor: pointer;
 }
 
 .icon {
