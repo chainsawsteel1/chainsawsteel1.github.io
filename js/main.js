@@ -145,6 +145,15 @@ $(function () {
         });
     });
 });
+$(function () {
+    $(".top").click(function () {
+        viewmain();
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
+});
 
 //ハッシュ取得
 var anchor = location.hash;
