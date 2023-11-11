@@ -26,6 +26,14 @@ body {
     body {
         background-color: rgb(6, 32, 22);
     }
+
+    .icon {
+        filter: invert(100%);
+    }
+
+    .snsicon {
+        filter: invert(100%);
+    }
 }
 
 a {
