@@ -29,7 +29,7 @@ $(function () {
     });
 });
 
-
+//スクロール
 window.addEventListener("scroll", scroll_top);
 window.addEventListener("scroll", scroll_btm);
 function scroll_top() {
@@ -45,8 +45,25 @@ function scroll_btm() {
     } else if (window.scrollY < 100) {
       $(".scrlbtm").css("opacity", "100%");
     }
-  }
-  
+}
+
+$(function () {
+    $(".pullsid").click(function () {
+        $(".side").css("right", "2%");
+        $(".pullsid").css("opacity", "0%");
+        $(".pushsid").css("opacity", "100%");
+        $('.pushsid').addClass('pullsidd');
+    });
+});
+
+$(function () {
+    $(".pushsid").click(function () {
+        $(".side").css("right", "-100%");
+        $('.pushsid').removeClass('pullsidd');
+        $(".pullsid").css("opacity", "100%");
+        $(".pushsid").css("opacity", "0%");
+    });
+});
 
 function hidemain() {
     $('.maincnt').addClass('hidecnt');

@@ -66,6 +66,11 @@ a {
     color: nc;
 }
 
+.side {
+    background-color: var(--nbg-color);
+    color: nc;
+}
+
 .warnb {
     background-color: var(--nbg-color);
     color: var(--nch-color);

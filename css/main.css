@@ -190,6 +190,16 @@ iframe:hover {
     z-index: 100;
 }
 
+.side {
+    position: fixed;
+    padding: 10px;
+    border-radius: 7px;
+    top: 10%;
+    right: -100%;
+    z-index: 100;
+    transition: 1s;
+}
+
 .loadmark {
     position: fixed;
     z-index: 10000;
@@ -294,4 +304,54 @@ iframe:hover {
     left: 2%;
     z-index: 1;
     opacity: 100%;
+}
+
+.pullsid {
+    position: fixed;
+    z-index: 101;
+    right: 2%;
+    top: 2%;
+}
+
+.pushsid {
+    position: fixed;
+    z-index: 100;
+    right: 2%;
+    top: 2%;
+    opacity: 0%;
+}
+.pullsidd {
+    z-index: 102;
+}
+
+@keyframes pull {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 2%;
+    }
+}
+
+@keyframes push {
+    0% {
+        right: 2%;
+    }
+    100% {
+        right: -100%;
+    }
+}
+
+.pull {
+    animation-name: pull;
+    animation-duration: 1s;
+    transition: .1s;
+    right: 2%;
+    
+}
+
+.push {
+    animation-name: push;
+    animation-duration: 1s;
+    transition: .1s;
 }
