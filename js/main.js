@@ -3,7 +3,7 @@ $(window).on('load resize', function () {
     var winW = $(window).width();
     var devW = 390;
     if (winW <= devW) {
-        $(".warn").css("animation-name", "warn");
+        $(".warn").css("animation-name", "load");
     } else {
         $(".warn").css("animation-name", "none");
     }

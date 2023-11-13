@@ -1,39 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+JP&display=swap');
 
-@keyframes warn {
-    0% {
-        bottom: 18%;
-        right: -100%;
-    }
-    10% {
-        bottom: 18%;
-        right: 2%;
-    }
-    90% {
-        bottom: 18%;
-        right: 2%;
-    }
-    100% {
-        bottom: 18%;
-        right: -100%;
-    }
-}
-
 @keyframes load {
     0% {
-        bottom: 10%;
         right: -100%;
     }
     10% {
-        bottom: 10%;
         right: 2%;
     }
     90% {
-        bottom: 10%;
         right: 2%;
     }
     100% {
-        bottom: 10%;
         right: -100%;
     }
 }
