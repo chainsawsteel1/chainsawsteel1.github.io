@@ -119,14 +119,6 @@ ul li {
     margin: auto;
 }
 
-.padd {
-    padding-top: 100px;
-}
-
-.padds {
-    padding-top: 10px;
-}
-
 .top {
     padding: 20px;
     border-bottom-left-radius: 20px;
@@ -281,10 +273,17 @@ ul li {
     flex-flow: row wrap;
 }
 
+.padd {
+    padding-top: 30px;
+}
+
+.padds {
+    padding-top: 10px;
+}
 
 .flpx {
-    flex: 200px;
-    padding: 20px;
+    flex: 300px;
+    padding: 30px;
 }
 
 @keyframes viewanim {
