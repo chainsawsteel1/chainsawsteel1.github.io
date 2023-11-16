@@ -110,6 +110,15 @@ iframe:hover {
     border-radius: 0px;
 }
 
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    width: fit-content;
+    margin: auto;
+}
+
 .padd {
     padding-top: 100px;
 }
@@ -270,7 +279,6 @@ iframe:hover {
 .blogcnt {
     display: flex;
     flex-flow: row wrap;
-
 }
 
 
