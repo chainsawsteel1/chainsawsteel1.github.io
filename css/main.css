@@ -248,12 +248,35 @@ iframe:hover {
     position: fixed;
 }
 
+.maincntfx {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .blog{
     position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+
 }
 
 .clink{
     position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.blogcnt {
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+
+.flpx {
+    flex: 200px;
+    padding: 20px;
 }
 
 @keyframes viewanim {
