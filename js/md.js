@@ -20,7 +20,6 @@ const loadMarkdown = async () => {
     let filename = "/md/" + (window.location.search.substring(1) || '404') + ".md";
 
     let text = await (await fetch(filename)).text();
-    console.log(text);
 
     if (text.match(new RegExp("<pre>Cannot GET .*/.md</pre>"))) {
       throw new Error("ファイル見つからん");

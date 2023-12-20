@@ -110,12 +110,13 @@ iframe:hover {
     border-radius: 0px;
 }
 
-.padd {
-    padding-top: 100px;
+ul {
+    padding-left: 0;
 }
 
-.padds {
-    padding-top: 10px;
+ul li {
+    width: fit-content;
+    margin: auto;
 }
 
 .top {
@@ -248,12 +249,41 @@ iframe:hover {
     position: fixed;
 }
 
+.maincntfx {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .blog{
     position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+
 }
 
 .clink{
     position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.blogcnt {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.padd {
+    padding-top: 30px;
+}
+
+.padds {
+    padding-top: 10px;
+}
+
+.flpx {
+    flex: 450px;
+    padding: 30px;
 }
 
 @keyframes viewanim {
