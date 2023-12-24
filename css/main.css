@@ -98,7 +98,7 @@ button {
 
 a {
     text-decoration: none;
-    animation-iteration-count: infinite;
+    transition: .2s;
 }
 
 iframe {
