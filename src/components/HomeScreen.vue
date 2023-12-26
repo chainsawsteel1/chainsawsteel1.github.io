@@ -37,7 +37,6 @@ export default {
 .body {
     margin-left: 10%;
     margin-right: 10%;
-    z-index: 500;
 }
 .top {
     padding: 20px;

@@ -64,27 +64,7 @@ ul li {
     opacity: 0%;
 }
 
-/* ロード完了表示 */
-.load {
-    position: fixed;
-    padding: 10px;
-    border-radius: 7px;
-    animation-duration: 8s;
-    bottom: 10%;
-    right: -100%;
-    z-index: 100;
-}
-/* 画面サイズ警告 */
-.warn {
-    position: fixed;
-    padding: 10px;
-    border-radius: 7px;
-    animation-duration: 8s;
-    bottom: 18%;
-    right: -100%;
-    cursor: pointer;
-    z-index: 100;
-}
+
 
 .side {
     position: fixed;

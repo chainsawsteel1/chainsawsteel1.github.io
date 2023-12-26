@@ -36,6 +36,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  margin: 0%;
 }
-@import url(https://unpkg.com/ress/dist/ress.min.css);
 </style>

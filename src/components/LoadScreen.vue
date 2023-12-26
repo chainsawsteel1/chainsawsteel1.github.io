@@ -1,5 +1,5 @@
 <template>
-  <div class="loadmark">
+  <div class="load">
     <h1>ローディングなう</h1>
     <p>
       このロード画面は演技ではない。
@@ -32,13 +32,12 @@ export default {
 </script>
 
 <style scoped>
-.loadmark {
-    position: fixed;
-    z-index: 10000;
-    width: 100%;
-    height: 100%;
-    margin: 0%;
-    padding: 0%;
-    cursor: wait;
+.load {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  cursor: wait;
 }
 </style>

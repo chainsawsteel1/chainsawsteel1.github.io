@@ -1,7 +1,6 @@
 body {
     background-color: rgb(216, 237, 255);
     color: var(--ch-color);
-    transition: .5s;
 }
 
 :root {
@@ -26,7 +25,7 @@ body {
     }
 
     body {
-        background-color: rgb(6, 32, 22);
+        background-color: rgb(6, 32, 22)
     }
 
     .icon {
