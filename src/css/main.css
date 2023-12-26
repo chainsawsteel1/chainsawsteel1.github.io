@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+JP&display=swap');
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    transition: .2s;
+}
+
+iframe {
+    border-radius: 10px;
+    transition: .1s;
+}
+
+iframe:hover {
+    border-radius: 0px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    width: fit-content;
+    margin: auto;
+}
+
+.icon {
+    border-radius: 10px;
+    transition: .1s ease-in-out;
+}
+
+.icon:hover {
+    border-radius: 0px;
+}
+
+.chicon {
+    border-radius: 10px;
+    transition: .1s ease-in-out;
+}
+
+.chicon:hover {
+    border-radius: 0px;
+}
+
+.snsicon {
+    border-radius: 7px;
+    transition: .1s ease-in-out;
+}
+
+.snsicon:hover {
+    border-radius: 0px;
+}
+
+.warnb {
+    position: fixed;
+    padding: 50px;
+    cursor: pointer;
+    height: 500px;
+    width: 300px;
+    z-index: -10000;
+    opacity: 0%;
+}
+
+/* ロード完了表示 */
+.load {
+    position: fixed;
+    padding: 10px;
+    border-radius: 7px;
+    animation-duration: 8s;
+    bottom: 10%;
+    right: -100%;
+    z-index: 100;
+}
+/* 画面サイズ警告 */
+.warn {
+    position: fixed;
+    padding: 10px;
+    border-radius: 7px;
+    animation-duration: 8s;
+    bottom: 18%;
+    right: -100%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.side {
+    position: fixed;
+    padding: 10px;
+    border-radius: 7px;
+    top: 10%;
+    right: -100%;
+    z-index: 100;
+    transition: 1s;
+}
+
+.okload {
+    opacity: 0%;
+    animation-duration: .5s;
+    animation-name: fade;
+    z-index: -10000;
+}
+
+.okload-b {
+    animation-duration: .5s;
+    animation-name: fade-b;
+}
+
+.ibox{
+    display:none;
+}
+
+.viewb {
+    z-index: 10000;
+    opacity: 90%;
+    animation-duration: .25s;
+    animation-name: viewb;
+    width: 100%;
+    height: 100%;
+}
+
+.viewbu {
+    z-index: -10000;
+    opacity: 0%;
+    animation-duration: .25s;
+    animation-name: viewbu;
+    width: 100%;
+    height: 100%;
+}
+
+.maincnt{
+    position: fixed;
+}
+
+.maincntfx {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.blog{
+    position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.clink{
+    position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.blogcnt {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.padd {
+    padding-top: 30px;
+}
+
+.padds {
+    padding-top: 10px;
+}
+
+.flpx {
+    flex: 450px;
+    padding: 30px;
+}
+
+.viewcnt{
+    z-index: 0;
+    opacity: 100%;
+    animation-name: viewanim;
+    animation-duration: .5s;
+    position: sticky;
+}
+
+.hidecnt{
+    z-index: -10000;
+    opacity: 0%;
+    animation-name: hideanim;
+    animation-duration: .5s;
+    position: fixed;
+}
+
+.scrltop {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 1;
+    opacity: 0%;
+}
+
+.scrlbtm {
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    z-index: 1;
+    opacity: 100%;
+}
+
+.pullsid {
+    position: fixed;
+    z-index: 101;
+    right: 2%;
+    top: 2%;
+}
+
+.pushsid {
+    position: fixed;
+    z-index: 100;
+    right: 2%;
+    top: 2%;
+    opacity: 0%;
+}
+.pullsidd {
+    z-index: 102;
+}
+
+.pull {
+    animation-name: pull;
+    animation-duration: 1s;
+    transition: .1s;
+    right: 2%;
+    
+}
+
+.push {
+    animation-name: push;
+    animation-duration: 1s;
+    transition: .1s;
+}

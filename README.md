@@ -1,22 +1,24 @@
-# [chainsawsteel1.github.io](https://chainsawsteel1.github.io)
-  
-## What is this?
-chAInsのホームページです
-ここを見るとchAInsについて詳しくなれるかも
-  
-## 使ったもの
-* [ress](https://github.com/filipelinhares/ress)
-  
-* [Inter](https://fonts.google.com/specimen/Inter)
+# vue-app
 
-* [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP)
+## Project setup
+```
+npm install
+```
 
-* [iconmonstr](https://iconmonstr.com)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-* [jQuery](https://jquery.com)
+### Compiles and minifies for production
+```
+npm run build
+```
 
-* [Showdown](https://github.com/showdownjs/showdown)
+### Lints and fixes files
+```
+npm run lint
+```
 
-## MDファイルのやつ
-[Meatwo310.github.io](https://github.com/Meatwo310/Meatwo310.github.io/blob/main/md.html) (Apache-2.0 license)
-のコードの一部を使わせていただきました。
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

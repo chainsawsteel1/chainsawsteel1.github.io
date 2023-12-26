@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(216, 237, 255);
+    color: var(--ch-color);
+    transition: .5s;
+}
+
+:root {
+    --nbg-color: white;
+    --nch-color: black;
+    --ch-color: black;
+    --ach-color: rgb(139, 139, 139);
+    --achh-color: rgb(77, 77, 77);
+    --tb-color: white;
+    --ic-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --nbg-color: black;
+        --nch-color: white;
+        --ch-color: white;
+        --ach-color: rgb(137, 137, 137);
+        --achh-color: rgb(220, 220, 220);
+        --tb-color: black;
+        --ic-color: white;
+    }
+
+    body {
+        background-color: rgb(6, 32, 22);
+    }
+
+    .icon {
+        filter: invert(100%);
+    }
+
+    .snsicon {
+        filter: invert(100%);
+    }
+}
+
+a {
+    color: var(--ach-color);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:hover {
+    color: var(--achh-color);
+}
+
+.top {
+    background-color: var(--tb-color);
+}
+
+/* .bottom {
+    background-color: var(--tb-color);
+} */
+
+.icon {
+    background-color: var(--ic-color);
+}
+
+.snsicon {
+    background-color: var(--ic-color);
+}
+
+.chicon {
+    background-color: rgb(255, 255, 255);
+}
+
+.warn {
+    background-color: var(--nbg-color);
+    color: nc;
+}
+
+.side {
+    background-color: var(--nbg-color);
+    color: nc;
+}
+
+.warnb {
+    background-color: var(--nbg-color);
+    color: var(--nch-color);
+}
+
+.load {
+    background-color: var(--nbg-color);
+    color: var(--nch-color);
+}
+
+.loadmark {
+    background-color: var(--nbg-color);
+    color: var(--nch-color);
+}
