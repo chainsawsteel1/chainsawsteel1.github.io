@@ -10,6 +10,9 @@
         <HelloWorld />
         <div class="padd"></div>
         <div class="padd"></div>
+        <HomeIndex />
+        <div class="padd"></div>
+        <div class="padd"></div>
         <div class="bottom">
             <p>
                 このサイトのソースコード : <a href="https://github.com/chainsawsteel1/chainsawsteel1.github.io"
@@ -23,12 +26,12 @@
 </template>
 
 <script>
-import HelloWorld from './HelloWorld.vue';
+import HomeIndex from './Home/HomeIndex.vue';
 
 export default {
     name: 'App',
     components: {
-        HelloWorld
+        HomeIndex
     }
 }
 </script>
