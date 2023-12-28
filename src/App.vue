@@ -1,10 +1,8 @@
 <template>
-  <v-app>
+  <v-app class="wipp"> 
     <LoadScreen v-show="loading"></LoadScreen>
     <HomeScreen v-show="!loading"></HomeScreen>
   </v-app>
-  
-
 </template>
 
 <script>

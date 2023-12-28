@@ -1,7 +1,8 @@
 <template>
     <div class="body">
         <div class="top">
-            <h1>chAIns's Website</h1>
+            <h1>Working In Progress</h1>
+            <!-- <h1>chAIns's Website</h1> -->
             <div class="padds"></div>
             <h2>よこそう私のサイトへ</h2>
         </div>
