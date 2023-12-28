@@ -11,7 +11,7 @@ a {
 
 iframe {
     border-radius: 10px;
-    transition: .1s;
+    transition: .2s;
 }
 
 iframe:hover {
@@ -29,7 +29,7 @@ ul li {
 
 .icon {
     border-radius: 10px;
-    transition: .1s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 .icon:hover {
@@ -38,7 +38,7 @@ ul li {
 
 .chicon {
     border-radius: 10px;
-    transition: .1s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 .chicon:hover {
@@ -47,7 +47,9 @@ ul li {
 
 .snsicon {
     border-radius: 7px;
-    transition: .1s ease-in-out;
+    transition: .2s ease-in-out;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
 }
 
 .snsicon:hover {
@@ -92,33 +94,6 @@ ul li {
     display:none;
 }
 
-.viewb {
-    z-index: 10000;
-    opacity: 90%;
-    animation-duration: .25s;
-    animation-name: viewb;
-    width: 100%;
-    height: 100%;
-}
-
-.viewbu {
-    z-index: -10000;
-    opacity: 0%;
-    animation-duration: .25s;
-    animation-name: viewbu;
-    width: 100%;
-    height: 100%;
-}
-
-.maincnt{
-    position: fixed;
-}
-
-.maincntfx {
-    display: flex;
-    flex-flow: row wrap;
-}
-
 .blog{
     position: fixed;
     display: flex;
@@ -146,10 +121,7 @@ ul li {
     padding-top: 10px;
 }
 
-.flpx {
-    flex: 450px;
-    padding: 30px;
-}
+
 
 .viewcnt{
     z-index: 0;
@@ -204,7 +176,7 @@ ul li {
 .pull {
     animation-name: pull;
     animation-duration: 1s;
-    transition: .1s;
+    transition: .2s;
     right: 2%;
     
 }
@@ -212,5 +184,5 @@ ul li {
 .push {
     animation-name: push;
     animation-duration: 1s;
-    transition: .1s;
+    transition: .2s;
 }

@@ -5,8 +5,7 @@
             <div class="padds"></div>
             <h2>よこそう私のサイトへ</h2>
         </div>
-        <div class="padd"></div>
-        <div class="padd"></div>
+
         <HelloWorld />
         <div class="padd"></div>
         <div class="padd"></div>

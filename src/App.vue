@@ -21,7 +21,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = false;
-    }, 1000);
+    }, 0);
   },
   components: {
     LoadScreen,
