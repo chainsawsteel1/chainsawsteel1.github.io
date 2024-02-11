@@ -1,7 +1,8 @@
+/* 要素に色をつけるcss */
+
 body {
     background-color: rgb(216, 237, 255);
     color: var(--ch-color);
-    transition: .5s;
 }
 
 :root {
@@ -12,6 +13,8 @@ body {
     --achh-color: rgb(77, 77, 77);
     --tb-color: white;
     --ic-color: white;
+    --bg-top: rgb(255, 255, 255);
+    --bg-hov: rgb(163, 163, 163);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,18 +26,12 @@ body {
         --achh-color: rgb(220, 220, 220);
         --tb-color: black;
         --ic-color: white;
+        --bg-top: rgb(50, 50, 50);
+        --bg-hov: rgb(163, 163, 163);
     }
 
     body {
-        background-color: rgb(6, 32, 22);
-    }
-
-    .icon {
-        filter: invert(100%);
-    }
-
-    .snsicon {
-        filter: invert(100%);
+        background-color: rgb(44, 62, 77);
     }
 }
 
@@ -47,47 +44,27 @@ a:hover {
     color: var(--achh-color);
 }
 
-.top {
-    background-color: var(--tb-color);
+.hover {
+    background-color: var(--bg-top);
+    color: var(--ch-color);
 }
 
-/* .bottom {
-    background-color: var(--tb-color);
-} */
-
-.icon {
-    background-color: var(--ic-color);
+.tiicon {
+    background-color: white;
 }
 
-.snsicon {
-    background-color: var(--ic-color);
+.navbar {
+    background-color: var(--bg-top);
 }
 
-.chicon {
-    background-color: rgb(255, 255, 255);
+.noli:hover {
+    background-color: var(--bg-hov);
 }
 
-.warn {
-    background-color: var(--nbg-color);
-    color: nc;
+.ova {
+    color: var(--ch-color);
 }
 
-.side {
-    background-color: var(--nbg-color);
-    color: nc;
-}
-
-.warnb {
-    background-color: var(--nbg-color);
-    color: var(--nch-color);
-}
-
-.load {
-    background-color: var(--nbg-color);
-    color: var(--nch-color);
-}
-
-.loadmark {
-    background-color: var(--nbg-color);
-    color: var(--nch-color);
+.ova:hover {
+    color: var(--ch-color);
 }

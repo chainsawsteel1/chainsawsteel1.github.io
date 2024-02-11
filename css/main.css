@@ -1,113 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+JP&display=swap');
+/* レイアウトなどを指定するcss */
 
-@keyframes load {
-    0% {
-        right: -100%;
-    }
-    10% {
-        right: 2%;
-    }
-    90% {
-        right: 2%;
-    }
-    100% {
-        right: -100%;
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap');
 
-@keyframes none {
-    0% {
-        bottom: 10%;
-        right: -100%;
-    }
-    100% {
-        bottom: 10%;
-        right: -100%;
-    }
-}
-
-@keyframes fade{
-    0%{
-        opacity: 100%;
-    }
-    99%{
-        z-index: 10000;
-        opacity: 0%;
-    }
-    100%{
-        z-index: -10000;
-    }
-}
-
-@keyframes fade-b{
-    0%{
-        opacity: 0%;
-        display:none;
-    }
-    50%{
-        opacity: 0%;
-        display:none;
-    }
-    100%{
-        opacity: 100%;
-    }
-}
-
-@keyframes viewb {
-    0% {
-        opacity: 0%;
-        height: 0%;
-    }
-    100% {
-        opacity: 90%;
-        z-index: 10000;
-        height: 100%;
-    }
-}
-
-@keyframes viewbu {
-    0% {
-        z-index: 10000;
-        opacity: 90%;
-        height: 100%;
-    }
-    99% {
-        z-index: 10000;
-    }
-    100% {
-        opacity: 0%;
-        z-index: -10000;
-        height: 0%;
-    }
-}
-
-.font {
-    font-family: 'Inter', 'Noto Sans JP', sans-serif;
-    margin-left: 10%;
-    margin-right: 10%;
-    z-index: 500;
-}
-
-body {
-    text-align: center;
-}
-
-button {
-    cursor: pointer;
-}
-
-a {
-    text-decoration: none;
+* {
     transition: .2s;
 }
 
-iframe {
-    border-radius: 10px;
-    transition: .1s;
-}
-
-iframe:hover {
-    border-radius: 0px;
+body {
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: 'IBM Plex Sans JP', sans-serif;
 }
 
 ul {
@@ -115,273 +20,94 @@ ul {
 }
 
 ul li {
+    width: 90%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+td {
+    padding: 10px;
+}
+
+/* class */
+
+.hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    z-index: 100;
+    opacity: 90%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tiicon {
+    border-radius: 20px;
+}
+
+.top {
+    text-align: center;
+}
+
+.about {
+    text-align: center;
+}
+
+.navbar {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    padding: 7px;
+    top: 0%;
+    left: 0%;
+    vertical-align: middle;
+    display: flex;
+}
+
+.logo {
+    margin: auto auto auto 0;
+}
+
+.navul {
+    margin: auto;
+    margin-right: 0;
+}
+
+.garally {
     width: fit-content;
     margin: auto;
 }
 
-.top {
-    padding: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    cursor: pointer;
+.noli {
+    list-style: none;
+    display: inline;
+    padding: 5px;
+    border-radius: 5px;
+    max-height: 34px;
+    min-height: 34px;
 }
 
-.icon {
+.noli:hover {
     border-radius: 10px;
-    transition: .1s ease-in-out;
 }
 
-.icon:hover {
-    border-radius: 0px;
+.center {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
 }
 
-.chicon {
-    border-radius: 10px;
-    transition: .1s ease-in-out;
-}
-
-.chicon:hover {
-    border-radius: 0px;
-}
-
-.snsicon {
-    border-radius: 7px;
-    transition: .1s ease-in-out;
-}
-
-.snsicon:hover {
-    border-radius: 0px;
-}
-
-.bottom {
-    padding: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.warnb {
-    position: fixed;
-    padding: 50px;
-    cursor: pointer;
-    height: 500px;
-    width: 300px;
-    z-index: -10000;
-    opacity: 0%;
-}
-
-/* ロード完了表示 */
-.load {
-    position: fixed;
-    padding: 10px;
-    border-radius: 7px;
-    animation-duration: 8s;
-    bottom: 10%;
-    right: -100%;
-    z-index: 100;
-}
-/* 画面サイズ警告 */
-.warn {
-    position: fixed;
-    padding: 10px;
-    border-radius: 7px;
-    animation-duration: 8s;
-    bottom: 18%;
-    right: -100%;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.side {
-    position: fixed;
-    padding: 10px;
-    border-radius: 7px;
-    top: 10%;
-    right: -100%;
-    z-index: 100;
-    transition: 1s;
-}
-
-.loadmark {
-    position: fixed;
-    z-index: 10000;
-    width: 100%;
-    height: 100%;
-    margin: 0%;
-    padding: 0%;
-    cursor: wait;
-}
-
-.okload {
-    opacity: 0%;
-    animation-duration: .5s;
-    animation-name: fade;
-    z-index: -10000;
-}
-
-.okload-b {
-    animation-duration: .5s;
-    animation-name: fade-b;
-}
-
-.ibox{
-    display:none;
-}
-
-.viewb {
-    z-index: 10000;
+.shadow {
     opacity: 90%;
-    animation-duration: .25s;
-    animation-name: viewb;
-    width: 100%;
-    height: 100%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.viewbu {
-    z-index: -10000;
-    opacity: 0%;
-    animation-duration: .25s;
-    animation-name: viewbu;
-    width: 100%;
-    height: 100%;
-}
-
-.maincnt{
-    position: fixed;
-}
-
-.maincntfx {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.blog{
-    position: fixed;
-    display: flex;
-    flex-flow: row wrap;
-
-}
-
-.clink{
-    position: fixed;
-    display: flex;
-    flex-flow: row wrap;
-
-}
-
-.blogcnt {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.padd {
-    padding-top: 30px;
-}
-
-.padds {
-    padding-top: 10px;
-}
-
-.flpx {
-    flex: 450px;
-    padding: 30px;
-}
-
-@keyframes viewanim {
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes hideanim {
-    0% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0%;
-    }
-}
-
-.viewcnt{
-    z-index: 0;
-    opacity: 100%;
-    animation-name: viewanim;
-    animation-duration: .5s;
-    position: sticky;
-}
-
-.hidecnt{
-    z-index: -10000;
-    opacity: 0%;
-    animation-name: hideanim;
-    animation-duration: .5s;
-    position: fixed;
-}
-
-.scrltop {
-    position: fixed;
-    bottom: 2%;
-    right: 2%;
-    z-index: 1;
-    opacity: 0%;
-}
-
-.scrlbtm {
-    position: fixed;
-    bottom: 2%;
-    left: 2%;
-    z-index: 1;
-    opacity: 100%;
-}
-
-.pullsid {
-    position: fixed;
-    z-index: 101;
-    right: 2%;
-    top: 2%;
-}
-
-.pushsid {
-    position: fixed;
-    z-index: 100;
-    right: 2%;
-    top: 2%;
-    opacity: 0%;
-}
-.pullsidd {
-    z-index: 102;
-}
-
-@keyframes pull {
-    0% {
-        right: -100%;
-    }
-    100% {
-        right: 2%;
-    }
-}
-
-@keyframes push {
-    0% {
-        right: 2%;
-    }
-    100% {
-        right: -100%;
-    }
-}
-
-.pull {
-    animation-name: pull;
-    animation-duration: 1s;
-    transition: .1s;
-    right: 2%;
-    
-}
-
-.push {
-    animation-name: push;
-    animation-duration: 1s;
-    transition: .1s;
-}
+/* id */

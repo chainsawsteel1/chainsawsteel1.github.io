@@ -1,27 +1,117 @@
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Home - chAIns's Website">
-    <meta property="og:description" content="Top Page">
-    <meta property="og:site_name" content="chAIns's Website - 相互リンク募集中">
-    <meta property="og:url" content="https://chainsawsteel1.github.io/404">
-    <meta property="og:locale" content="ja_JP" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="/css/404.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="/js/404.js"></script>
-    <title>Home - chAIns's Website</title>
+    <link rel="icon" href="/twisskey.png">
+    <title>iframe</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    body {
+        font-family: 'IBM Plex Sans JP', sans-serif;
+    }
+
+    :root {
+        --nbg-color: white;
+        --nch-color: black;
+        --ch-color: black;
+        --ach-color: rgb(139, 139, 139);
+        --achh-color: rgb(77, 77, 77);
+        --tb-color: white;
+        --ic-color: white;
+        --bg-top: rgb(255, 255, 255);
+        --bg-hov: rgb(163, 163, 163);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --nbg-color: black;
+            --nch-color: white;
+            --ch-color: white;
+            --ach-color: rgb(137, 137, 137);
+            --achh-color: rgb(220, 220, 220);
+            --tb-color: black;
+            --ic-color: white;
+            --bg-top: rgb(50, 50, 50);
+            --bg-hov: rgb(163, 163, 163);
+        }
+    }
+
+    iframe {
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .h404 {
+        z-index: -1000;
+        opacity: 0%;
+    }
+
+    .w404 {
+        z-index: -1000;
+        opacity: 0%;
+    }
+
+    #hover {
+        background-color: var(--bg-top);
+        color: var(--ch-color);
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-size: cover;
+        border-radius: 20px;
+        width: auto;
+        height: auto;
+        padding: 20px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .view {
+        z-index: 100;
+        opacity: 90%;
+    }
+</style>
+
+<script>
+    function notf() {
+        return $.ajax({
+            type: "GET",
+            url: $(location).attr('search'),
+            cache: false,
+        })
+    }
+
+    notf().done(function (data, status, xhr) {
+        $('.h404').removeClass('view');
+        $('.w404').addClass('view');
+
+    }).fail(function (XMLHttpRequest, status, errorThrown) {
+        $('.h404').addClass('view');
+        $('.w404').removeClass('view');
+    });
+</script>
+
 <body>
-    <p class="h404">
+    <p id="hover" class="h404">
         404 Not Found
         <br>
         存在しないパスを指定しているようです
     </p>
-    
-    <p class="w404">
+
+    <p id="hover" class="w404">
         貴方は404用ページを表示しているようです。
         <br>
         一部の機能が動作しません多分

@@ -1,22 +1,21 @@
-# [chainsawsteel1.github.io](https://chainsawsteel1.github.io)
-  
-## What is this?
-chAInsのホームページです
-ここを見るとchAInsについて詳しくなれるかも
-  
-## 使ったもの
-* [ress](https://github.com/filipelinhares/ress)
-  
-* [Inter](https://fonts.google.com/specimen/Inter)
+# Twisskeyのサイト
 
-* [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP)
+ブラウザ上でMDファイルをHTMLに書き換え、表示します
 
-* [iconmonstr](https://iconmonstr.com)
+### ページ切り替え
+
+URLの?以降で判断します  
+?page1であれば/md/page1.mdを参照します
+
+### ページの追加
+
+MDファイルを作成し、その中に書き込みます  
+CSSを適応したい場合は中にHTMLを書き込みます
+
+### 使ったライブラリとか
 
 * [jQuery](https://jquery.com)
 
 * [Showdown](https://github.com/showdownjs/showdown)
 
-## MDファイルのやつ
-[Meatwo310.github.io](https://github.com/Meatwo310/Meatwo310.github.io/blob/main/md.html) (Apache-2.0 license)
-のコードの一部を使わせていただきました。
+* [IBM Plex Sans JP](https://fonts.google.com/specimen/IBM+Plex+Sans+JP)
