@@ -53,6 +53,11 @@ a:hover {
     background-color: white;
 }
 
+.navimg {
+    background-color: white;
+    border-radius: 5px;
+}
+
 .navbar {
     background-color: var(--bg-top);
 }
