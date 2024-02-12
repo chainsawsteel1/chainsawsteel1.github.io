@@ -11,7 +11,7 @@ $(window).on('load resize', function () {
 
 //navbarの透過
 window.addEventListener("scroll", opacity_nav);
-var heig = 10;
+var heig = 15;
 function opacity_nav() {
   if (window.scrollY > heig) {
     $('.navbar').addClass('shadow');
