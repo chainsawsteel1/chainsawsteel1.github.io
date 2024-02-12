@@ -1,3 +1,5 @@
+//これ動いてない
+
 // Files to cache
 const cacheName = 'chains-pwa-v1';
 const appShellFiles = [
