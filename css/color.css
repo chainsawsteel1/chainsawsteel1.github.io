@@ -15,6 +15,7 @@ body {
     --ic-color: white;
     --bg-top: rgb(255, 255, 255);
     --bg-hov: rgb(163, 163, 163);
+    --bg-load: rgb(216, 237, 255);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +29,7 @@ body {
         --ic-color: white;
         --bg-top: rgb(50, 50, 50);
         --bg-hov: rgb(163, 163, 163);
+        --bg-load: rgb(44, 62, 77);
     }
 
     body {
