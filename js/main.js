@@ -64,7 +64,6 @@ function inpagego(target) {
 }
 
 function gotop(target) {
-  $('body,html').stop().animate({ scrollTop: target }, 400);
   $('.already').addClass('hide');
   setTimeout(function () {
     $('.already').removeClass('hide');
