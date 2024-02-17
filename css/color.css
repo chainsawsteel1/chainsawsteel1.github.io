@@ -51,6 +51,11 @@ a:hover {
     color: var(--ch-color);
 }
 
+#hover {
+    background-color: var(--bg-top);
+    color: var(--ch-color);
+}
+
 .tiicon {
     background-color: white;
 }
