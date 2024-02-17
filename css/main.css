@@ -158,6 +158,10 @@ td {
     z-index: 100 !important;
 }
 
+.hidee {
+    opacity: 0%;
+}
+
 .loading {
     transform: translate(-50%, -50%);
 }

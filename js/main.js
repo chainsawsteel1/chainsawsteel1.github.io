@@ -35,6 +35,7 @@ $(window).on("load", function () {
   setTimeout(function () {
     $('.loading').addClass('next');
     $('.content').removeClass('load');
+    $('.navbar').removeClass('hidee');
   }, 200);
 });
 
@@ -67,6 +68,7 @@ function gooutpage(target) {
 
 function inpagego(target) {
   $('.content').addClass('next');
+  $('.navbar').addClass('hidee');
   $('.loading').removeClass('next');
   setTimeout(function () {
     window.location = target;
