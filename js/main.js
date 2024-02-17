@@ -3,9 +3,15 @@ $(window).on('load resize', function () {
   var winW = $(window).width();
   var devW = 650;
   if (winW <= devW) {
+    $("body").css("padding-top", "30%");
     $("body").css("width", "100%");
+    $('.navbar').addClass('under');
+    $('.navbar').removeClass('high');
   } else {
+    $("body").css("padding-top", "80px");
     $("body").css("width", "60%");
+    $('.navbar').addClass('high');
+    $('.navbar').removeClass('under');
   }
 });
 
