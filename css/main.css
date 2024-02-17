@@ -13,6 +13,7 @@ body {
     max-width: 800px;
     margin: auto;
     font-family: 'IBM Plex Sans JP', sans-serif;
+    overflow-x: hidden;
 }
 
 ul {
