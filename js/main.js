@@ -3,17 +3,14 @@ $(window).on('load resize', function () {
   var winW = $(window).width();
   var devW = 650;
   if (winW <= devW) {
-    $('.katate').addClass('hide');
-    setTimeout(function () {
-      $('.katate').removeClass('hide');
-    }, 2000);
+    $(".katate").css("animation-name", "load");
     $("body").css("padding-top", "40%");
     $("body").css("padding-bottom", "80px");
     $("body").css("width", "100%");
     $('.navbar').addClass('under');
     $('.navbar').removeClass('high');
   } else {
-    $('.katate').removeClass('hide');
+    $(".katate").css("animation-name", "none");
     $("body").css("padding-top", "80px");
     $("body").css("padding-bottom", "20px");
     $("body").css("width", "60%");
