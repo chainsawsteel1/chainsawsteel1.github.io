@@ -124,4 +124,8 @@ td {
     transform: translate(30%);
     opacity: 0%;
 }
+
+.loading {
+    transform: translate(-50%, -50%);
+}
 /* id */

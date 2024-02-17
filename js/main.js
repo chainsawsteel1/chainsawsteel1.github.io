@@ -23,6 +23,7 @@ function opacity_nav() {
 //ロード表示
 $(window).on("load", function () {
   setTimeout(function () {
+    $('.loading').addClass('next');
     $('.content').removeClass('load');
   }, 200);
 });
@@ -49,15 +50,19 @@ $(document).on('click', 'a', function (e) {
     inpagego(to);
   }
 });
+
 function gooutpage(target) {
   window.open(target, '_blank');
 }
+
 function inpagego(target) {
   $('.content').addClass('next');
+  $('.loading').removeClass('next');
   setTimeout(function () {
     window.location = target;
   }, 400);
 }
+
 function gotop(target) {
   $('body,html').stop().animate({ scrollTop: target }, 400);
 }
