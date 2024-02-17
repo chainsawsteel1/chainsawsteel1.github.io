@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
-    transition: .3s;
+    transition: .4s;
 }
 
 body {
@@ -115,13 +115,12 @@ td {
 }
 
 .load {
-    transform: translate(-50%);
+    transform: translate(-30%);
     opacity: 0%;
 }
 
 .next {
-    position: fixed;
-    transform: translate(50%);
+    transform: translate(30%);
     opacity: 0%;
 }
 /* id */

@@ -56,8 +56,8 @@ function inpagego(target) {
   $('.content').addClass('next');
   setTimeout(function () {
     window.location = target;
-  }, 300);
+  }, 400);
 }
 function gotop(target) {
-  $('body,html').stop().animate({ scrollTop: target }, 300);
+  $('body,html').stop().animate({ scrollTop: target }, 400);
 }
