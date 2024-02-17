@@ -4,7 +4,7 @@ $(window).on('load resize', function () {
   var devW = 650;
   if (winW <= devW) {
     $(".katate").css("animation-name", "load");
-    $("body").css("padding-top", "40%");
+    $("body").css("padding-top", "20px");
     $("body").css("padding-bottom", "80px");
     $("body").css("width", "100%");
     $('.navbar').addClass('under');
