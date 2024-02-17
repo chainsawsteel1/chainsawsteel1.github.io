@@ -50,6 +50,10 @@ td {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
+.js {
+    z-index: 10001;
+}
+
 #hover {
     position: fixed;
     bottom: 0px;
