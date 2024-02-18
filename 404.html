@@ -1,121 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="/twisskey.png">
-    <title>iframe</title>
+    <link rel="icon" href="/myicon.png">
+    <title>chAInsのサイト</title>
+    <!-- 色指定css -->
+    <link rel="stylesheet" href="/css/color.css">
+    <!-- レイアウト指定css -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- 見え方統一css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- pwa -->
+    <link rel="manifest" href="/pwa/manifest.json">
+    <script src="/pwa/sw.js"></script>
+    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- mdファイルをhtmlにブラウザ上で変えるやつ -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+    <!-- メインスクリプト -->
+    <script src="/js/main.js"></script>
+    <!-- MDファイル変換 -->
+    <script src="/js/mdfile.js"></script>
 </head>
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap');
-
-    * {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        height: 100vh;
-    }
-
-    body {
-        font-family: 'IBM Plex Sans JP', sans-serif;
-    }
-
-    :root {
-        --nbg-color: white;
-        --nch-color: black;
-        --ch-color: black;
-        --ach-color: rgb(139, 139, 139);
-        --achh-color: rgb(77, 77, 77);
-        --tb-color: white;
-        --ic-color: white;
-        --bg-top: rgb(255, 255, 255);
-        --bg-hov: rgb(163, 163, 163);
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --nbg-color: black;
-            --nch-color: white;
-            --ch-color: white;
-            --ach-color: rgb(137, 137, 137);
-            --achh-color: rgb(220, 220, 220);
-            --tb-color: black;
-            --ic-color: white;
-            --bg-top: rgb(50, 50, 50);
-            --bg-hov: rgb(163, 163, 163);
-        }
-    }
-
-    iframe {
-        border: none;
-        width: 100%;
-        height: 100%;
-    }
-
-    .h404 {
-        z-index: -1000;
-        opacity: 0%;
-    }
-
-    .w404 {
-        z-index: -1000;
-        opacity: 0%;
-    }
-
-    #hover {
-        background-color: var(--bg-top);
-        color: var(--ch-color);
-        position: fixed;
-        bottom: 0px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-size: cover;
-        border-radius: 20px;
-        width: auto;
-        height: auto;
-        padding: 20px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .view {
-        z-index: 100;
-        opacity: 90%;
-    }
-</style>
-
-<script>
-    function notf() {
-        return $.ajax({
-            type: "GET",
-            url: $(location).attr('search'),
-            cache: false,
-        })
-    }
-
-    notf().done(function (data, status, xhr) {
-        $('.h404').removeClass('view');
-        $('.w404').addClass('view');
-
-    }).fail(function (XMLHttpRequest, status, errorThrown) {
-        $('.h404').addClass('view');
-        $('.w404').removeClass('view');
-    });
-</script>
-
 <body>
-    <p id="hover" class="h404">
-        404 Not Found
-        <br>
-        存在しないパスを指定しているようです
-    </p>
+    <noscript>
+        <h1 class="hover js">このサイトでは女子小学生(JavaScript)を有効にしてください!!!</h1>
+    </noscript>
 
-    <p id="hover" class="w404">
-        貴方は404用ページを表示しているようです。
-        <br>
-        一部の機能が動作しません多分
-    </p>
+    <div class="navbar hidee">
+        <img class="navimg"
+            src="data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMy41MTQgNi42MWMtLjMxNy4xNzktLjUxNC41MTktLjUxNC44ODd2OC45NWMwIC4zNy4xOTcuNzA4LjUxNC44ODcgMS41OTcuOTAxIDYuNDU2IDMuNjM5IDguMDA1IDQuNTEyLjE1Mi4wODUuMzE5LjEyOC40ODcuMTI4LjE2NCAwIC4zMjgtLjA0MS40NzctLjEyMyAxLjU0OS0uODU1IDYuMzktMy41MjMgNy45OTQtNC40MDguMzIzLS4xNzcuNTIzLS41MTkuNTIzLS44OTF2LTkuMDU1YzAtLjM2OC0uMTk3LS43MDgtLjUxNS0uODg3LTEuNTk1LS44OTktNi40NDQtMy42MzItNy45OTktNC41MDgtLjE1MS0uMDg1LS4zMTktLjEyOC0uNDg2LS4xMjgtLjE2OCAwLS4zMzUuMDQzLS40ODYuMTI4LTEuNTU1Ljg3Ni02LjQwNSAzLjYwOS04IDQuNTA4bTE1Ljk4NiAyLjExNXY3LjUyNWwtNi43NSAzLjcyMnYtNy41Nzh6bS0xNSA3LjQyNXYtNy40NThsNi43NSAzLjc1djcuNTExem0uNzM2LTguNzY5IDYuNzY0LTMuODEzIDYuODAxIDMuODM0LTYuODAxIDMuNzE2eiIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+"
+            alt="" width="34px">
+        <p class="leftp"></p>
+        <a class="ova noli logo delay" href="/">ホーム</a>
+        <ul class="navul">
+            <a class="ova delay" href="/?blog">
+                <li class="noli">ブログ</li>
+            </a>
+            <a class="ova delay" href="/?link">
+                <li class="noli">リンク</li>
+            </a>
+        </ul>
+    </div>
 
-    <iframe src="/" frameborder="0"></iframe>
+    <div class="loading hover">
+        <h1>Loading</h1>
+    </div>
+
+    <div class="already" id="hover">
+        <p>すでにこのページにいます</p>
+    </div>
+
+    <div class="content load">
+        <!-- MD埋め込み -->
+        <div class="center">
+            <img src="https://r2.tkngh.jp//a05ef154-8842-42d9-be29-6646d10167ac.gif" alt="blob">
+            <h1>なにか問題が発生したようだ</h1>
+        </div>
+
+        <!-- HTML試し書き -->
+        <div class="workspaace">
+
+
+
+        </div>
+
+        <div class="about">
+            <br>
+            <p>このサイトは自分が別の用途に作ったものを自分用に転用しています。</p>
+            <a class="demo" href="https://github.com/chainsawsteel1" target="_blank">chAIns<z /a>
+        </div>
+    </div>
 </body>

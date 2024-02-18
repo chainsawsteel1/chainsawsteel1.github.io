@@ -46,7 +46,7 @@ notf().done(function (data, status, xhr) {
     document.getElementById("mainmd").innerHTML = `
 
     <div class="center">
-        <img src="https://r2.tkngh.jp//2160cbb4-211a-483e-8177-f70803783b9b.gif" alt="blob">
+        <img src="https://r2.tkngh.jp//a05ef154-8842-42d9-be29-6646d10167ac.gif" alt="blob">
         <h1>なにか問題が発生したようだ</h1>
     </div>
 
