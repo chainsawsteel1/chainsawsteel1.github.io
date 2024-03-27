@@ -1,7 +1,6 @@
 # SNS
-## [KNS](https://k.tkngh.jp/@chainsawsteel1)
+## [KNS](https://k.tkngh.jp/@chains)
 ## [TKNGH](https://m.tkngh.jp/@chainsawsteel1)
-## [OTHER](https://misskey.04.si/@chainsawsteel1/pages/chainsawsteel1acclist)
 
 <br>
 
