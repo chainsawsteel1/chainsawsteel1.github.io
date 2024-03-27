@@ -1,11 +1,12 @@
 # SNS
+## [KNS](https://k.tkngh.jp/@chainsawsteel1)
 ## [TKNGH](https://m.tkngh.jp/@chainsawsteel1)
 ## [OTHER](https://misskey.04.si/@chainsawsteel1/pages/chainsawsteel1acclist)
 
 <br>
 
 # 相互
-<img src="/img/link/chains.png" alt="chains" width="250">
+<img class="hideimg" src="/img/link/chains.png" alt="chains" width="250">
 ## [chAIns's Website](https://chainsawsteel1.github.io)
 chainsawsteel1が管理しているリンク集兼ブログサイト
 上の画像はサンプルです。相互リンクの時に貼り付けて下さい。
