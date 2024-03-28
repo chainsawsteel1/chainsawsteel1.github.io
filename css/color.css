@@ -51,7 +51,7 @@ a:hover {
     color: var(--ch-color);
 }
 
-#hover {
+.hover2 {
     background-color: var(--bg-top);
     color: var(--ch-color);
 }
