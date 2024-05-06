@@ -46,7 +46,7 @@ notf().done(function (data, status, xhr) {
     document.getElementById("mainmd").innerHTML = `
 
     <div class="center">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTYuMTQyIDJsNS44NTggNS44NTh2OC4yODRsLTUuODU4IDUuODU4aC04LjI4NGwtNS44NTgtNS44NTh2LTguMjg0bDUuODU4LTUuODU4aDguMjg0em0uODI5LTJoLTkuOTQybC03LjAyOSA3LjAyOXY5Ljk0MWw3LjAyOSA3LjAzaDkuOTQxbDcuMDMtNy4wMjl2LTkuOTQybC03LjAyOS03LjAyOXptLTguNDgyIDE2Ljk5MmwzLjUxOC0zLjU2OCAzLjU1NCAzLjUyMSAxLjQzMS0xLjQzLTMuNTY2LTMuNTIzIDMuNTM1LTMuNTY4LTEuNDMxLTEuNDMyLTMuNTM5IDMuNTgzLTMuNTgxLTMuNDU3LTEuNDE4IDEuNDE4IDMuNTg1IDMuNDczLTMuNTA3IDMuNTY2IDEuNDE5IDEuNDE3eiIvPjwvc3ZnPg==" alt="blob">
+        <img class="tiicon error" src="/img/error.png" alt="fail">
         <h1>なにか問題が発生したようだ</h1>
     </div>
 
