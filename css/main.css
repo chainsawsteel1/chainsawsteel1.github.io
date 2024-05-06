@@ -173,4 +173,9 @@ td {
 .hideimg:hover {
     filter: blur(0px);
 }
+
+.error {
+    border-radius: 15px;
+    height: 100px;
+}
 /* id */
