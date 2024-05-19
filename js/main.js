@@ -15,6 +15,10 @@ $(window).on('load resize', function () {
     $('.navbar').addClass('high');
     $('.navbar').removeClass('under');
   }
+  if (winW <= 300) {
+    document.getElementById("already").innerText = "画面の横幅狭すぎるよ";
+    gotop();
+  }
 });
 
 //navbarの透過
@@ -54,7 +58,7 @@ $(document).on('click', 'a', function (e) {
     if (check != '') {
       target = $(check).offset().top;
     }
-    gotop(target);
+    gotop();
   } else {
     inpagego(to);
   }
@@ -73,9 +77,12 @@ function inpagego(target) {
   }, 400);
 }
 
-function gotop(target) {
+function gotop() {
   $('.already').addClass('hide');
   setTimeout(function () {
     $('.already').removeClass('hide');
   }, 2000);
+  setTimeout(function () {
+    document.getElementById("already").innerText = "すでにこのページにいます";
+  }, 2500);
 }
