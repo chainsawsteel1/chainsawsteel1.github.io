@@ -73,7 +73,8 @@ td {
     transform: translate(-50%, -50%);
     background-size: cover;
     z-index: 10000;
-    width: 500px;
+    width: fit-content;
+    padding: 20px;
 }
 
 .js {
