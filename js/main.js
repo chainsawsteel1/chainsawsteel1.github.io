@@ -38,7 +38,7 @@ $(window).on("load", function () {
     $('.loading').addClass('next');
     $('.content').removeClass('load');
     $('.navbar').removeClass('hidee');
-  }, 200);
+  }, 500);
 });
 
 //遅延
