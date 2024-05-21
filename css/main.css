@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
-    transition: .4s;
+    transition: .4s cubic-bezier(.49,.12,.11,1.59);
 }
 
 body {
@@ -54,7 +54,7 @@ td {
     position: fixed;
     bottom: 0px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0%);
     background-size: cover;
     border-radius: 20px;
     width: auto;
@@ -168,6 +168,7 @@ td {
 .hide {
     opacity: 90% !important;
     z-index: 100 !important;
+    transform: translate(-50%, -50%) scale(100%);
 }
 
 .hidee {
