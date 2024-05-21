@@ -54,7 +54,7 @@ td {
     position: fixed;
     bottom: 0px;
     left: 50%;
-    transform: translate(-50%, -50%) scale(50%);
+    transform: translate(-50%, -50%) scale(70%);
     background-size: cover;
     border-radius: 20px;
     width: auto;

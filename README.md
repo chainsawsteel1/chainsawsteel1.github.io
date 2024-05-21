@@ -19,3 +19,5 @@ CSSを適応したい場合は中にHTMLを書き込みます
 * [Showdown](https://github.com/showdownjs/showdown)
 
 * [IBM Plex Sans JP](https://fonts.google.com/specimen/IBM+Plex+Sans+JP)
+
+* [iconmonstr](https://iconmonstr.com/)
