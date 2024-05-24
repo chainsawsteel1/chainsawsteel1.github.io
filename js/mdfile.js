@@ -64,5 +64,5 @@ function load() {
         $('.loading').addClass('next');
         $('.content').removeClass('load');
         $('.navbar').removeClass('hidee');
-    }, 500);
+    }, 400);
 }
