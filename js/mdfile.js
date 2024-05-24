@@ -1,50 +1,52 @@
-//jquery使ってURL解析
-function notf() {
-    return $.ajax({
-        type: "GET",
-        url: let = "/md/" + (window.location.search.substring(1)) + ".md",
-        cache: false,
-    })
-}
+$(window).on("load", function () {
 
-notf().done(function (data, status, xhr) {
-    /**
-     * @return {Promise<void>}
-     */
-
-    const loadMarkdown = async () => {
-        let converter = new showdown.Converter();
-        converter.setFlavor('github');
-
-        // ?記号以降の文字列を取得
-        let filename = "/md/" + (window.location.search.substring(1)) + ".md";
-
-        let text = await (await fetch(filename)).text();
-
-        /**
-         * @type {string}
-        */
-        let html = converter.makeHtml(text);
-
-        document.getElementById("mainmd").innerHTML = html;
-
-        const waitLoading = document.getElementsByClassName("wait_loading")
-        for (let i = 0; i < waitLoading.length; i++) {
-            waitLoading.item(i).classList.remove("wait_loading");
-        }
+    //jquery使ってURL解析
+    function notf() {
+        return $.ajax({
+            type: "GET",
+            url: let = "/md/" + (window.location.search.substring(1)) + ".md",
+            cache: false,
+        })
     }
 
-    window.addEventListener(
-        "hashchange",
-        loadMarkdown,
-        false,
-    );
+    notf().done(function (data, status, xhr) {
+        /**
+         * @return {Promise<void>}
+         */
 
-    loadMarkdown();
-    load();
+        const loadMarkdown = async () => {
+            let converter = new showdown.Converter();
+            converter.setFlavor('github');
 
-}).fail(function (XMLHttpRequest, status, errorThrown) {
-    document.getElementById("mainmd").innerHTML = `
+            // ?記号以降の文字列を取得
+            let filename = "/md/" + (window.location.search.substring(1)) + ".md";
+
+            let text = await (await fetch(filename)).text();
+
+            /**
+             * @type {string}
+            */
+            let html = converter.makeHtml(text);
+
+            document.getElementById("mainmd").innerHTML = html;
+
+            const waitLoading = document.getElementsByClassName("wait_loading")
+            for (let i = 0; i < waitLoading.length; i++) {
+                waitLoading.item(i).classList.remove("wait_loading");
+            }
+        }
+
+        window.addEventListener(
+            "hashchange",
+            loadMarkdown,
+            false,
+        );
+
+        loadMarkdown();
+        load();
+
+    }).fail(function (XMLHttpRequest, status, errorThrown) {
+        document.getElementById("mainmd").innerHTML = `
 
     <div class="center">
         <img class="tiicon error" src="/img/error.png" alt="fail">
@@ -52,10 +54,12 @@ notf().done(function (data, status, xhr) {
     </div>
 
     `;
-});
+    });
+
+})
 
 //ロード表示
-function load(){
+function load() {
     setTimeout(function () {
         $('.loading').addClass('next');
         $('.content').removeClass('load');
