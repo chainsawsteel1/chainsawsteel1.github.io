@@ -33,13 +33,7 @@ function opacity_nav() {
 }
 
 //ロード表示
-$(window).on("load", function () {
-  setTimeout(function () {
-    $('.loading').addClass('next');
-    $('.content').removeClass('load');
-    $('.navbar').removeClass('hidee');
-  }, 500);
-});
+//mdfile.js:57
 
 //遅延
 $(document).on('click', 'a', function (e) {

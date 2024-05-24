@@ -41,6 +41,7 @@ notf().done(function (data, status, xhr) {
     );
 
     loadMarkdown();
+    load();
 
 }).fail(function (XMLHttpRequest, status, errorThrown) {
     document.getElementById("mainmd").innerHTML = `
@@ -52,3 +53,12 @@ notf().done(function (data, status, xhr) {
 
     `;
 });
+
+//ロード表示
+function load(){
+    setTimeout(function () {
+        $('.loading').addClass('next');
+        $('.content').removeClass('load');
+        $('.navbar').removeClass('hidee');
+    }, 500);
+}
