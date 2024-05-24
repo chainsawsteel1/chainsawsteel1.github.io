@@ -19,6 +19,9 @@ $(window).on('load resize', function () {
     document.getElementById("already").innerText = "画面の横幅狭すぎるよ";
     gotop();
   }
+  if (location.search == "?oldpage") {
+    $("body").css("padding-top", "80px");
+  }
 });
 
 //navbarの透過

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+
+<head>
+    <meta charset="utf-8">
+    <title>chainsawsteel1</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div>
+        <a href="./">Home</a>
+        <a href="./">Link</a>
+    </div>
+    <article>
+        <div class="side">
+            <h1>Link</h1>
+            <h2>リンク集</h2>
+            <p><a href="./">ツイッターメイン</a></p>
+            <p>
+                <font color="red">フォロワー300人突破!!</font>
+            </p>
+            <p><a href="./">ツイッターサブ<font color="red"> new!!</font></a></p>
+            <p>ゴキブリの写真を投稿中</p>
+            <p>
+                <font color="red">フォロワー20人突破!!</font>
+            </p>
+            <p><a href="./">ようつべ</a></p>
+            <p>動画を上げるとは言っていない</p>
+            <p><a href="./">マイディスコードサーバー</a></p>
+            <p>見たなら入れ</p>
+            <p><a href="./">misskeyだ</a></p>
+            <p>
+                <font color="red">フォロワー1人突破!!</font>
+            </p>
+        </div>
+    </article>
+</body>
+
+</html>
+
+
+<style>
+    h1 {
+        background: gray;
+        animation-name: fadeInAnime;
+        animation-fill-mode: backwards;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-delay: 0.5;
+        animation-direction: normal;
+    }
+
+
+    article {
+        animation-name: fadeInAnime;
+        animation-fill-mode: backwards;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-delay: 0.5;
+        animation-direction: normal;
+    }
+
+    @keyframes fadeInAnime {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+            color: black;
+        }
+
+        100% {
+            opacity: 1;
+            visibility: visible;
+            color: white;
+        }
+    }
+
+    html,
+    body {
+        color: white;
+        height: 100%;
+        background: black;
+        animation: bg_slide 0.5s linear;
+    }
+
+    @keyframes bg_slide {
+        0% {
+            transform: translateX(-300px);
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0px);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+</style>

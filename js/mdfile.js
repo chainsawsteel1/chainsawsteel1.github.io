@@ -58,11 +58,23 @@ $(window).on("load", function () {
 
 })
 
+function hash() {
+    //ハッシュ取得
+    var anchor = location.hash;
+    var convert = anchor.replace('#', '')
+    var cnt = "<iframe src=\"/html/" + convert + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
+    $(function () {
+        document.getElementById("emb").innerHTML = cnt;
+        document.getElementById("etitle").innerHTML = convert;
+    });
+}
+
 //ロード表示
 function load() {
     setTimeout(function () {
         $('.loading').addClass('next');
         $('.content').removeClass('load');
         $('.navbar').removeClass('hidee');
+        hash();
     }, 400);
 }

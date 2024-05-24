@@ -8,5 +8,10 @@
 
 <br>
 
+# History
+## [ここをクリック](?history)
+
+<br>
+
 # Other
 ## [None](?None)
