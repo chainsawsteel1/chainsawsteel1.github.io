@@ -1,90 +1,90 @@
 /* 要素に色をつけるcss */
 
 body {
-    background-color: rgb(216, 237, 255);
-    color: var(--ch-color);
+	background-color: rgb(216, 237, 255);
+	color: var(--ch-color);
 }
 
 :root {
-    --nbg-color: white;
-    --nch-color: black;
-    --ch-color: black;
-    --ach-color: rgb(139, 139, 139);
-    --achh-color: rgb(77, 77, 77);
-    --tb-color: white;
-    --ic-color: white;
-    --bg-top: rgb(255, 255, 255);
-    --bg-hov: rgb(163, 163, 163);
-    --bg-load: rgb(216, 237, 255);
+	--nbg-color: white;
+	--nch-color: black;
+	--ch-color: black;
+	--ach-color: rgb(139, 139, 139);
+	--achh-color: rgb(77, 77, 77);
+	--tb-color: white;
+	--ic-color: white;
+	--bg-top: rgb(255, 255, 255);
+	--bg-hov: rgb(163, 163, 163);
+	--bg-load: rgb(216, 237, 255);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --nbg-color: black;
-        --nch-color: white;
-        --ch-color: white;
-        --ach-color: rgb(137, 137, 137);
-        --achh-color: rgb(220, 220, 220);
-        --tb-color: black;
-        --ic-color: white;
-        --bg-top: rgb(50, 50, 50);
-        --bg-hov: rgb(163, 163, 163);
-        --bg-load: rgb(44, 62, 77);
-    }
+	:root {
+		--nbg-color: black;
+		--nch-color: white;
+		--ch-color: white;
+		--ach-color: rgb(137, 137, 137);
+		--achh-color: rgb(220, 220, 220);
+		--tb-color: black;
+		--ic-color: white;
+		--bg-top: rgb(50, 50, 50);
+		--bg-hov: rgb(163, 163, 163);
+		--bg-load: rgb(44, 62, 77);
+	}
 
-    body {
-        background-color: rgb(44, 62, 77);
-    }
+	body {
+		background-color: rgb(44, 62, 77);
+	}
 }
 
 a {
-    color: var(--ach-color);
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	color: var(--ach-color);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a:hover {
-    color: var(--achh-color);
+	color: var(--achh-color);
 }
 
 .hover {
-    background-color: var(--bg-top);
-    color: var(--ch-color);
+	background-color: var(--bg-top);
+	color: var(--ch-color);
 }
 
 .hover2 {
-    background-color: var(--bg-top);
-    color: var(--ch-color);
+	background-color: var(--bg-top);
+	color: var(--ch-color);
 }
 
 .tiicon {
-    background-color: white;
+	background-color: white;
 }
 
 .navimg {
-    background-color: white;
-    border-radius: 5px;
+	background-color: white;
+	border-radius: 5px;
 }
 
 .navbar {
-    background-color: var(--bg-top);
+	background-color: var(--bg-top);
 }
 
 .noli:hover {
-    background-color: var(--bg-hov);
+	background-color: var(--bg-hov);
 }
 
 .ova {
-    color: var(--ch-color);
+	color: var(--ch-color);
 }
 
 .ova:hover {
-    color: var(--ch-color);
+	color: var(--ch-color);
 }
 
 .toggle {
-    background-color: var(--bg-top);
+	background-color: var(--bg-top);
 }
 
 .toggle:hover {
-    background-color: var(--bg-hov);
+	background-color: var(--bg-hov);
 }

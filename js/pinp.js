@@ -1,6 +1,3 @@
-/**
- * 読み込み完了時に一度だけ実行される。
- */
 $(() => {
 	const element = $('.drag-and-drop')[0];
 	element.onpointerdown = (event) => {

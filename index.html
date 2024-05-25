@@ -2,98 +2,100 @@
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="/myicon.png">
-    <title>chAInsのサイト</title>
-    <!-- 色指定css -->
-    <link rel="stylesheet" href="/css/color.css">
-    <!-- レイアウト指定css -->
-    <link rel="stylesheet" href="/css/main.css">
-    <!-- 見え方統一css -->
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <!-- pwa -->
-    <link rel="manifest" href="/pwa/manifest.json">
-    <script src="/pwa/sw.js"></script>
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <!-- mdファイルをhtmlにブラウザ上で変えるやつ -->
-    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
-    <!-- js-cookie -->
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <!-- メインスクリプト -->
-    <script src="/js/main.js"></script>
-    <!-- MDファイル変換 -->
-    <script src="/js/mdfile.js"></script>
-    <!-- tips -->
-    <script src="/js/tips.js"></script>
-    <!-- cursor -->
-    <script src="/js/cursor.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="/myicon.png">
+	<title>chAInsのサイト</title>
+	<!-- 色指定css -->
+	<link rel="stylesheet" href="/css/color.css">
+	<!-- レイアウト指定css -->
+	<link rel="stylesheet" href="/css/main.css">
+	<!-- 見え方統一css -->
+	<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+	<!-- pwa -->
+	<link rel="manifest" href="/pwa/manifest.json">
+	<script src="/pwa/sw.js"></script>
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+		crossorigin="anonymous"></script>
+	<!-- mdファイルをhtmlにブラウザ上で変えるやつ -->
+	<script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+	<!-- js-cookie -->
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<!-- メインスクリプト -->
+	<script src="/js/main.js"></script>
+	<!-- MDファイル変換 -->
+	<script src="/js/mdfile.js"></script>
+	<!-- tips -->
+	<script src="/js/tips.js"></script>
+	<!-- cursor -->
+	<script src="/js/cursor.js"></script>
 </head>
 
 <body>
-    <noscript>
-        <h1 class="hover js">このサイトでは女子小学生(JavaScript)を有効にしてください!!!</h1>
-    </noscript>
+	<noscript>
+		<h1 class="hover js">このサイトでは女子小学生(JavaScript)を有効にしてください!!!</h1>
+	</noscript>
 
-    <div class="pinp popup drag-and-drop shadow none">
-        <div class="bar">
-            <p>ここを持って動かす</p>
-        </div>
-        <div id="openini"></div>
-    </div>
+	<div class="pinp popup drag-and-drop shadow none">
+		<div class="bar">
+			<p>ここを持って動かす</p>
+		</div>
+		<div id="openini"></div>
+	</div>
 
-    <div class="hidee toggle shadow">
-        <p>hover mode</p>
-    </div>
+	<div class="hidee toggle shadow">
+		<p>hover mode</p>
+	</div>
 
-    <div class="navbar hidee">
-        <img class="navimg"
-            src="data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMy41MTQgNi42MWMtLjMxNy4xNzktLjUxNC41MTktLjUxNC44ODd2OC45NWMwIC4zNy4xOTcuNzA4LjUxNC44ODcgMS41OTcuOTAxIDYuNDU2IDMuNjM5IDguMDA1IDQuNTEyLjE1Mi4wODUuMzE5LjEyOC40ODcuMTI4LjE2NCAwIC4zMjgtLjA0MS40NzctLjEyMyAxLjU0OS0uODU1IDYuMzktMy41MjMgNy45OTQtNC40MDguMzIzLS4xNzcuNTIzLS41MTkuNTIzLS44OTF2LTkuMDU1YzAtLjM2OC0uMTk3LS43MDgtLjUxNS0uODg3LTEuNTk1LS44OTktNi40NDQtMy42MzItNy45OTktNC41MDgtLjE1MS0uMDg1LS4zMTktLjEyOC0uNDg2LS4xMjgtLjE2OCAwLS4zMzUuMDQzLS40ODYuMTI4LTEuNTU1Ljg3Ni02LjQwNSAzLjYwOS04IDQuNTA4bTE1Ljk4NiAyLjExNXY3LjUyNWwtNi43NSAzLjcyMnYtNy41Nzh6bS0xNSA3LjQyNXYtNy40NThsNi43NSAzLjc1djcuNTExem0uNzM2LTguNzY5IDYuNzY0LTMuODEzIDYuODAxIDMuODM0LTYuODAxIDMuNzE2eiIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+"
-            alt="" width="34px">
-        <p class="leftp"></p>
-        <a class="ova noli logo delay" href="/">HOME</a>
-        <ul class="navul">
-            <a class="ova delay" href="/?blog">
-                <li class="noli">BLOG</li>
-            </a>
-            <a class="ova delay" href="/?link">
-                <li class="noli">LINK</li>
-            </a>
-        </ul>
-    </div>
+	<div class="navbar hidee">
+		<img class="navimg"
+			src="data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMy41MTQgNi42MWMtLjMxNy4xNzktLjUxNC41MTktLjUxNC44ODd2OC45NWMwIC4zNy4xOTcuNzA4LjUxNC44ODcgMS41OTcuOTAxIDYuNDU2IDMuNjM5IDguMDA1IDQuNTEyLjE1Mi4wODUuMzE5LjEyOC40ODcuMTI4LjE2NCAwIC4zMjgtLjA0MS40NzctLjEyMyAxLjU0OS0uODU1IDYuMzktMy41MjMgNy45OTQtNC40MDguMzIzLS4xNzcuNTIzLS41MTkuNTIzLS44OTF2LTkuMDU1YzAtLjM2OC0uMTk3LS43MDgtLjUxNS0uODg3LTEuNTk1LS44OTktNi40NDQtMy42MzItNy45OTktNC41MDgtLjE1MS0uMDg1LS4zMTktLjEyOC0uNDg2LS4xMjgtLjE2OCAwLS4zMzUuMDQzLS40ODYuMTI4LTEuNTU1Ljg3Ni02LjQwNSAzLjYwOS04IDQuNTA4bTE1Ljk4NiAyLjExNXY3LjUyNWwtNi43NSAzLjcyMnYtNy41Nzh6bS0xNSA3LjQyNXYtNy40NThsNi43NSAzLjc1djcuNTExem0uNzM2LTguNzY5IDYuNzY0LTMuODEzIDYuODAxIDMuODM0LTYuODAxIDMuNzE2eiIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+"
+			alt="" width="34px">
+		<p class="leftp"></p>
+		<a class="ova noli logo delay" href="/">HOME</a>
+		<ul class="navul">
+			<a class="ova delay" href="/?blog">
+				<li class="noli">BLOG</li>
+			</a>
+			<a class="ova delay" href="/?link">
+				<li class="noli">LINK</li>
+			</a>
+		</ul>
+	</div>
 
-    <div class="loading hover">
-        <h1>Loading</h1>
-    </div>
+	<div class="loading hover">
+		<h1>Loading</h1>
+	</div>
 
-    <div class="loading hover-t">
-        <p>tips:</p>
-        <p id="tips">Preparing</p>
-    </div>
+	<div class="loading hover-t">
+		<p>tips:</p>
+		<p id="tips">Preparing</p>
+	</div>
 
-    <div class="already hover2" id="already">
-        <p></p>
-    </div>
+	<div class="already hover2" id="already">
+		<p></p>
+	</div>
 
-    <div class="content load">
-        <!-- MD埋め込み -->
-        <div id="mainmd"></div>
+	<div class="content load">
+		<!-- MD埋め込み -->
+		<div id="mainmd"></div>
 
-        <!-- HTML試し書き -->
-        <div class="workspaace">
+		<!-- HTML試し書き -->
+		<div class="workspaace">
 
 
-            
 
-        </div>
 
-        <div class="about">
-            <br><p><a rel="me" href="https://k.tkngh.jp/@chains" target="_blank"></a></p>
-            <p><a class="demo" href="https://github.com/chainsawsteel1" target="_blank">chAIns - GitHub</a></p>
-        </div>
-    </div>
+		</div>
+
+		<div class="about">
+			<br>
+			<p><a rel="me" href="https://k.tkngh.jp/@chains" target="_blank"></a></p>
+			<p><a class="demo" href="https://github.com/chainsawsteel1" target="_blank">chAIns - GitHub</a></p>
+		</div>
+	</div>
 </body>
 
 <script src="/js/pinp.js"></script>
