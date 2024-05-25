@@ -95,6 +95,7 @@ function inpagego(target) {
   setTimeout(function () {
     $('.content').addClass('next');
     $('.navbar').addClass('hidee');
+    $('.toggle').addClass('hidee');
     $('.loading').removeClass('next');
     $('.pinp').addClass('none');
     $('.already').removeClass('hide');

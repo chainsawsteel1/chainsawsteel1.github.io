@@ -76,6 +76,7 @@ function load() {
         $('.loading').addClass('next');
         $('.content').removeClass('load');
         $('.navbar').removeClass('hidee');
+        $('.toggle').removeClass('hidee');
         hash();
     }, 400);
 }
