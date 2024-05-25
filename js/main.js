@@ -73,16 +73,7 @@ $(document).on('click', 'a', function (e) {
 });
 
 function gooutpage(target) {
-  if (Cookies.get('tgl') == 'false') {
-    window.open(target, '_blank');
-  } else if (Cookies.get('tgl') == 'true') {
-    embini(target)
-    $('.pinp').removeClass('none');
-    $(".pinp").css("opacity", "0%");
-    setTimeout(function () {
-      $(".pinp").css("opacity", "90%");
-    }, 100);
-  }
+  openwindow(target)
 }
 
 function inpagego(target) {
@@ -104,17 +95,6 @@ function gotop() {
   setTimeout(function () {
     $('.already').removeClass('hide');
   }, 3000);
-}
-
-function embini(target) {
-  document.getElementById("already").innerText = "セキュリティの理由で開かないだろう";
-  gotop();
-  let cnt = "<iframe src=\"" + target + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
-  document.getElementById("openini").innerHTML = cnt;
-  document.getElementById("bar1").innerHTML = target;
-  setTimeout(function () {
-    $(".pinp").css("transition", ".2s cubic-bezier(.53, .25, .16, 1.38)");
-  }, 400);
 }
 
 $(function () {
@@ -142,3 +122,36 @@ $(function () {
     }, 400);
   });
 });
+
+function openwindow(target) {
+  if (Cookies.get('tgl') == 'false') {
+    window.open(target, '_blank');
+  } else if (Cookies.get('tgl') == 'true') {
+    if (chklink(target) == false) {
+      window.open(target, '_blank');
+    } else if (chklink(target) == true) {
+      embini(target)
+      $('.pinp').removeClass('none');
+      $(".pinp").css("opacity", "0%");
+      setTimeout(function () {
+        $(".pinp").css("opacity", "90%");
+      }, 100);
+    }
+  }
+}
+
+function embini(target) {
+  document.getElementById("already").innerText = "セキュリティの理由で開かないだろう";
+  gotop();
+  let cnt = "<iframe src=\"" + target + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
+  document.getElementById("openini").innerHTML = cnt;
+  document.getElementById("bar1").innerHTML = target;
+  setTimeout(function () {
+    $(".pinp").css("transition", ".2s cubic-bezier(.53, .25, .16, 1.38)");
+  }, 400);
+}
+
+function chklink(url) {
+  // wip
+  return true
+}
