@@ -246,6 +246,7 @@ td {
 	margin-top: 5px;
 	background-color: rgb(56, 56, 56);
 	border-radius: 50px;
+	cursor: pointer;
 }
 
 .bar2:hover {
