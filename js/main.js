@@ -100,12 +100,12 @@ function gotop() {
 $(function () {
   $(".toggle").click(function () {
     console.log(Cookies.get('tgl'))
-    if(Cookies.get('tgl') == 'false') {
+    if (Cookies.get('tgl') == 'false') {
       Cookies.set('tgl', 'true')
       $(".toggle").css("box-shadow", "0px 8px 15px rgb(163, 163, 163)");
       document.getElementById("already").innerText = "ホバーモードオン\nだがセキュリティの理由でつかえないだろう";
       gotop();
-    } else if(Cookies.get('tgl') == 'true') {
+    } else if (Cookies.get('tgl') == 'true') {
       Cookies.set('tgl', 'false')
       $(".toggle").css("box-shadow", "0px 8px 15px rgba(0, 0, 0, 0.1)");
       document.getElementById("already").innerText = "ホバーモードオフ";
@@ -152,6 +152,5 @@ function embini(target) {
 }
 
 function chklink(url) {
-  // wip
   return true
 }
