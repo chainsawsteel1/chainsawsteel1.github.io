@@ -46,6 +46,7 @@ $(window).on("load", function () {
         load();
 
     }).fail(function (XMLHttpRequest, status, errorThrown) {
+        load();
         document.getElementById("mainmd").innerHTML = `
 
     <div class="center">

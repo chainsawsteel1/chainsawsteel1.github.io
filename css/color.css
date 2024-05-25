@@ -80,3 +80,11 @@ a:hover {
 .ova:hover {
     color: var(--ch-color);
 }
+
+.toggle {
+    background-color: var(--bg-top);
+}
+
+.toggle:hover {
+    background-color: var(--bg-hov);
+}

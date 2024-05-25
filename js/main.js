@@ -1,3 +1,5 @@
+var tgl = '0'
+
 //画面サイズ
 $(window).on('load resize', function () {
   var winW = $(window).width();
@@ -8,12 +10,17 @@ $(window).on('load resize', function () {
     $("body").css("width", "100%");
     $('.navbar').addClass('under');
     $('.navbar').removeClass('high');
+    $('.toggle').addClass('high');
+    $('.toggle').removeClass('under');
   } else {
     $("body").css("padding-top", "80px");
     $("body").css("padding-bottom", "20px");
+    $(".toggle").css("bottom", "0%");
     $("body").css("width", "60%");
     $('.navbar').addClass('high');
     $('.navbar').removeClass('under');
+    $('.toggle').addClass('under');
+    $('.toggle').removeClass('high');
   }
   if (winW <= 300) {
     document.getElementById("already").innerText = "画面の横幅狭すぎるよ";
@@ -55,6 +62,7 @@ $(document).on('click', 'a', function (e) {
     if (check != '') {
       target = $(check).offset().top;
     }
+    document.getElementById("already").innerText = "すでにこのページにいます";
     gotop();
   } else {
     inpagego(to);
@@ -62,24 +70,62 @@ $(document).on('click', 'a', function (e) {
 });
 
 function gooutpage(target) {
-  window.open(target, '_blank');
+  if (Cookies.get('tgl') == 'false') {
+    window.open(target, '_blank');
+  } else if (Cookies.get('tgl') == 'true') {
+    $('.pinp').removeClass('none');
+    $(".pinp").css("opacity", "0%");
+    setTimeout(function () {
+      $(".pinp").css("opacity", "90%");
+      $(".pinp").css("transition", ".4s");
+    }, 100);
+    setTimeout(function () {
+      $(".pinp").css("opacity", "90%");
+      $(".pinp").css("transition", ".1s");
+    }, 500);
+    embini(target)
+  }
 }
 
 function inpagego(target) {
-  $('.content').addClass('next');
-  $('.navbar').addClass('hidee');
-  $('.loading').removeClass('next');
+  $(".pinp").css("transition", ".4s");
+  setTimeout(function () {
+    $('.content').addClass('next');
+    $('.navbar').addClass('hidee');
+    $('.loading').removeClass('next');
+    $('.pinp').addClass('none');
+    $('.already').removeClass('hide');
+  }, 10);
   setTimeout(function () {
     window.location = target;
-  }, 400);
+  }, 410);
 }
 
 function gotop() {
   $('.already').addClass('hide');
   setTimeout(function () {
     $('.already').removeClass('hide');
-  }, 2000);
-  setTimeout(function () {
-    document.getElementById("already").innerText = "すでにこのページにいます";
-  }, 2500);
+  }, 3000);
 }
+
+function embini(target) {
+  document.getElementById("already").innerText = "セキュリティの理由で開かないだろう";
+  gotop();
+  var cnt = "<iframe src=\"" + target + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
+  document.getElementById("openini").innerHTML = cnt;
+}
+
+$(function () {
+  $(".toggle").click(function () {
+    console.log(Cookies.get('tgl'))
+    if(Cookies.get('tgl') == 'false') {
+      Cookies.set('tgl', 'true')
+      document.getElementById("already").innerText = "ホバーモードオン\nだがセキュリティの理由でつかえないだろう";
+      gotop();
+    } else if(Cookies.get('tgl') == 'true') {
+      Cookies.set('tgl', 'false')
+      document.getElementById("already").innerText = "ホバーモードオフ";
+      gotop();
+    }
+  });
+});

@@ -20,6 +20,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- mdファイルをhtmlにブラウザ上で変えるやつ -->
     <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+    <!-- js-cookie -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <!-- メインスクリプト -->
     <script src="/js/main.js"></script>
     <!-- MDファイル変換 -->
@@ -34,6 +36,17 @@
     <noscript>
         <h1 class="hover js">このサイトでは女子小学生(JavaScript)を有効にしてください!!!</h1>
     </noscript>
+
+    <div class="pinp popup drag-and-drop shadow none">
+        <div class="bar">
+            <p>ここを持って動かす</p>
+        </div>
+        <div id="openini"></div>
+    </div>
+
+    <div class="toggle shadow">
+        <p>hover mode</p>
+    </div>
 
     <div class="navbar hidee">
         <img class="navimg"
@@ -61,7 +74,7 @@
     </div>
 
     <div class="already hover2" id="already">
-        <p>すでにこのページにいます</p>
+        <p></p>
     </div>
 
     <div class="content load">
@@ -72,6 +85,7 @@
         <div class="workspaace">
 
 
+            
 
         </div>
 
@@ -81,3 +95,8 @@
         </div>
     </div>
 </body>
+
+<script src="/js/pinp.js"></script>
+
+<style>
+</style>
