@@ -228,7 +228,28 @@ td {
 }
 
 .bar {
+	text-align: center;
 	height: 30px;
+}
+
+.bar1 {
+	float: left;
+	padding-left: 5px;
+	padding-top: 3px;
+	position: fixed;
+}
+
+.bar2 {
+	float: right;
+	text-align: right;
+	margin-right: 5px;
+	margin-top: 5px;
+	background-color: rgb(56, 56, 56);
+	border-radius: 50px;
+}
+
+.bar2:hover {
+	background-color: rgb(117, 117, 117);
 }
 
 .toggle {

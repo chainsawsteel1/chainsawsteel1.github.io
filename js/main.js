@@ -86,6 +86,7 @@ function gooutpage(target) {
 }
 
 function inpagego(target) {
+  $(".pinp").css("transition", ".4s cubic-bezier(.53, .25, .16, 1.38)");
   $('.content').addClass('next');
   $('.navbar').addClass('hidee');
   $('.toggle').addClass('hidee');
@@ -110,6 +111,10 @@ function embini(target) {
   gotop();
   var cnt = "<iframe src=\"" + target + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
   document.getElementById("openini").innerHTML = cnt;
+  document.getElementById("bar1").innerHTML = target;
+  setTimeout(function () {
+    $(".pinp").css("transition", ".2s cubic-bezier(.53, .25, .16, 1.38)");
+  }, 400);
 }
 
 $(function () {
@@ -126,5 +131,14 @@ $(function () {
       document.getElementById("already").innerText = "ホバーモードオフ";
       gotop();
     }
+  });
+});
+
+$(function () {
+  $(".bar2").click(function () {
+    $(".pinp").css("opacity", "0%");
+    setTimeout(function () {
+      $('.pinp').addClass('none');
+    }, 400);
   });
 });
