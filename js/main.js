@@ -76,12 +76,12 @@ function gooutpage(target) {
   if (Cookies.get('tgl') == 'false') {
     window.open(target, '_blank');
   } else if (Cookies.get('tgl') == 'true') {
+    embini(target)
     $('.pinp').removeClass('none');
     $(".pinp").css("opacity", "0%");
     setTimeout(function () {
       $(".pinp").css("opacity", "90%");
     }, 100);
-    embini(target)
   }
 }
 
