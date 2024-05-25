@@ -1,4 +1,7 @@
-var tgl = '0'
+console.log(Cookies.get('tgl'))
+if (Cookies.get('tgl') == undefined) {
+  Cookies.set('tgl', 'false')
+}
 
 //画面サイズ
 $(window).on('load resize', function () {
