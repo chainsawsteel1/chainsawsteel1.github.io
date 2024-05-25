@@ -86,18 +86,16 @@ function gooutpage(target) {
 }
 
 function inpagego(target) {
-  $(".pinp").css("transition", ".4s");
-  setTimeout(function () {
-    $('.content').addClass('next');
-    $('.navbar').addClass('hidee');
-    $('.toggle').addClass('hidee');
-    $('.loading').removeClass('next');
-    $('.pinp').addClass('none');
-    $('.already').removeClass('hide');
-  }, 10);
+  $('.content').addClass('next');
+  $('.navbar').addClass('hidee');
+  $('.toggle').addClass('hidee');
+  $('.pinp').addClass('hidee');
+  $('.loading').removeClass('next');
+  $('.already').removeClass('hide');
+  $(".pinp").css("opacity", "0%");
   setTimeout(function () {
     window.location = target;
-  }, 410);
+  }, 400);
 }
 
 function gotop() {
