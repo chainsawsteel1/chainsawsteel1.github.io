@@ -82,10 +82,6 @@ function gooutpage(target) {
       $(".pinp").css("opacity", "90%");
       $(".pinp").css("transition", ".4s");
     }, 100);
-    setTimeout(function () {
-      $(".pinp").css("opacity", "90%");
-      $(".pinp").css("transition", ".1s");
-    }, 500);
     embini(target)
   }
 }
