@@ -5,8 +5,8 @@ if (Cookies.get('tgl') == undefined) {
 
 //画面サイズ
 $(window).on('load resize', function () {
-  var winW = $(window).width();
-  var devW = 650;
+  let winW = $(window).width();
+  let devW = 650;
   if (winW <= devW) {
     $("body").css("padding-top", "200px");
     $("body").css("padding-bottom", "80px");
@@ -36,7 +36,7 @@ $(window).on('load resize', function () {
 
 //navbarの透過
 window.addEventListener("scroll", opacity_nav);
-var heig = 15;
+let heig = 15;
 function opacity_nav() {
   if (window.scrollY > heig) {
     $('.navbar').addClass('shadow');
@@ -61,7 +61,7 @@ $(document).on('click', 'a', function (e) {
   if (blank == '_blank' || to.indexOf(fromDomain) == -1) {
     gooutpage(to);
   } else if (check.indexOf('#') == 0 || check == '') {
-    var target = 0;
+    let target = 0;
     if (check != '') {
       target = $(check).offset().top;
     }
@@ -109,7 +109,7 @@ function gotop() {
 function embini(target) {
   document.getElementById("already").innerText = "セキュリティの理由で開かないだろう";
   gotop();
-  var cnt = "<iframe src=\"" + target + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
+  let cnt = "<iframe src=\"" + target + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
   document.getElementById("openini").innerHTML = cnt;
   document.getElementById("bar1").innerHTML = target;
   setTimeout(function () {

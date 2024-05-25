@@ -8,8 +8,8 @@ $(() => {
 			const maxX = window.innerWidth - Number(element.offsetWidth) - play;
 			const maxY = window.innerHeight - Number(element.offsetHeight) - play;
 			element.style.transform = `translate(
-          ${Math.max(Math.min(x, maxX), play)}px,
-          ${Math.max(Math.min(y, maxY), play)}px
+        ${Math.max(Math.min(x, maxX), play)}px,
+        ${Math.max(Math.min(y, maxY), play)}px
         )`;
 		};
 		element.setPointerCapture(event.pointerId);
