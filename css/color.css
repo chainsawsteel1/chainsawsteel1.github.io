@@ -35,6 +35,10 @@ body {
 	body {
 		background-color: rgb(44, 62, 77);
 	}
+
+	.darkimg {
+		filter: invert(100%);
+	}
 }
 
 a {
