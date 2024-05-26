@@ -153,7 +153,7 @@ function embini(target) {
   document.getElementById("openini").innerHTML = cnt;
   document.getElementById("bar1").innerHTML = target;
   setTimeout(function () {
-    $(".pinp").css("transition", ".1s cubic-bezier(.53, .25, .16, 1.38)");
+    $(".pinp").css("transition", "0s cubic-bezier(.53, .25, .16, 1.38)");
   }, 400);
 }
 
