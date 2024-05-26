@@ -3,6 +3,10 @@ if (Cookies.get('tgl') == undefined) {
   Cookies.set('tgl', 'false')
 }
 
+setTimeout(function () {
+  $(".cursorlight").css("transition", "0s cubic-bezier(.53, .25, .16, 1.38)");
+}, 400);
+
 //画面サイズ
 $(window).on('load resize', function () {
   let winW = $(window).width();
@@ -78,10 +82,12 @@ function gooutpage(target) {
 
 function inpagego(target) {
   $(".pinp").css("transition", ".4s cubic-bezier(.53, .25, .16, 1.38)");
+  $(".cursorlight").css("transition", ".4s cubic-bezier(.53, .25, .16, 1.38)");
   $('.content').addClass('next');
   $('.navbar').addClass('hidee');
   $('.toggle').addClass('hidee');
   $('.pinp').addClass('hidee');
+  $('.cursorlight').addClass('hidee');
   $('.loading').removeClass('next');
   $('.already').removeClass('hide');
   $(".pinp").css("opacity", "0%");
@@ -147,7 +153,7 @@ function embini(target) {
   document.getElementById("openini").innerHTML = cnt;
   document.getElementById("bar1").innerHTML = target;
   setTimeout(function () {
-    $(".pinp").css("transition", ".2s cubic-bezier(.53, .25, .16, 1.38)");
+    $(".pinp").css("transition", ".1s cubic-bezier(.53, .25, .16, 1.38)");
   }, 400);
 }
 

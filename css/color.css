@@ -92,3 +92,7 @@ a:hover {
 .toggle:hover {
 	background-color: var(--bg-hov);
 }
+
+.cursorlight {
+	background-color: var(--nch-color);
+}
