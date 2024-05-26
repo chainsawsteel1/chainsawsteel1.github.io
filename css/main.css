@@ -96,8 +96,6 @@ td {
 	height: 48px;
 	padding: 7px;
 	left: 0%;
-	vertical-align: middle;
-	display: flex;
 }
 
 .high {
@@ -108,32 +106,35 @@ td {
 	bottom: 0%;
 }
 
-.logo {
-	margin: auto auto auto 0;
-}
-
-.navul {
-	margin: auto;
-	margin-right: 0;
-}
-
 .garally {
 	width: fit-content;
 	margin: auto;
 }
 
 .leftp {
-	margin-left: 2.5%;
-	margin-right: 2.5%;
+	margin-left: 10%;
+}
+
+.rightp {
+	margin-right: 10%;
 }
 
 .noli {
-	list-style: none;
 	display: inline;
 	padding: 5px;
 	border-radius: 5px;
 	max-height: 34px;
 	min-height: 34px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.noli1 {
+	float: left;
+}
+
+.noli2 {
+	float: right;
 }
 
 .noli:hover {

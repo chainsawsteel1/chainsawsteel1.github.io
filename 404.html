@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-Frame-Options" content="DENY">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="icon" href="/myicon.png">
 	<title>chAInsのサイト</title>
@@ -17,15 +18,20 @@
 	<link rel="manifest" href="/pwa/manifest.json">
 	<script src="/pwa/sw.js"></script>
 	<!-- jquery -->
-	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"
+		integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 	<!-- mdファイルをhtmlにブラウザ上で変えるやつ -->
 	<script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+	<!-- js-cookie -->
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<!-- メインスクリプト -->
 	<script src="/js/main.js"></script>
 	<!-- MDファイル変換 -->
 	<script src="/js/mdfile.js"></script>
+	<!-- tips -->
 	<script src="/js/tips.js"></script>
+	<!-- cursor -->
+	<script src="/js/cursor.js"></script>
 </head>
 
 <body>
@@ -33,17 +39,22 @@
 		<h1 class="hover js">このサイトでは女子小学生(JavaScript)を有効にしてください!!!</h1>
 	</noscript>
 
+	<div class="pinp popup drag-and-drop shadow none">
+		<div class="bar">
+			<p class="bar1" id="bar1">ここを持って動かす</p>
+			<img src="/img/cross.png" alt="X" class="bar2" width="20px" height="20px">
+		</div>
+		<div class="shadow" id="openini"></div>
+	</div>
+
+	<div class="hidee toggle shadow">
+		<img class="lightimg" src="/img/hover.png" alt="hover" width="50px">
+	</div>
+
 	<div class="navbar hidee">
-		<p class="leftp"></p>
-		<a class="ova noli logo delay" href="/">HOME</a>
-		<ul class="navul">
-			<a class="ova delay" href="/?blog">
-				<li class="noli">BLOG</li>
-			</a>
-			<a class="ova delay" href="/?link">
-				<li class="noli">LINK</li>
-			</a>
-		</ul>
+		<a class="ova noli noli1 leftp" href="/">HOME</a>
+		<a class="ova noli noli2 rightp" href="/?blog">BLOG</a>
+		<a class="ova noli noli2" href="/?link">LINK</a>
 	</div>
 
 	<div class="loading hover">
@@ -56,28 +67,37 @@
 	</div>
 
 	<div class="already hover2" id="already">
-		<p>すでにこのページにいます</p>
+		<p></p>
 	</div>
+
+	<div class="cursorlight hidee" id="cursor"></div>
 
 	<div class="content load">
 		<!-- MD埋め込み -->
-		<div class="center">
-			<img class="tiicon error" src="/img/error.png" alt="fail">
-			<h1>なにか問題が発生したようだ</h1>
-		</div>
+		<!-- <div id="mainmd"></div> -->
 
 		<!-- HTML試し書き -->
 		<div class="workspaace">
-
-
-
+			<div class="center">
+				<img class="tiicon error" src="/img/error.png" alt="fail">
+				<h1>なにか問題が発生したようだ</h1>
+			</div>
 		</div>
 
 		<div class="about">
 			<br>
-			<br>
 			<p><a rel="me" href="https://k.tkngh.jp/@chains" target="_blank"></a></p>
-			<a class="demo" href="https://github.com/chainsawsteel1" target="_blank">chAIns - GitHub</a>
+			<p><a id="demo" href="https://github.com/chainsawsteel1" target="_blank">chAIns - GitHub</a></p>
 		</div>
 	</div>
 </body>
+
+<script src="/js/pinp.js"></script>
+
+<style>
+
+</style>
+
+<script>
+
+</script>
