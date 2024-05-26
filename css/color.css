@@ -106,5 +106,5 @@ a:hover {
 /* id */
 
 #openini {
-	background-color: black;
+	background-color: var(--ch-color);
 }
