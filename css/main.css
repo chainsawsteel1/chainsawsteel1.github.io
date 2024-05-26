@@ -102,6 +102,10 @@ td {
 	top: 0%;
 }
 
+.navbox {
+	margin: auto;
+}
+
 .under {
 	bottom: 0%;
 }
@@ -112,11 +116,11 @@ td {
 }
 
 .leftp {
-	margin-left: 10%;
+	margin-left: 10px;
 }
 
 .rightp {
-	margin-right: 10%;
+	margin-right: 10px;
 }
 
 .noli {

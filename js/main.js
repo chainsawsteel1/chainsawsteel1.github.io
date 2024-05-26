@@ -11,6 +11,7 @@ $(window).on('load resize', function () {
     $("body").css("padding-top", "200px");
     $("body").css("padding-bottom", "80px");
     $("body").css("width", "100%");
+    $(".navbox").css("width", "100%");
     $('.navbar').addClass('under');
     $('.navbar').removeClass('high');
     $('.toggle').addClass('high');
@@ -20,6 +21,7 @@ $(window).on('load resize', function () {
     $("body").css("padding-bottom", "20px");
     $(".toggle").css("bottom", "0%");
     $("body").css("width", "60%");
+    $(".navbox").css("width", "60%");
     $('.navbar').addClass('high');
     $('.navbar').removeClass('under');
     $('.toggle').addClass('under');
