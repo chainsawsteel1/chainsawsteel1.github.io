@@ -3,10 +3,6 @@ if (Cookies.get('tgl') == undefined) {
   Cookies.set('tgl', 'false')
 }
 
-setTimeout(function () {
-  $(".cursorlight").css("transition", "0s cubic-bezier(.53, .25, .16, 1.38)");
-}, 400);
-
 //画面サイズ
 $(window).on('load resize', function () {
   let winW = $(window).width();

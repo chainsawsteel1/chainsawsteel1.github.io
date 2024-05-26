@@ -81,6 +81,9 @@ function load() {
 		if (Cookies.get('tgl') == 'true') {
 			$(".toggle").css("box-shadow", "0px 8px 15px rgb(163, 163, 163)");
 		}
+		setTimeout(function () {
+			$(".cursorlight").css("transition", "0s cubic-bezier(.53, .25, .16, 1.38)");
+		}, 400);
 		hash();
 	}, 400);
 }
