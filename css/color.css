@@ -18,6 +18,12 @@ body {
 	--bg-load: rgb(216, 237, 255);
 }
 
+@media (prefers-color-scheme: light) {
+	.lightimg {
+		filter: invert(100%);
+	}
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--nbg-color: black;
@@ -95,4 +101,10 @@ a:hover {
 
 .cursorlight {
 	background-color: var(--nch-color);
+}
+
+/* id */
+
+.openini {
+	background-color: black;
 }
