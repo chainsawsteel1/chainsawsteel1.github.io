@@ -78,12 +78,10 @@ function gooutpage(target) {
 
 function inpagego(target) {
   $(".pinp").css("transition", ".4s cubic-bezier(.53, .25, .16, 1.38)");
-  $(".cursorlight").css("transition", ".4s cubic-bezier(.53, .25, .16, 1.38)");
   $('.content').addClass('next');
   $('.navbar').addClass('hidee');
   $('.toggle').addClass('hidee');
   $('.pinp').addClass('hidee');
-  $('.cursorlight').addClass('hidee');
   $('.loading').removeClass('next');
   $('.already').removeClass('hide');
   $(".pinp").css("opacity", "0%");
