@@ -119,6 +119,7 @@ $(function () {
 
 $(function () {
   $(".bar2").click(function () {
+    $(".pinp").css("transition", ".4s cubic-bezier(.53, .25, .16, 1.38)");
     $(".pinp").css("opacity", "0%");
     setTimeout(function () {
       $('.pinp').addClass('none');
@@ -143,11 +144,12 @@ function openwindow(target) {
   }
 }
 
-function embini(target) {
+// multi window
+function embini(target, window) {
   document.getElementById("already").innerText = "セキュリティの理由で開かないだろう";
   gotop();
   let cnt = "<iframe src=\"" + target + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
-  document.getElementById("openini").innerHTML = cnt;
+  document.getElementById("openini1").innerHTML = cnt;
   document.getElementById("bar1").innerHTML = target;
   setTimeout(function () {
     $(".pinp").css("transition", "0s cubic-bezier(.53, .25, .16, 1.38)");

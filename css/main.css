@@ -219,7 +219,6 @@ td {
 	position: fixed;
 	z-index: 10000;
 	touch-action: none;
-	opacity: 100% !important;
 	align-items: center;
 	justify-content: center;
 }
