@@ -29,7 +29,7 @@ $(window).on('load resize', function () {
   }
   if (winW <= 300) {
     document.getElementById("already").innerText = "画面の横幅狭すぎるよ";
-    gotop();
+    showbanner();
   }
   if (location.search == "?oldpage") {
     $("body").css("padding-top", "80px");
@@ -68,16 +68,19 @@ $(document).on('click', 'a', function (e) {
       target = $(check).offset().top;
     }
     document.getElementById("already").innerText = "すでにこのページにいます";
-    gotop();
+    showbanner();
   } else {
     inpagego(to);
   }
 });
 
+
+// 外部サイト
 function gooutpage(target) {
   openwindow(target)
 }
 
+// 次のページへ
 function inpagego(target) {
   $(".pinp").css("transition", ".4s cubic-bezier(.53, .25, .16, 1.38)");
   $('.content').addClass('next');
@@ -93,12 +96,14 @@ function inpagego(target) {
   }, 400);
 }
 
-function gotop() {
+function showbanner() {
   $('.already').addClass('hide');
   setTimeout(function () {
     $('.already').removeClass('hide');
   }, 3000);
 }
+
+// window manager
 
 $(function () {
   $(".toggle").click(function () {
@@ -107,26 +112,28 @@ $(function () {
       Cookies.set('tgl', 'true')
       $(".toggle").css("box-shadow", "0px 8px 15px rgb(163, 163, 163)");
       document.getElementById("already").innerText = "ホバーモードオン\nだがセキュリティの理由でつかえないだろう";
-      gotop();
+      showbanner();
     } else if (Cookies.get('tgl') == 'true') {
       Cookies.set('tgl', 'false')
       $(".toggle").css("box-shadow", "0px 8px 15px rgba(0, 0, 0, 0.1)");
       document.getElementById("already").innerText = "ホバーモードオフ";
-      gotop();
+      showbanner();
     }
   });
 });
 
+// close
 $(function () {
-  $(".bar2").click(function () {
-    $(".pinp").css("transition", ".4s cubic-bezier(.53, .25, .16, 1.38)");
-    $(".pinp").css("opacity", "0%");
+  $("#close1").click(function () {
+    $("#pinp1").css("transition", ".4s cubic-bezier(.53, .25, .16, 1.38)");
+    $("#pinp1").css("opacity", "0%");
     setTimeout(function () {
-      $('.pinp').addClass('none');
+      $('#pinp1').addClass('none');
     }, 400);
   });
 });
 
+// open
 function openwindow(target) {
   if (Cookies.get('tgl') == 'false') {
     window.open(target, '_blank');
@@ -135,27 +142,28 @@ function openwindow(target) {
       window.open(target, '_blank');
     } else if (chklink(target) == true) {
       embini(target)
-      $('.pinp').removeClass('none');
-      $(".pinp").css("opacity", "0%");
+      $('#pinp1').removeClass('none');
+      $("#pinp1").css("opacity", "0%");
       setTimeout(function () {
-        $(".pinp").css("opacity", "90%");
+        $("#pinp1").css("opacity", "90%");
       }, 100);
     }
   }
 }
 
-// multi window
-function embini(target, window) {
+// return url
+function embini(target) {
   document.getElementById("already").innerText = "セキュリティの理由で開かないだろう";
-  gotop();
+  showbanner();
   let cnt = "<iframe src=\"" + target + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
   document.getElementById("openini1").innerHTML = cnt;
   document.getElementById("bar1").innerHTML = target;
   setTimeout(function () {
-    $(".pinp").css("transition", "0s cubic-bezier(.53, .25, .16, 1.38)");
+    $("#pinp1").css("transition", "0s cubic-bezier(.53, .25, .16, 1.38)");
   }, 400);
 }
 
+// security check
 function chklink(url) {
   return true
 }
