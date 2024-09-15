@@ -80,6 +80,9 @@ function load() {
 		if (Cookies.get('tgl') == 'true') {
 			$(".toggle").css("box-shadow", "0px 8px 15px rgb(163, 163, 163)");
 		}
+		const script = document.createElement('script');
+		script.src = '/js/sound.js';
+		document.head.appendChild(script); 
 		hash();
 	}, 400);
 }

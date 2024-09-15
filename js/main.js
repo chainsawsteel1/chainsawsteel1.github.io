@@ -20,16 +20,15 @@ $(window).on('load resize', function () {
     $("body").css("padding-top", "80px");
     $("body").css("padding-bottom", "20px");
     $(".toggle").css("bottom", "0%");
-    $("body").css("width", "60%");
-    $(".navbox").css("width", "60%");
+    $("body").css("width", "600px");
+    $(".navbox").css("width",600-winW/100);
     $('.navbar').addClass('high');
     $('.navbar').removeClass('under');
     $('.toggle').addClass('under');
     $('.toggle').removeClass('high');
   }
   if (winW <= 300) {
-    document.getElementById("already").innerText = "画面の横幅狭すぎるよ";
-    showbanner();
+    showbanner("画面の横幅狭すぎるよ");
   }
   if (location.search == "?oldpage") {
     $("body").css("padding-top", "80px");
@@ -67,8 +66,7 @@ $(document).on('click', 'a', function (e) {
     if (check != '') {
       target = $(check).offset().top;
     }
-    document.getElementById("already").innerText = "すでにこのページにいます";
-    showbanner();
+    showbanner("すでにこのページにいます");
   } else {
     inpagego(to);
   }
@@ -96,7 +94,8 @@ function inpagego(target) {
   }, 400);
 }
 
-function showbanner() {
+function showbanner(text) {
+  document.getElementById("already").innerText = text;
   $('.already').addClass('hide');
   setTimeout(function () {
     $('.already').removeClass('hide');
@@ -111,13 +110,11 @@ $(function () {
     if (Cookies.get('tgl') == 'false') {
       Cookies.set('tgl', 'true')
       $(".toggle").css("box-shadow", "0px 8px 15px rgb(163, 163, 163)");
-      document.getElementById("already").innerText = "ホバーモードオン\nだがセキュリティの理由でつかえないだろう";
-      showbanner();
+      showbanner("ホバーモードオン\nだがセキュリティの理由でつかえないだろう");
     } else if (Cookies.get('tgl') == 'true') {
       Cookies.set('tgl', 'false')
       $(".toggle").css("box-shadow", "0px 8px 15px rgba(0, 0, 0, 0.1)");
-      document.getElementById("already").innerText = "ホバーモードオフ";
-      showbanner();
+      showbanner("ホバーモードオフ");
     }
   });
 });
@@ -153,8 +150,7 @@ function openwindow(target) {
 
 // return url
 function embini(target) {
-  document.getElementById("already").innerText = "セキュリティの理由で開かないだろう";
-  showbanner();
+  showbanner("セキュリティの理由で開かないだろう");
   let cnt = "<iframe src=\"" + target + "\" frameborder=\"0\" width=\"100%\" height=\"500px\"></iframe>"
   document.getElementById("openini1").innerHTML = cnt;
   document.getElementById("bar1").innerHTML = target;
@@ -167,3 +163,16 @@ function embini(target) {
 function chklink(url) {
   return true
 }
+
+// backbutton
+$(function () {
+  $(".back").click(function () {
+    showbanner("未実装");
+    const fromDomain = location.origin
+    const backDomain = document.referrer
+    console.log(fromDomain + " == " + backDomain)
+    if (fromDomain == backDomain) {
+      inpagego(document.referrer)
+    }
+  });
+});

@@ -103,6 +103,9 @@ a:hover {
 	background-color: var(--nch-color);
 }
 
+.back {
+	background-color: var(--bg-top);
+}
 /* id */
 
 #openini {

@@ -269,6 +269,32 @@ td {
 	left: -100px;
 	border-radius: 50px;
 }
+
+.back {
+	position: fixed;
+	width: 30px;
+	height: 30px;
+	margin: auto;
+	top: 50%;
+	bottom: 50%;
+	border-radius: 50px;
+	opacity: 40%;
+	left: 5%;
+	padding-top: 2px;
+}
+
+.back:hover {
+	transform: scale(2);
+	opacity: 90%;
+}
+
+.back:active {
+	transform: scale(1.5);
+}
+
+.log {
+	position: fixed;
+}
 /* id */
 
 #openini {
