@@ -115,6 +115,10 @@ a:hover {
 	background-color: var(--bg-top);
 }
 
+.warn {
+	background: linear-gradient(90deg, rgba(255, 0, 0, 0.5),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 0, 0, 0.5))
+}
+
 /* id */
 
 #openini {

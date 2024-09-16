@@ -1,3 +1,5 @@
+let que = []
+
 console.log(Cookies.get('tgl'))
 if (Cookies.get('tgl') == undefined) {
   Cookies.set('tgl', 'false')
@@ -66,6 +68,7 @@ $(document).on('click', 'a', function (e) {
     if (check != '') {
       target = $(check).offset().top;
     }
+    warn()
     showbanner("すでにこのページにいます");
   } else {
     inpagego(to);
@@ -84,6 +87,7 @@ function inpagego(target) {
   $('.content').addClass('next');
   $('.navbar').addClass('hidee');
   $('.toggle').addClass('hidee');
+  $('.warn').addClass('hidee');
   $('.background').addClass('hidee');
   $('.pinp').addClass('hidee');
   $('.cursorlight').addClass('hidee');
@@ -96,11 +100,36 @@ function inpagego(target) {
 }
 
 function showbanner(text) {
+  que.push(text)
+  console.log(que)
+  if (que.length == 1) {
+    banner(text)
+  }
+}
+
+setInterval(() => {
+  if (que.length != 0) {
+    banner(que[0])
+    console.log(que)
+    setTimeout(function () {
+      que.shift()
+    }, 2400)
+  }
+}, 2400)
+
+function banner(text) {
   document.getElementById("already").innerText = text;
   $('.already').addClass('hide');
   setTimeout(function () {
     $('.already').removeClass('hide');
-  }, 3000);
+  }, 2000);
+}
+
+function warn() {
+  $('.warn').removeClass('hidee');
+  setTimeout(function () {
+    $('.warn').addClass('hidee');
+  }, 200);
 }
 
 // window manager
