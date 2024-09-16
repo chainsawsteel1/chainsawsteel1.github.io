@@ -77,6 +77,7 @@ function load() {
 		$('.content').removeClass('load');
 		$('.navbar').removeClass('hidee');
 		$('.toggle').removeClass('hidee');
+		$('.background').removeClass('hidee');
 		if (Cookies.get('tgl') == 'true') {
 			$(".toggle").css("box-shadow", "0px 8px 15px rgb(163, 163, 163)");
 		}

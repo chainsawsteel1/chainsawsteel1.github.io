@@ -84,6 +84,7 @@ function inpagego(target) {
   $('.content').addClass('next');
   $('.navbar').addClass('hidee');
   $('.toggle').addClass('hidee');
+  $('.background').addClass('hidee');
   $('.pinp').addClass('hidee');
   $('.cursorlight').addClass('hidee');
   $('.loading').removeClass('next');
