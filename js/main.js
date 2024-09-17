@@ -100,8 +100,15 @@ function inpagego(target) {
 }
 
 function showbanner(text) {
-  que.push(text)
-  console.log(que)
+  if (que.length >= 3) {
+    if (que[0] != text) {
+      que.push(text)
+      console.log(que)
+    }
+  } else {
+    que.push(text)
+    console.log(que)
+  }
   if (que.length == 1) {
     banner(text)
   }
