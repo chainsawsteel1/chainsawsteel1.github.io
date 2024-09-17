@@ -115,8 +115,13 @@ function showbanner(text) {
 }
 
 setInterval(() => {
-  if (que.length != 0) {
+  if (que.length >= 1) {
     banner(que[0])
+    console.log(que)
+    setTimeout(function () {
+      que.shift()
+    }, 1200)
+  } else {
     console.log(que)
     setTimeout(function () {
       que.shift()

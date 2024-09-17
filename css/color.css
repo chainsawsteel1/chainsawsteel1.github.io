@@ -13,8 +13,8 @@ body {
 	--achh-color: rgb(77, 77, 77);
 	--tb-color: white;
 	--ic-color: white;
-	--bg-top: rgb(255, 255, 255);
-	--bg-hov: rgb(163, 163, 163);
+	--bg-top: rgb(236, 246, 255);
+	--bg-hov: rgb(216, 237, 255);
 	--bg-load: rgb(216, 237, 255);
 }
 
@@ -38,7 +38,7 @@ body {
 		--tb-color: black;
 		--ic-color: white;
 		--bg-top: rgb(25, 32, 40);
-		--bg-hov: rgb(80, 124, 151);
+		--bg-hov: rgb(44, 62, 77);
 		--bg-load: rgb(44, 62, 77);
 	}
 
