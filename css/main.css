@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
-	/* transition: .2s cubic-bezier(.53, .25, .16, 1.38); */
-	transition: .2s;
+	/* transition: .3s cubic-bezier(.53, .25, .16, 1.38); */
+	transition: .3s;
 }
 
 body {
@@ -27,6 +27,7 @@ ul li {
 }
 
 a {
+	transition: .2s;
 	text-decoration: none;
 }
 

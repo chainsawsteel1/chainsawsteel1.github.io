@@ -120,16 +120,16 @@ setInterval(() => {
     console.log(que)
     setTimeout(function () {
       que.shift()
-    }, 2400)
+    }, 1200)
   }
-}, 2400)
+}, 1200)
 
 function banner(text) {
   document.getElementById("already").innerText = text;
   $('.already').addClass('hide');
   setTimeout(function () {
     $('.already').removeClass('hide');
-  }, 2000);
+  }, 1000);
 }
 
 function warn() {
