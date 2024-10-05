@@ -6,8 +6,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="X-Frame-Options" content="DENY">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="referrer" content="origin">
+	<meta name="referrer" content="strict-origin">
 	<link rel="icon" href="/myicon.png">
 	<title>chAInsのサイト</title>
+	<!-- 埋め込み表示 -->
+	<meta property="og:type" content="website" />
+    <meta property="og:title" content="chAInsのサイト">
+    <meta property="og:description" content="Embed Home">
+    <meta property="og:site_name" content="相互リンク募集中だよ">
+    <meta property="og:url" content="https://chainsawsteel1.github.io">
+    <meta property="og:locale" content="ja_JP" />
 	<!-- 色指定css -->
 	<link rel="stylesheet" href="/css/color.css">
 	<!-- レイアウト指定css -->
@@ -18,8 +27,7 @@
 	<link rel="manifest" href="/pwa/manifest.json">
 	<script src="/pwa/sw.js"></script>
 	<!-- jquery -->
-	<script src="https://code.jquery.com/jquery-3.7.1.js"
-		integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 	<!-- mdファイルをhtmlにブラウザ上で変えるやつ -->
 	<script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 	<!-- js-cookie -->
@@ -31,7 +39,9 @@
 	<!-- tips -->
 	<script src="/js/tips.js"></script>
 	<!-- cursor -->
-	<script src="/js/cursor.js"></script>
+	<!-- <script src="/js/cursor.js"></script> -->
+	<!-- title -->
+	<script src="/js/title.js"></script>
 </head>
 
 <body>
@@ -39,40 +49,53 @@
 		<h1 class="hover js">このサイトでは女子小学生(JavaScript)を有効にしてください!!!</h1>
 	</noscript>
 
-	<div class="pinp popup drag-and-drop shadow none">
+	<!-- window -->
+	<div id="pinp1" class="pinp popup drag-and-drop shadow none">
 		<div class="bar">
 			<p class="bar1" id="bar1">ここを持って動かす</p>
-			<img src="/img/cross.png" alt="X" class="bar2" width="20px" height="20px">
+			<img id="close1" src="/img/cross.png" alt="X" class="bar2" width="20px" height="20px">
 		</div>
-		<div class="shadow" id="openini"></div>
+		<div class="shadow" id="openini1"></div>
 	</div>
 
-	<div class="hidee toggle shadow">
+	<!-- window toggle -->
+	<!-- <div class="hidee toggle shadow">
 		<img class="lightimg" src="/img/hover.png" alt="hover" width="50px">
-	</div>
+	</div> -->
 
-	<div class="navbar hidee">
+	<!-- navbar -->
+	<!-- <div class="navbar hidee">
 		<div class="navbox">
-			<a class="ova noli noli1 leftp" href="/">HOME</a>
-			<a class="ova noli noli2 rightp" href="/?blog">BLOG</a>
+			<a class="ova noli noli1" href="/">HOME</a>
+			<a class="ova noli noli2" href="/?blog">BLOG</a>
 			<a class="ova noli noli2" href="/?link">LINK</a>
 		</div>
-	</div>
+	</div> -->
 
+	<div class="background hidee"></div>
+	<div class="warn hidee"></div>
+
+	<!-- load screen -->
 	<div class="loading hover">
 		<h1>Loading</h1>
 	</div>
 
+	<!-- load tips -->
 	<div class="loading hover-t">
 		<p>tips:</p>
 		<p id="tips">Preparing</p>
 	</div>
 
+	<!-- banner -->
 	<div class="already hover2" id="already">
 		<p></p>
 	</div>
 
-	<div class="cursorlight hidee" id="cursor"></div>
+	<!-- <div class="back shadow">
+		<img src="/img/back.png" alt="back" width="25px" class="darkimg">
+	</div> -->
+
+	<!-- <div class="cursorlight hidee" id="cursor"></div> -->
 
 	<div class="content load">
 		<!-- MD埋め込み -->
@@ -80,15 +103,14 @@
 
 		<!-- HTML試し書き -->
 		<div class="workspaace">
-			<div class="center">
-				<img class="tiicon error" src="/img/error.png" alt="fail">
-				<h1>なにか問題が発生したようだ</h1>
-			</div>
+			<h1>サイト移転のお知らせ</h1>
+			<h2>コードの大幅な変更により、リポジトリやデプロイに使用するサービスを変更しました。<br>以下が新しいURLです。</h2>
+			<h2><a href="https://chainsawsteel1.vercel.app/">https://chainsawsteel1.vercel.app/</a></h2>
+			<h2>今度とも 、chainsのサイトをよろしくお願いします。</h2>
 		</div>
 
 		<div class="about">
 			<br>
-			<p><a rel="me" href="https://k.tkngh.jp/@chains" target="_blank"></a></p>
 			<p><a id="demo" href="https://github.com/chainsawsteel1" target="_blank">chAIns - GitHub</a></p>
 		</div>
 	</div>
